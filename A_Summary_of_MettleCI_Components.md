@@ -77,9 +77,8 @@ user-selected tools providing the following capabilities:
 Different tools provide different combinations of these capabilities
 within the same platform. For example,
 
-|                  |                    |                          |                    |
-|------------------|--------------------|--------------------------|--------------------|
 |                  | **Git Repository** | **Work Item Management** | **CI/CD Pipeline** |
+|------------------|--------------------|--------------------------|--------------------|
 | **Atlassian**    | ✅ (via Bitbucket) | ✅ (via Jira)            | ✅ (via Bamboo)    |
 | **Azure DevOps** | ✅                 | ✅                       | ✅                 |
 | **GitHub**       | ✅                 | ✅                       | ✅                 |
