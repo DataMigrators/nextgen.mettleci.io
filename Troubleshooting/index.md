@@ -1,5 +1,7 @@
 layout: page
 title: "Troubleshooting"
+nav_order: 2
+has_children: true
 ---
 
 # MCIDOC (MettleCI Documentation)
