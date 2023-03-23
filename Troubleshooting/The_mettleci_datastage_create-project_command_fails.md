@@ -1,6 +1,5 @@
 ---
 layout: page
-title: "A Workbench update doesn't appear to have installed"
 parent: Troubleshooting
 title: "The \`mettleci datastage create-project\` command fails"
 nav_order: 2
