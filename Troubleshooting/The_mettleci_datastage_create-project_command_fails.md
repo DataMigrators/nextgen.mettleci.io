@@ -4,6 +4,15 @@ title: "The mettleci datastage create-project command fails"
 parent: Troubleshooting
 ---
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 # Symptom
 
 The `mettleci datastage create-project` command (<a
