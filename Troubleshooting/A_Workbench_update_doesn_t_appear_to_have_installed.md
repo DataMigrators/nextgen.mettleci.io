@@ -1,6 +1,9 @@
 ---
 layout: page
 title: "A Workbench update doesn't appear to have installed"
+parent: Troubleshooting
+nav_order: 2
+---
 ---
 
 # A Workbench update doesn't appear to have installed
