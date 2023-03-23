@@ -1,8 +1,7 @@
 ---
 layout: page
+title: "The mettleci datastage create-project command fails"
 parent: Troubleshooting
-title: "The \`mettleci datastage create-project\` command fails"
-nav_order: 2
 ---
 
 # Symptom
