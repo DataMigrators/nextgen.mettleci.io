@@ -3,15 +3,14 @@ description: Documentation for MettleCI running on DataStage NextGen
 theme: just-the-docs
 
 # Color scheme supports "light" (default) and "dark"
-color_scheme: wider
+color_scheme: dark
 
 url: https://nextgen.mettleci.io
 
 # Aux links for the upper right navigation
-aux_links:
-  Legacy MettleCI Docs: http://docs.mettleci.io/
-  "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
+# aux_links:
+#  Legacy MettleCI Docs: http://docs.mettleci.io/
+#  "Just the Docs on GitHub": "//github.com/pmarsceill/just-the-docs"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
@@ -21,12 +20,6 @@ nav_external_links:
     url: http://docs.mettleci.io/
   - title: Server-to-Parallel Conversion
     url: http://s2px.mettleci.io/
-
-
-# Footer content
-# appears at the bottom of every page's main content
-# Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust markup / liquid-based content.
-footer_content: "Copyright &copy; 2017-2023 Data Migrators Pty Ltd"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
