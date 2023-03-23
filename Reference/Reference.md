@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Configuration
+title: Reference
 nav_order: 3
 has_children: true
 has_toc: true
-permalink: /configuration
+permalink: /reference
 ---
 
