@@ -3,7 +3,7 @@ description: Documentation for MettleCI running on DataStage NextGen
 theme: just-the-docs
 
 # Color scheme supports "light" (default) and "dark"
-color_scheme: dark
+color_scheme: dark, wider
 
 url: https://nextgen.mettleci.io
 
