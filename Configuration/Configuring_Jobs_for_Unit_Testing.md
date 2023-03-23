@@ -1,4 +1,9 @@
-# Configuring Jobs for Unit Testing
+---
+layout: page
+title: "Configuring Jobs for Unit Testing"
+parent: Configuration
+nav_order: 2
+---
 
 MettleCI's powerful Unit Test capability allows developer to conduct
 unit testing using authored, captured, or fabricated data without having
