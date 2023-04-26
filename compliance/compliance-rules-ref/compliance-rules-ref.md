@@ -5,7 +5,7 @@ nav_order: 3
 parent: Compliance
 has_children: true
 has_toc: true
-permalink: /compliance_rules_reference
+permalink: /compliance-rules-ref
 ---
 
 # Compliance Rules Reference
