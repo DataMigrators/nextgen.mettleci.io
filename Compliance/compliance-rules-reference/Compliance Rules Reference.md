@@ -1,16 +1,11 @@
 ---
-layout: page
-title: Compliance_Rules_Reference
-parent: .
----
-
----
 layout: default
-title: Compliance
+title: Compliance Rules Reference
 nav_order: 3
+parent: Compliance
 has_children: true
 has_toc: true
-permalink: /compliance
+permalink: /compliance_rules_reference
 ---
 
 # Compliance Rules Reference
@@ -23,20 +18,19 @@ which the rule can be applied:
 
 | Compliance Rule Extension     | Asset Type                |
 |-------------------------------|---------------------------|
-| `.pjb.grm`                    | Parallel job              |
-| `.qjb.grm`                    | Sequence job              |
-| `.sjb.grm`                    | Server job                |
+| `.pjb.grm`                    | Parallel flow             |
+| `.qjb.grm`                    | Sequence flow             |
 | `.psc.grm`                    | Parallel shared container |
 | `.ssc.grm`                    | Server shared container   |
 
 The current set of sample Compliance Rules are detailed below:
 
-| Compliance Rule                                                                                                                                                         | Parallel Job | Server Job | Job Sequence | Description                                                                                                                             |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| [Adjacent Transformers](Adjacent_Transformers)                                                                                     | Yes          | Yes        | \-           | Identified job designs with adjacent Transformer stages.                                                                                |
-| [Aggregator Not Preceded by ‘Check’ Sort](Aggregator_Not_Preceded_by_Check_Sort)                                                                                         | Yes          | \-         | \-           | Identifies Parallel Aggregator Stages not preceded by a ‘Check’ Sort Stage.                                                             |
-| [Audit Annotation](/wiki/spaces/MCIDOC/pages/2219278417/Audit+Annotation)                                                                                               | Yes          | Yes        | Yes          | Identifies where sensitive information may potentially be present in DataStage Job and Sequence Annotations                             |
-| [CCMigrateTool Stages](/wiki/spaces/MCIDOC/pages/2216886309/CCMigrateTool+Stages)                                                                                       | Yes          | Yes        | \-           | Identifies the use of deprecated stages in Parallel Jobs and suggests an alternative                                                    |
+| Compliance Rule | Parallel Flow | Job Sequence | Description                                                                                                                             |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| [Adjacent Transformers](Adjacent_Transformers) | Yes | \-  | Identified job designs with adjacent Transformer stages.|
+| [Aggregator Not Preceded by ‘Check’ Sort](Aggregator_Not_Preceded_by_Check_Sort) | Yes | \- | Identifies Parallel Aggregator Stages not preceded by a ‘Check’ Sort Stage.|
+| [Audit Annotation](/wiki/spaces/MCIDOC/pages/2219278417/Audit+Annotation) | Yes | Yes | Identifies where sensitive information may potentially be present in DataStage Job and Sequence Annotations|
+| [CCMigrateTool Stages](/wiki/spaces/MCIDOC/pages/2216886309/CCMigrateTool+Stages)                                                                                       | Yes        | \-           | Identifies the use of deprecated stages in Parallel Jobs and suggests an alternative                                                    |
 | [Column Name Contains Unsupported Characters](/wiki/spaces/MCIDOC/pages/2322006017/Column+Name+Contains+Unsupported+Characters)                                         | \-           | Yes        | \-           | Identifies stage columns with names using characters not supported by the Parallel Engine.                                              |
 | [Consider Surrogate Key Generator over Transformer Surrogate Key](/wiki/spaces/MCIDOC/pages/2352480257/Consider+Surrogate+Key+Generator+over+Transformer+Surrogate+Key) | Yes          | \-         | \-           | Recommends considering replacing a Transformer Stage using a Surrogate Key with a Surrogate Key Generator stage.                        |
 | [Custom Stages](/wiki/spaces/MCIDOC/pages/2217115649/Custom+Stages)                                                                                                     | Yes          | Yes        | \-           | This rule detects the use of Custom stages in Parallel Jobs                                                                             |
