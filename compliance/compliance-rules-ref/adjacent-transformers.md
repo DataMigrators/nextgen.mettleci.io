@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Adjacent_Transformers
-parent: compliance-rules-ref
+parent: parent: Compliance Rules Ref
 nav_order: 3
-permalink: compliance-rules-ref/adjacent_transformers
+permalink: adjacent_transformers
 ---
 # Adjacent Transformers
 
