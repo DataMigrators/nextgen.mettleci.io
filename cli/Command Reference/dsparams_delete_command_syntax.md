@@ -1,0 +1,1 @@
+# dsparams delete command syntax

@@ -1,0 +1,1 @@
+# isx cut command syntax

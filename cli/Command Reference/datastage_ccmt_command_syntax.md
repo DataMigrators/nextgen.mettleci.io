@@ -1,0 +1,1 @@
+# datastage ccmt command syntax

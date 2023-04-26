@@ -1,0 +1,1 @@
+# datastage compile command syntax
