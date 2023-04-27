@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Adjacent_Transformers
-parent: parent: Compliance Rules Ref
+parent: Compliance Rules Reference
 nav_order: 3
 permalink: adjacent_transformers
 ---
