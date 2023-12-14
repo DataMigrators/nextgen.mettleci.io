@@ -1,3 +1,10 @@
+---
+layout: default
+title: Configuration
+nav_order: 1
+has_children: false
+has_toc: false
+---
 # Adjacent Transformers
 
 ## Summary
