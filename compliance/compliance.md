@@ -1,3 +1,12 @@
+---
+layout: default
+title: compliance
+nav_order: 3
+has_children: true
+has_toc: true
+permalink: /compliance
+---
+
 # MettleCI Cloud Pak Compliance Rule Reference
 
 This page lists the example DataStage compliance rules suplied with MettleCI for IBM Cloud Pak for Data.
