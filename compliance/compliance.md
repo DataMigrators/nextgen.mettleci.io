@@ -1,6 +1,6 @@
 ---
 layout: default
-title: compliance
+title: Compliance
 nav_order: 3
 has_children: true
 has_toc: true
