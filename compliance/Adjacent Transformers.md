@@ -3,8 +3,6 @@ layout: page
 title: "Adjacent Transformers"
 parent: Compliance
 nav_order: 2
-has_children: false
-has_toc: false
 ---
 
 # Adjacent Transformers
