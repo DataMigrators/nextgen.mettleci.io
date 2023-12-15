@@ -1,8 +1,7 @@
 ---
-layout: page
+layout: default
 title: "compliance"
 parent: Compliance
-nav_order: 2
 ---
 
 ---
