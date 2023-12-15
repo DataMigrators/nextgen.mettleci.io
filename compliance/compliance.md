@@ -8,9 +8,9 @@ nav_order: 2
 ---
 layout: default
 title: Compliance
-nav_order: 1
-has_children: falstrue
+has_children: true
 has_toc: true
+permalink: /compliance
 ---
 
 # MettleCI Cloud Pak Compliance Rule Reference
