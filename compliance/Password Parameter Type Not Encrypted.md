@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Password Parameter Type Not Encrypted"
+parent: Compliance
+nav_order: 2
+---
+
 # Password Param Type Not Encrypted
 
 ## Summary

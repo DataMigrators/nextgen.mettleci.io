@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Default Naming"
+parent: Compliance
+nav_order: 2
+---
+
 # Default Naming
 
 ## Summary

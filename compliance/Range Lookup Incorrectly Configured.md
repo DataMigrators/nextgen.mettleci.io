@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Range Lookup Incorrectly Configured"
+parent: Compliance
+nav_order: 2
+---
+
 # Range Lookup
 
 ## Summary

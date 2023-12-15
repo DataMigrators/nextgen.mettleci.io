@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Lookup Failure"
+parent: Compliance
+nav_order: 2
+---
+
 # Lookup Failure
 
 ## Summary

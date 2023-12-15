@@ -1,3 +1,10 @@
+---
+layout: page
+title: "DB Connector Not Auto Generate SQL"
+parent: Compliance
+nav_order: 2
+---
+
 # DB Connector Not Auto Generate SQL
 
 ## Summary

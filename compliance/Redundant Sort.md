@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Redundant Sort"
+parent: Compliance
+nav_order: 2
+---
+
 # Redundant Sort
 
 ## Summary

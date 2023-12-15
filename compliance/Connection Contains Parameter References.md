@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Connection Contains Parameter References"
+parent: Compliance
+nav_order: 2
+---
+
 # Connection Contains Parameter References
 
 ## Summary

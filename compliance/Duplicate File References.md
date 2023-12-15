@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Duplicate File References"
+parent: Compliance
+nav_order: 2
+---
+
 # Duplicate File References
 
 ## Summary

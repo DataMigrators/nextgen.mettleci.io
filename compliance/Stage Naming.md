@@ -1,8 +1,15 @@
+---
+layout: page
+title: "Stage Naming"
+parent: Compliance
+nav_order: 2
+---
+
 # Stage Naming
 
-## Sumnmary
+## Summary
 
-Stage Naming Standards for Parallel Flows and Watson Pipelines.
+Stage naming standards for DataStage flows and watson pipelines.
 
 ## Description
 
@@ -14,4 +21,4 @@ In most cases, this is achieved by having a prefix that reflects the stage type.
 
 ## Actions
 
-Ensure your Flow Stages or Watson Pipeline DataStage components are named according to your naming standards.
+Ensure your flow stages or Watson pipeline DataStage components are named according to your naming standards.

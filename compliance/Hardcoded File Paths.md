@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Hardcoded File Paths"
+parent: Compliance
+nav_order: 2
+---
+
 # Hardcoded File Paths
 
 ## Summary

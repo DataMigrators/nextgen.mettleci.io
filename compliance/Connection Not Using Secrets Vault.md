@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Connection Not Using Secrets Vault"
+parent: Compliance
+nav_order: 2
+---
+
 # Connection Not Using Secrets Vault
 
 ## Summary

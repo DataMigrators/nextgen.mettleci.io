@@ -1,3 +1,10 @@
+---
+layout: page
+title: "SQL in DB Connectors"
+parent: Compliance
+nav_order: 2
+---
+
 # File Reference Missing Required Parameter
 
 ## Summary

@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Sequential File With Reject Mode Not Set To Fail"
+parent: Compliance
+nav_order: 2
+---
+
 # Sequential File With Reject Mode Not Set To Fail
 
 ## Summary

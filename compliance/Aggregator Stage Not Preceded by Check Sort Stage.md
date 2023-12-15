@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Aggregator Stage Not Preceded by Check Sort Stage"
+parent: Compliance
+nav_order: 2
+---
+
 # Aggregator Stage Not Preceded by Check Sort Stage
 
 ## Summary

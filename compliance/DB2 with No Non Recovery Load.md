@@ -1,3 +1,10 @@
+---
+layout: page
+title: "DB2 with No Non Recovery Load"
+parent: Compliance
+nav_order: 2
+---
+
 # Db2 with No Non Recovery Load
 
 ## Summary

@@ -9,11 +9,11 @@ nav_order: 2
 
 ## Summary
 	
-Identified job designs with adjacent Transformer stages.
+Identifies flow designs with adjacent Transformer stages.
 
 ## Description
 
-Although powerful, transformers contain embedded logic that is not immediately obvious when looking at the canvas and reduces a developers ability to immediately understand a job's logic. Overuse of transformers when more 'verbose' stages could achieve the same outcome can result in greater maintenance overhead.
+Although powerful, transformers contain embedded logic that is not immediately obvious when looking at the canvas and reduces a developers ability to immediately understand a flow's logic. Overuse of transformers when more 'verbose' stages could achieve the same outcome can result in greater maintenance overhead.
 
 Adjacent transformers can be a symptom of a transformer that has become so complex that a developer has needed to split its logic across two transformers. When this occurs, developers should consider if there is an alternative implementation strategy that could be implemented using multiple standard stages working in conjunction rather than performing all logic within
 one or more transformer stages
