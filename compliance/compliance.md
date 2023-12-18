@@ -3,6 +3,7 @@ layout: default
 title: Compliance
 has_children: true
 has_toc: true
+parent: Reference
 permalink: /compliance
 ---
 
