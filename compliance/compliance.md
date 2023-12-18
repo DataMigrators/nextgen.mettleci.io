@@ -1,11 +1,4 @@
 ---
-layout: page
-title: "compliance"
-parent: Compliance
-nav_order: 2
----
-
----
 layout: default
 title: Compliance
 has_children: true
