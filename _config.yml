@@ -8,8 +8,8 @@ color_scheme: dark
 url: https://nextgen.mettleci.io
 
 # Aux links for the upper right navigation
-# aux_links:
-#  Legacy MettleCI Docs: http://docs.mettleci.io/
+aux_links:
+  "Legacy MettleCI Docs": "//docs.mettleci.io/"
 #  "Just the Docs on GitHub": "//github.com/pmarsceill/just-the-docs"
 
 # Makes Aux links open in a new tab. Default is false
@@ -21,6 +21,23 @@ nav_external_links:
   - title: Server-to-Parallel Conversion
     url: http://s2px.mettleci.io/
 
-# Footer last edited timestamp
+# Footer content
+footer_content: "Copyright &copy; 2017-2024 Data Migrators Pty Ltd."
+
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Settings
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+  # ignore:
+  #   envs: all
