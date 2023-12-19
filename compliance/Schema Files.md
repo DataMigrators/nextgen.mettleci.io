@@ -2,7 +2,6 @@
 layout: page
 title: "Schema Files"
 parent: Compliance
-nav_order: 2
 ---
 
 # Schema Files

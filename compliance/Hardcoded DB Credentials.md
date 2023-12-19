@@ -2,7 +2,6 @@
 layout: page
 title: "Hardcoded DB Credentials"
 parent: Compliance
-nav_order: 2
 ---
 
 # Hardcoded DB Credentials

@@ -2,7 +2,6 @@
 layout: page
 title: "DataSet Not Using Same Partition"
 parent: Compliance
-nav_order: 2
 ---
 
 # DataSet Not Using Same Partition

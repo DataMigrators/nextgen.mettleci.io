@@ -2,7 +2,6 @@
 layout: page
 title: "Sort Post Join Stage"
 parent: Compliance
-nav_order: 2
 ---
 
 # Sort Post Join Stage

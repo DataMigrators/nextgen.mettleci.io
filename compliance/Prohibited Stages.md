@@ -2,7 +2,6 @@
 layout: page
 title: "Prohibited Stages"
 parent: Compliance
-nav_order: 2
 ---
 
 # Prohibited Stages

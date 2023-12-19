@@ -2,7 +2,6 @@
 layout: page
 title: "Unencrypted DB Passwords"
 parent: Compliance
-nav_order: 2
 ---
 
 # Unencrypted database passwords

@@ -2,7 +2,6 @@
 layout: page
 title: "Oracle Connector Not Using Partitioned Read"
 parent: Compliance
-nav_order: 2
 ---
 
 # Oracle Connector Not Using Partition Read

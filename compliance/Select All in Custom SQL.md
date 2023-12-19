@@ -2,7 +2,6 @@
 layout: page
 title: "Select All in Custom SQL"
 parent: Compliance
-nav_order: 2
 ---
 
 # "Select *" in Custom SQL

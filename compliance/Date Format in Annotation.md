@@ -2,7 +2,6 @@
 layout: page
 title: "Date Format in Annotation"
 parent: Compliance
-nav_order: 2
 ---
 
 # Data Format in Annotation

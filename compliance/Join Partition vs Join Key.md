@@ -2,7 +2,6 @@
 layout: page
 title: "Join Partition vs Join Key"
 parent: Compliance
-nav_order: 2
 ---
 
 # Join Partition vs Join Key

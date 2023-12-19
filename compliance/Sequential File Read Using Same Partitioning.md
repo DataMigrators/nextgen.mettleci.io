@@ -2,7 +2,6 @@
 layout: page
 title: "Sequential File Read Using Same Partitioning"
 parent: Compliance
-nav_order: 2
 ---
 
 # Sequential File Read Using Same Partitioning

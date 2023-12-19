@@ -2,7 +2,6 @@
 layout: page
 title: "System Time Dependency"
 parent: Compliance
-nav_order: 2
 ---
 
 # System Time Dependency

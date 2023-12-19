@@ -2,7 +2,6 @@
 layout: page
 title: "Log Column Values"
 parent: Compliance
-nav_order: 2
 ---
 
 # Log Column Values

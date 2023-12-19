@@ -2,7 +2,6 @@
 layout: page
 title: "SQL in DB Connectors"
 parent: Compliance
-nav_order: 2
 ---
 
 # SQL in DB Connectors

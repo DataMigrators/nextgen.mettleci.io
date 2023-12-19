@@ -2,7 +2,6 @@
 layout: page
 title: "Adjacent Transformers"
 parent: Compliance
-nav_order: 2
 ---
 
 # Adjacent Transformers

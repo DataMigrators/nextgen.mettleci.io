@@ -2,7 +2,6 @@
 layout: page
 title: "Database Row Limit"
 parent: Compliance
-nav_order: 2
 ---
 
 # Database Row Limit

@@ -2,7 +2,6 @@
 layout: page
 title: "Link Sort"
 parent: Compliance
-nav_order: 2
 ---
 
 # Link Sort

@@ -2,7 +2,6 @@
 layout: page
 title: "Stage Naming"
 parent: Compliance
-nav_order: 2
 ---
 
 # Stage Naming

@@ -2,7 +2,6 @@
 layout: page
 title: "Database Query From File"
 parent: Compliance
-nav_order: 2
 ---
 
 # Database Query From File

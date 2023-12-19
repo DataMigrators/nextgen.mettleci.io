@@ -2,7 +2,6 @@
 layout: page
 title: "Flow Using Random Function"
 parent: Compliance
-nav_order: 2
 ---
 
 # Flow Using Random Function
