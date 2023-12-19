@@ -12,7 +12,8 @@ Identify Transformers (or other stages) using Random functions which produce non
 
 ## Description
 
-Rand(), Random() & Srandom() are functions which produce non-deterministic output. This will cause false positive in MettleCI Unit Testing results
+`Rand()`, `Random()` and `Srandom()` are examples of functions which produce non-deterministic output. 
+Output columns whose values are dependent upon these functions will produce unexpected results which cannot, therefore, be useed in MettleCI unit tests.
 
 ## Actions
 
