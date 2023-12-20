@@ -16,4 +16,4 @@ It is good practice to consider the use of Parameter Sets to store Flow Paramete
 
 ## Actions
 
-Ensure all your Flow Parameters are included in a Pararmeter Set.
+Ensure all your Flow Parameters are included in a Parameter Set.
