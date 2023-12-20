@@ -12,9 +12,9 @@ This page lists the example DataStage compliance rules suplied with MettleCI for
 
 | Rule name | Description |
 |-----------|-------------|
-| [Adjacent Transformers](Adjacent Transformers.md) | Identifies flow designs with adjacent Transformer stages. |
-| [Aggregator Stage Not Preceded by Check Sort Stage](Aggregator Stage Not Preceded by Check Sort Stage.md) | Aggregator Stage will only return the correct result if the keys are pre-sorted |
-| [Audit Annotation](Audit Annotation.md) | Identifies where sensitive information may potentially be present in DataStage Job and Sequence Annotations. |
+| [Adjacent Transformers](Adjacent Transformers) | Identifies flow designs with adjacent Transformer stages. |
+| [Aggregator Stage Not Preceded by Check Sort Stage](Aggregator Stage Not Preceded by Check Sort Stage) | Aggregator Stage will only return the correct result if the keys are pre-sorted |
+| [Audit Annotation](Audit Annotation) | Identifies where sensitive information may potentially be present in DataStage Job and Sequence Annotations. |
 | [Connection Contains Parameter References](Connection Contains Parameter References.md) | Identifies Connections created by the migration from legacy Datastage to NextGen that contain references to |
 | [Connection Not Using Secrets Vault](Connection Not Using Secrets Vault.md) | Identifies Connections that do not store their credentials to use secrets in a vault. |
 | [Database Query From File](Database Query From File.md) | Ensures if Database Connectors and Stages reads SQL statement from file. |
