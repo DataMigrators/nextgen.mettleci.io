@@ -49,3 +49,4 @@ tch
 testthedocs
 textlint
 tox
+[uU]nencrypted
