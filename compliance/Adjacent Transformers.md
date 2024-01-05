@@ -21,5 +21,3 @@ Adjacent transformers can also be a symptom of defect fixes that are clumsily 't
 ## Actions
 
 Adjust your job design so that there are no adjacent transformers. Consider combining adjacent Transformer stages if possible.
-
-

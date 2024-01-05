@@ -8,18 +8,15 @@ parent: Compliance
 
 ## Summary
 
-Identifies where sensitive information may potentially be present in DataStage Job and Sequence Annotations.
+Identifies where sensitive information may be present in DataStage Job and Sequence annotations.
 
 ## Description
 
-This rule looks for the the following signatures in all annotations:
+This rule scans all annotations for instances of the words `hostname`, `password`, `organisation` (`en-UK` spelling) or `organization` (`en-US` spelling).
 
-1. The name of a DataStage hostname, as well as instances 
-2. Instances of the words hostname, password, organisation (`en-UK` spelling) or organization (`en-US` spelling).
+Note that it's impossible to use regular expressions to detect a password, host name, or organisation, but assuming one of these words is found the likelihood of the actual sensitive information being present is high.
 
-Note that it is impossible to use regular expressions to detect a password, hostname, or organisation, but assuming one of these words is found the likelihood of the actual sensitive information being present is high.
-
-Like all MettleCI Compliance Rules, this rule is an example intended for you to adapt to suit your needs.
+Like all MettleCI Compliance Rules, this rule is provided as an example intended for you to adapt to suit your needs.
 
 ## Actions
 

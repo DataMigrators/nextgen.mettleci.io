@@ -8,12 +8,11 @@ parent: Compliance
 
 ## Summary
 
-Identifies Connections that do not store their credentials to use secrets in a vault.
+Identifies Connections that don't store their credentials to use secrets in a vault.
 
 ## Description
 
-Connections have the option of retrieving their credentials from a secret in a vault.
-If this option is not taken, the credential values are stored in plain text when the connection object is exported from the project, in spite of being displayed in the UI as excrypted.
+Connections have the option of retrieving their credentials from a secret in a vault. If this option isn't taken the credential values are stored in plain text when the connection object is exported from the project, despite being displayed in the user interface as encrypted.
 
 ## Actions
 
