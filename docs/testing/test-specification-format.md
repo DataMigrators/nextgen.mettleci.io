@@ -115,7 +115,7 @@ Substitute hardcoded values for the `DSJobStartDate` and `DSJobStartTime` macros
 }
 ```
 
-One application of the `parameters` property is to supply values to make flows that rely on system date and time information produce a deterministic output by [hard coding those values when testing](testing-flows-using-datetime-references.md).
+One application of the `parameters` property is to supply values to make flows that rely on system date and time information produce a deterministic output by [hard coding those values when testing](../patterns/testing-flows-using-datetime-references.md).
 
 **Note** that the `data_intg_flow_ref` property is an internally-generated DataStage reference to the flow with which this test is associated and should not be changed.
 

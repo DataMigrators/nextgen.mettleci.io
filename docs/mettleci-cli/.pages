@@ -1,3 +1,4 @@
 title: MettleCI CLI
 nav:
     - command-shell.md
+    - compliance-namespace.md
