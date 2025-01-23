@@ -1,0 +1,13 @@
+title: Test Cases
+nav:
+    - testing-datastage-flows.md
+    - configuring-test-data-storage.md
+    - creating-datastage-test-cases.md
+    - migrating-datastage-tests-from-older-versions.md
+    - test-specification-format.md
+    - capturing-test-data.md
+    - baselining-test-results.md
+    - editing-datastage-tests.md
+    - executing-datastage-test-cases.md
+    - verifying-test-results.md
+    - troubleshoot-testing.md

@@ -1,7 +1,9 @@
 nav:
-    - index.md
     - overview
-    - blog
-    - about
-    - help
+    - flow-analysis
+    - testing
+    - patterns
+    - pipelines
+    - mettleci-cli
+    - troubleshooting
     - tags.md
