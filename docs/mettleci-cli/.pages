@@ -2,3 +2,6 @@ title: MettleCI CLI
 nav:
     - command-shell.md
     - compliance-namespace.md
+    - datastage-namespace.md
+    - unittest-namespace.md
+    - project-cache-directory.md

@@ -37,7 +37,7 @@ Some of the available commands (listed below) use IBM DataStage client component
 mettleci [namespace] [command] {commandoptions}
 ```
 
-Here's an example of the MettleCI Command Line being used to compile an entire DataStage project (using the ['compile' command provided by the 'datastage' namespace](link.md)) :
+Here's an example of the MettleCI Command Line being used to compile an entire DataStage project (using the ['compile' command provided by the 'datastage' namespace](datastage-namespace.md)) :
 
 ```shell
 # Note that the example below uses the line continuation charactere ('\' on Unix or '^' on Windows)

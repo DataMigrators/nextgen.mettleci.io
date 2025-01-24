@@ -5,7 +5,7 @@ tags:
   - DATASTAGE
   - TESTING
 ---
-# Test Cases with local and shared containers
+# Testing flow with sub-flows
 
 ???+ info "This patterns is handled automatically for you by DataStage"
 
@@ -15,7 +15,7 @@ Let's take a simple example of a DataStage test case:
 
 ![representation of a DataStage job showing CSV files being injected into source stages and an output stage referring to a CSV file which does not exist](./images/ds-test-case-simple2.png "test baseline screen capture")
 
-Containers (both local and shared) complicate this situation as stage names in DataStage are only unique within a given flow or container.  
+Sub-flows (both local and shared) complicate this situation as stage names in DataStage are only unique within a given flow or container.  
 
 Consider writing a test specification for the following flow, `ProcessAccounts`, which includes a shared container stage `ContainerC1` which is itself a reference to the shared container `scWriteAccounts`:
 
