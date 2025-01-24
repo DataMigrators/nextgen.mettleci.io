@@ -9,6 +9,10 @@
          <lastmod>2025-01-24</lastmod>
     </url>
     <url>
+         <loc>https://pages.github.ibm.com/datamigrators/devops-for-datastage/fabrication/fabrication/</loc>
+         <lastmod>2025-01-24</lastmod>
+    </url>
+    <url>
          <loc>https://pages.github.ibm.com/datamigrators/devops-for-datastage/flow-analysis/flow-analysis/</loc>
          <lastmod>2025-01-24</lastmod>
     </url>
@@ -21,11 +25,23 @@
          <lastmod>2025-01-24</lastmod>
     </url>
     <url>
+         <loc>https://pages.github.ibm.com/datamigrators/devops-for-datastage/mettleci-cli/datastage-namespace/</loc>
+         <lastmod>2025-01-24</lastmod>
+    </url>
+    <url>
          <loc>https://pages.github.ibm.com/datamigrators/devops-for-datastage/mettleci-cli/project-cache-directory/</loc>
          <lastmod>2025-01-24</lastmod>
     </url>
     <url>
+         <loc>https://pages.github.ibm.com/datamigrators/devops-for-datastage/mettleci-cli/unittest-namespace/</loc>
+         <lastmod>2025-01-24</lastmod>
+    </url>
+    <url>
          <loc>https://pages.github.ibm.com/datamigrators/devops-for-datastage/overview/</loc>
+         <lastmod>2025-01-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pages.github.ibm.com/datamigrators/devops-for-datastage/patterns/high-volume-tests/</loc>
          <lastmod>2025-01-24</lastmod>
     </url>
     <url>
@@ -50,6 +66,10 @@
     </url>
     <url>
          <loc>https://pages.github.ibm.com/datamigrators/devops-for-datastage/pipelines/</loc>
+         <lastmod>2025-01-24</lastmod>
+    </url>
+    <url>
+         <loc>https://pages.github.ibm.com/datamigrators/devops-for-datastage/pipelines/pipelines/</loc>
          <lastmod>2025-01-24</lastmod>
     </url>
     <url>
