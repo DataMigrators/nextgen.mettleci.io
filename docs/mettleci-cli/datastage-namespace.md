@@ -274,7 +274,6 @@ Inspecting DataStage assets for last change...
 Last change to project occurred at 2023-12-17 22:07:00 GMT     
 ```
 
-
 ## DataStage Execute
 
 ![datastage compile syntax](./images/datastage-compile.png "datastage compile syntax")
