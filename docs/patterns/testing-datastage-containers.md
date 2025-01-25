@@ -7,7 +7,7 @@ tags:
 ---
 # Testing flow with sub-flows
 
-???+ info "This patterns is handled automatically for you by DataStage"
+??? info "This patterns is handled automatically for you by DataStage"
 
     For DataStage flows that use this pattern the DataStage test case creation process will generate an appropriately structured test case specification. This page acts as a reference to explain the structure of the generated JSON test specification.
 
