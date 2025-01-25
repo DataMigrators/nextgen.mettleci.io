@@ -5,5 +5,4 @@ nav:
     - patterns
     - pipelines
     - mettleci-cli
-    - troubleshooting
     - tags.md
