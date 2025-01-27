@@ -2,10 +2,10 @@
 status: reviewed #Status can be draft, reviewed or published. 
 owner: John McKeever
 tags:
-  - PIPELINE
+  - Pipeline
   - CLI
-  - COMPLIANCE
-  - TAGS
+  - Flow Analysis
+  - Tags
 ---
 # Compliance namespace
 

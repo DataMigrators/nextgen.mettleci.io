@@ -1,11 +1,9 @@
 ---
-classification: confidential #Remove this line if it's not IBM Confidential.
-status: draft #Status can be draft, reviewed or published. 
-owner: Add the main page authors
+status: reviewed #Status can be draft, reviewed or published. 
+owner: John McKeever
 tags:
-  - TAG1
-  - TAG2
-  - TAG3
+  - DataStage
+  - Running Tests
 ---
 # UnitTest namespace
 

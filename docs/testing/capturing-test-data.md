@@ -2,9 +2,9 @@
 status: reviewed
 owner: John McKeever
 tags:
-  - DATASTAGE
-  - TESTING
-  - CAPTURE
+  - DataStage
+  - Creating Tests
+  - Capture
 ---
 # Capturing test data
 

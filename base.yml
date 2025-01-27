@@ -181,10 +181,3 @@ plugins:
       media_type: print
       enabled_if_env: ENABLE_PDF_EXPORT
       combined: false
-  rss:
-      match_path: blog/posts/.*
-      date_from_meta:
-        as_creation: date
-      categories:
-        - categories
-        - tags  

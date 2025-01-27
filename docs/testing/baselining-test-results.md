@@ -2,8 +2,8 @@
 status: reviewed
 owner: John McKeever
 tags:
-  - DATASTAGE
-  - TESTING
+  - DataStage
+  - Creating Tests
 ---
 # Recapture a test result baseline
 

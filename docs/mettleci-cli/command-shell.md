@@ -2,8 +2,8 @@
 status: reviewed
 owner: John McKeever
 tags:
-  - DATASTAGE
-  - TESTING
+  - DataStage
+  - Running Tests
 ---
 # MettleCI Command Shell
 
@@ -28,7 +28,7 @@ In console mode MettleCI prints a command prompt and waits for a command. Each c
 
 In command mode you can enter commands one at a time at your operating system's command line. Start each command (omitting the quotes) with `mettleci` (unix) or `mettleci.cmd` (Windows) followed by a namespace and command, then the parameters.
 
-Open image2019-10-25_22-51-19.png
+![command mode](./images/cli-command-mode.png "command mode")
 
 Some of the available commands (listed below) use IBM DataStage client components, and so are platform specific.  For example, job compilation requires access to Windows-only components, and so will not be supported on Unix environments.  The MettleCI command is followed by a namespace, which groups a collection of build and deployment operations.  Each of these commands accepts a number of mandatory and/or optional parameters. 
 

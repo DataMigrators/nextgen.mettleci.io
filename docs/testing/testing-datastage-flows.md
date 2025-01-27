@@ -2,8 +2,9 @@
 status: reviewed
 owner: John McKeever
 tags:
-  - DATASTAGE
-  - TESTING
+  - DataStage
+  - Creating Tests
+  - Executing Tests
 ---
 # Getting Started With Testing DataStage Flows
 

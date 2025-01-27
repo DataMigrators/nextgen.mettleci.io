@@ -2,8 +2,8 @@
 status: reviewed
 owner: John McKeever
 tags:
-  - DATASTAGE
-  - TESTING
+  - DataStage
+  - Creating Tests
 ---
 # DataStage test specification format
 

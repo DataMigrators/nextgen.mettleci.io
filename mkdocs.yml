@@ -66,11 +66,11 @@ markdown_extensions:
 
 plugins:
   # Built-in blog plugin - see https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/
-  blog:
-      blog_dir: "blog"
-      pagination_per_page: 5
-      post_date_format: full
-      post_url_date_format: yyyy/MM/dd
+#  blog:
+#      blog_dir: "blog"
+#      pagination_per_page: 5
+#      post_date_format: full
+#      post_url_date_format: yyyy/MM/dd
   # Allow Tags on the pages - see https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
   tags:
       tags_file: tags.md
@@ -96,7 +96,7 @@ plugins:
       #
       exclude_pages:
           - '99.about/'
-          - 'blog'
+#          - 'blog'
       #    - 'appendix/contribute/'
       #convert_iframe:
       #    - src: IFRAME SRC
