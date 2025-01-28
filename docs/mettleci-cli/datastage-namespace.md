@@ -42,42 +42,7 @@ Exporting DataStage assets...
  * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Utilities/UT_CONTROL.pjb' - COMPLETED
  * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_TRANSACTION.pjb' - COMPLETED
  * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_PURCHASE.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_TRANSACTION_TYPE.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_CUSTOMER.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_CITY.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_STOCKITEM.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_ORDERS.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_STOCKITEM.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_STOCK_HOLDING.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/ParameterSets/pDMSqlServer_DW.pst' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_MOVEMENT.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_SALE.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/ParameterSets/pGlobal.pst' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_MOVEMENT.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_ORDERS.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_TRANSACTION_TYPE.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_EMPLOYEE.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_CUSTOMER.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Connections/DMSqlServer_DW.dcn' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_ORDERS.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_TRANSACTION_TYPE.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Utilities/UT_LOAD_TABLE.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_CITY.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_STOCK_HOLDING.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_CUSTOMER.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_CITY.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_PAYMENT_METHOD.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_EMPLOYEE.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/ParameterSets/pDMSqlServer_OLTP.pst' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_STOCKITEM.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_TRANSACTION.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_MOVEMENT.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_SUPPLIER.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_TRANSACTION.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_PAYMENT_METHOD.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_SALE.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Load/LD_PURCHASE.pjb' - COMPLETED
- * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_SALE.pjb' - COMPLETED
+<snip>
  * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_PURCHASE.pjb' - COMPLETED
  * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Transform/TR_PAYMENT_METHOD.pjb' - COMPLETED
  * Export 'DATASTAGE-ENGINE.MYORGANIZATION.COM/myproject/Jobs/Extract/EX_SUPPLIER.pjb' - COMPLETED
@@ -108,6 +73,8 @@ Attempting to identify changes with 4 working threads.
 Inspecting DataStage assets for changes...
 Change identification complete, 0 asset changes detected in project
 ```
+
+---
 
 ## DataStage Cleanup-Projects
 
@@ -145,6 +112,8 @@ Deleting project: SNTest1
  * Delete 'test2-engn.datamigrators.io/Test1' - COMPLETED
 ```
 
+---
+
 ## DataStage Compile
 
 ![datastage compile syntax](./images/datastage-compile.png "datastage compile syntax")
@@ -171,6 +140,8 @@ Compiling DataStage jobs...
  * Compile 'engine_tier.datamigrators.io/dstage1/Jobs/Load/LD_STOCK_HOLDING.pjb' - COMPLETED
 Compilation complete
 ``` 
+
+---
 
 ## DataStage Create-Project
 
@@ -200,6 +171,8 @@ Due to a known issue with the DataStage dsadmin command itself it is not possibl
 There may be some situations in which this causes the `mettleci datastage create-project` command to fail. When faced with an inexplicable failure of this nature check to see if the project’s directory structure already exists on the filesystem.  If so, and it’s safe to do so, remove the file structure and try again.
 
 
+---
+
 ## DataStage Delete-Project
 
 ![datastage compile syntax](./images/datastage-compile.png "datastage compile syntax")
@@ -214,6 +187,8 @@ $> mettleci datastage delete-project \
    -username isadmin -password isadminpwd \
    -project Test3
 ```
+
+---
 
 ## DataStage Deploy
 
@@ -273,6 +248,8 @@ Attempting to identify last change with 4 working threads.
 Inspecting DataStage assets for last change...
 Last change to project occurred at 2023-12-17 22:07:00 GMT     
 ```
+
+---
 
 ## DataStage Execute
 

@@ -180,4 +180,4 @@ plugins:
       verbose: false
       media_type: print
       enabled_if_env: ENABLE_PDF_EXPORT
-      combined: false
+      combined: true

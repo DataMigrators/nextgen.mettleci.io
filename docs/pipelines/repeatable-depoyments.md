@@ -25,7 +25,7 @@ A simple but naïve approach to deploying ISX files containing assets with desig
 
 This approach is repeatable as the content of the resulting DataStage project will always match the software version represented by the source ISX files.  However, performance of this approach is extremely poor and will not allow the resulting CI/CD Pipelines to provide fast feedback to developers.  As an example, a DataStage project containing about 500 jobs will typically take over 1.5hrs to perform both the import and compile steps of this deployment approach.
 
-The implementation used by the MettleCI [deploym command](../../mettleci-cli/datastage-namespace/#datastage-deploy) is logically equivalent to the naïve approach but uses an incremental algorithm to deploy changes in a fast and scalable manner:
+The implementation used by the MettleCI [deploy command](../../mettleci-cli/datastage-namespace/#datastage-deploy) is logically equivalent to the naïve approach but uses an incremental algorithm to deploy changes in a fast and scalable manner:
 
 1. Source ISX files and the existing DataStage project are analyzed for differences
 1. Differences are converted to operations which transform the existing DataStage project to match the source ISX files

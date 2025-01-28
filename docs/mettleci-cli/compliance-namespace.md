@@ -68,6 +68,8 @@ Unique Sort,PARALLEL_JOB,,,,,,maintainability,,,,
 $>
 ```
  
+---
+
 ## Compliance Query Command
  
 ???+ info "This command is for running MettleCI Asset Queries"
@@ -112,6 +114,8 @@ MettleCI Command Line (build 122)
 # Done!
 C:\>
 ```
+
+---
 
 ## Compliance Test Command
 

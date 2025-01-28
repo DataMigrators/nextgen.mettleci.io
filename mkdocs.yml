@@ -82,7 +82,7 @@ plugins:
       back_cover: false
       #
       cover_title: DevOps for DataStage
-      cover_subtitle: Guidance one DataStage DevOps tools and technqiues
+      cover_subtitle: Guidance on DataStage DevOps tools and technqiues
       cover_logo: 'theme/logo-ibm-dark.png'
       #custom_template_path: TEMPLATES PATH
       #
@@ -95,8 +95,7 @@ plugins:
       #    - 'release-notes/:changelog'
       #
       exclude_pages:
-          - '99.about/'
-#          - 'blog'
+      #    - 'blog'
       #    - 'appendix/contribute/'
       #convert_iframe:
       #    - src: IFRAME SRC
@@ -113,4 +112,4 @@ plugins:
       #
       debug_html: true
       #show_anchors: true
-      verbose: false
+      verbose: true
