@@ -14,7 +14,7 @@ This page will present an introduction to the testing pyramid and [some testing 
 
 ![testing pyramid](./images/testing-pyramid.png "testing pyramid")
 
-... and we'll introduce 'shift left' testing philosophy outlined by IBM [here](https://www.ibm.com/think/topics/shift-left-testing).
+# ... and we'll introduce 'shift left' testing philosophy outlined by IBM [here](https://www.ibm.com/think/topics/shift-left-testing).
 
-![shift left](./images/shift-left.png "shift left")
+# ![shift left](./images/shift-left.png "shift left")
 

@@ -6,13 +6,13 @@ INHERIT: ./base.yml
 
 # Project Information
 site_name: "DevOps for DataStage"
-site_url: "https://pages.github.ibm.com/datamigrators/devops-for-datastage/"
+site_url: "https://pages.github.com/datamigrators/devops-for-datastage/"
 site_description: "Guidance one DataStage DevOps tools and technqiues"
 site_author: "John McKeever"
 
 # Repository Information
 repo_name: 'datamigrators/devops-for-datastage'
-repo_url: 'https://github.ibm.com/datamigrators/devops-for-datastage'
+repo_url: 'https://github.com/datamigrators/devops-for-datastage'
 
 # Copyright
 copyright: <a href="/datamigrators/devops-for-datastage/about/authors">Data Migrators Pty Ltd</a>.
@@ -21,11 +21,9 @@ copyright: <a href="/datamigrators/devops-for-datastage/about/authors">Data Migr
 oic_handbook:
   #template_display_info: false    # version information in the footer, defaults to true in base.yml
   announce_text: >
-    The <b>Academy of Technology (AoT)</b> is transforming into <b>IBM Open Innovation Community</b>.
-    See <a href="https://w3.ibm.com/w3publisher/academy-assets/blog/d440d8f0-d2fa-11ed-9765-85f0355fd533"
-    target="_blank">blog post</a> and <a
-    href="https://pages.github.ibm.com/oic/open-innovation-handbook/" target="_blank">Handbook</a> for more details.
-  instana_key: 'SwqWI68BRyCMhG-g5zgsAA'
+    MettleCI release v1.3 is now available on IBM Passport Advantage.  
+    See <a href="https://docs.mettleci.io" target="_blank">docs.mettleci.io</a> for more details.
+  # instana_key: 'SwqWI68BRyCMhG-g5zgsAA'
 
 # Provide some control over theme features.  Comment or un-comment as needed.
 theme:
@@ -94,7 +92,7 @@ plugins:
       #    - 'release-notes/:upgrading'
       #    - 'release-notes/:changelog'
       #
-      exclude_pages:
+      # exclude_pages:
       #    - 'blog'
       #    - 'appendix/contribute/'
       #convert_iframe:

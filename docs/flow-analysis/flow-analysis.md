@@ -7,23 +7,18 @@ tags:
 ---
 # Introduction
 
-!!! note "The latest version can always be found here: https://pages.github.ibm.com/datamigrators/devops-for-datastage/"
+Static code analysis is the analysis of a computer program's code without executing that code; In DataStage NextGen this is referred to as **Flow Anlaysis**.  This approach contrasts with dynamic program analysis, which is performed on programs during their execution, and is achieved in DataStage by creating as DataStage **Test Case**.  
 
-[Download the latest (PDF)](pdf/devops-for-datastage.pdf){ .md-button } [Download the latest (DOCX)](out/devops-for-datastage.docx){ .md-button }
+DataStage's flow analysis functionality validates one or more DataStage assets against a set of quality criteria defined in **Flow Analysis Rules**.  MettleCI ships with a set of [sample flow analysis rules](flow.rules.md) which provide a basis for customers to develop their own suite of flow analysis rules by either using the shipped rules as supplied, ignoring them, modifying them, or augmenting them with new customer-specific rules as required to meet specific needs.  
 
-<div class="grid cards" markdown>
+Flow analysis rules have a variety of applications:
 
--   :material-clock-fast:{ .lg .middle } __Set up in 5 minutes__
+- Enforcing coding standards in DataStage flows, improving the consistency, maintainabiity, and security of your solution
+- Identifying external assets, which may require external management
+- Identifying deprecated stages, allowing upgrade effort to be quantified.
 
-    ---
+Flow analysis rules are grouped into tags
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
--   :material-scale-balance:{ .lg .middle } __Open Source, MIT__
-
-    ---
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-</div>
-
+Flow anlysis rules are also executable as part 
+The Sort stage (highlighted) does not comply with an existing Compliance Rule designed to ensure naming standards.  Note that the DataStage custom menu actions shown in this page are installed by following the DataStage Integration Setup instructions.

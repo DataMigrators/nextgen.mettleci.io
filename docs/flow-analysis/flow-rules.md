@@ -6,9 +6,9 @@ tags:
   - Flow Analysis
   - Reference
 ---
-# Supplied flow rules
+# Sample flow analysis rules
 
-## Adjacent Transformers
+## Adjacent transformers
 
 #### Summary
 	
@@ -24,18 +24,17 @@ Adjacent transformers can also be a symptom of defect fixes that are clumsily 't
 
 #### Actions
 
-Adjust your job design so that there are no adjacent transformers. Consider combining adjacent Transformer stages if possible.
+Adjust your flow design so that there are no adjacent transformers. Consider combining adjacent Transformer stages if possible.
 
 ---
 
-## Aggregator Stage Not Preceded by Check Sort Stage
+## Aggregator stage not preceded by check sort stage
 
 #### Summary
 
-Aggregator Stage will only return the correct result if the keys are pre-sorted
-In some organisation, the data are sourced from presorted dataset.
+The Aggregator stage will only return correct results if the data are presented to the stage is already sorted by the specified aggregation keys.
 
-However, mistakes can happen. If the dataset isn't presorted, the output from Aggregator Stage will be incorrect. One way to ensure the accident would not happen, without impacting the performance is to include a check sort stage before Aggregator Stage.
+A simple way of verifying this without unneccessarily introducing a maintenance or performance overhead is to include a 'check sort' stage before the aggregator stage.
 
 #### Description
 
@@ -51,11 +50,11 @@ Add a Check Sort stage to before Aggregator stage.
 
 ---
 
-## Audit Annotation
+## Audit annotation
 
 #### Summary
 
-Identifies where sensitive information may be present in DataStage Job and Sequence annotations.
+Identifies where sensitive information may be present in DataStage flow and pipeline annotations.
 
 #### Description
 
@@ -67,11 +66,11 @@ Like all MettleCI Compliance Rules, this rule is provided as an example intended
 
 #### Actions
 
-Remove the sensitive information from your Job or Sequence annotation.
+Remove the sensitive information from your Flow or Sequence annotation.
 
 ---
 
-## Connection Contains Parameter References
+## Connection contains parameter references
 
 #### Summary
 
@@ -81,7 +80,7 @@ Identifies Connections created by the migration from legacy DataStage to NextGen
 
 https://www.ibm.com/docs/en/cloud-paks/cp-data/4.0?topic=datastage-migrating#reference_fbm_gww_yqb__post-mig__title__1
 
-During the process of migrating legacy DataStage projects to NextGen, connection details and credentials are moved from the job into a separate Connection, which may be also used outside of a DataStage context. When the connection details are parameterised those parameter references are copied into the Connection object. These must then be replaced with real credentials so it can be tested and saved.
+During the process of migrating legacy DataStage projects to NextGen, connection details and credentials are moved from the flow into a separate Connection, which may be also used outside of a DataStage context. When the connection details are parameterised those parameter references are copied into the Connection object. These must then be replaced with real credentials so it can be tested and saved.
 
 #### Actions
 
@@ -109,17 +108,17 @@ Update the connection, setting the Input Method as 'Use secrets from a vault' .
 
 #### Summary
 
-Identifies Data Sets not using the 'Same' partitioning method
+Identifies Data Sets not using the `Same` partitioning method
 
 #### Description
 
-This rule identifies Parallel Job Data Sets which don't use the 'Same' partitioning method.
+This rule identifies flow data sets which don't use the `Same` partitioning method.
 
 This is an IBM development tip documented here: [Sorting data - IBM Documentation](https://www.ibm.com/docs/en/iis/11.7?topic=tips-sorting-data) 
 
 #### Actions
 
-When reading from Data Sets maintain your sort order by using ‘Same’ partitioning method.
+When reading from Data Sets maintain your sort order by using `Same` partitioning method.
 
 ---
 
@@ -135,7 +134,7 @@ In InfoSphere Information Governance Catalog, the schema and database table name
 
 You can generate default SQL statements to read from and write to data sources.
 Alternatively, you can specify SQL statements manually that read from and write to data sources.
-SQL that you specify might contain certain DBMS vendor-specific constructs that can't be parsed correctly in job lineage analysis.
+SQL that you specify might contain certain DBMS vendor-specific constructs that can't be parsed correctly in lineage analysis.
 
 As a result, the relationships between stages and data sources and between stages and other stages might be incorrect.
 
@@ -154,10 +153,10 @@ Ensures if Database Connectors and Stages reads SQL statement from file.
 #### Description
 
 Developers occasionally wants to keep the SQL statements flexible, and use external file for SQL statements.
-However, SQL statements from external files don't go to the metadata repository where they can be used for 
-job flow analysis. These SQL statements are also not included in operational metadata XML files.
+However, SQL statements from external files don't go to the metadata repository where they can be used for
+lineage analysis. These SQL statements are also not included in operational metadata XML files.
 
-This can make the job harder to maintain as it contains external objects, and failure when deploying to a different project of server.
+This can make the flow harder to maintain as it contains external objects, and failure when deploying to a different project of server.
 
 It's recommended for developers to use parameters instead of an external file if they wish to benefit from the flexibility of using SQL statements.
 
@@ -175,7 +174,7 @@ Identifies Connectors Stages with a configured Database Row Limit.
 
 #### Description
 
-Row limits set on the Database stages are options developers might use during development and unit testing to allow faster development. Leaving these options set may have unintended consequences should the job be deployed into test and production environments.
+Row limits set on the Database stages are options developers might use during development and unit testing to allow faster development. Leaving these options set may have unintended consequences should the flow be deployed into test and production environments.
 
 #### Actions
 
@@ -207,7 +206,7 @@ Identify whether the a Flow annotation contains instances of particular arbitrar
 
 #### Description
 
-Identify whether the a ‘Job Description’ annotation contains instances of particular arbitrary text. You can modify this rule to get it to seek out any text your team wants to prevent passing compliance.  This example rule looks for text matching the following date formats:
+Identify whether the a flow annotation contains instances of particular arbitrary text. You can modify this rule to get it to seek out any text your team wants to prevent passing compliance.  This example rule looks for text matching the following date formats:
 
 | Format                                         | Description                                      |
 |------------------------------------------------|--------------------------------------------------|
@@ -223,7 +222,7 @@ Remove or alter the text that references a date.
 
 ---
 
-## Db2 with No Non Recovery Load
+## Db2 with no non-recovery load
 
 #### Summary
 
@@ -239,7 +238,7 @@ User dependent.
 
 ---
 
-## Debug Row Limit
+## Debug row limit
 
 #### Summary
 
@@ -247,7 +246,7 @@ Identifies row limits in debug stages (Peek, Sample, Tail)
 
 #### Description
 
-Debug stages are options developers might use during development to enable debugging and testing. Leaving these options set may have unintended consequences should the job be deployed into test and production environments.
+Debug stages are options developers might use during development to enable debugging and testing. Leaving these options set may have unintended consequences should the flow be deployed into test and production environments.
 
 #### Actions
 
@@ -255,23 +254,23 @@ Remove either the Debug Row Limit setting, or remove the Stage within which it i
 
 ---
 
-## Default Naming
+## Default stage naming
 
 #### Summary
 
-Default Stage Names for Parallel Jobs, Server Jobs, and Job Sequences
+Default stage names for flows and automation pipelines.
 
 #### Description
 
-Stages should be given meaningful names, to improve readability and reduce bug-fixing effort. The use of default (DataStage-supplied) names (e.g. `Link123`) suggests that jobs might possibly be not quite finished.
+Stages should be given meaningful names, to improve readability and reduce bug fixing effort. The use of default (DataStage canvas-generated) names (e.g. `Link123`) suggests that flows might still be ready for promotion to downstream testing and production environments.
 
 #### Actions
 
-Ensure that all Jobs, Sequences, Stages, and Links are given user-chosen names (not just defaults) which align with your naming standards. 
+Ensure that all flows, Sequences, Stages, and Links are given user-chosen names (not just defaults) which align with your naming standards. 
 
 ---
 
-## Duplicate File References
+## Duplicate file references
 
 #### Summary
 
@@ -289,11 +288,11 @@ Ensure that a file is only referenced once in a DataStage flow.
 
 ---
 
-## Duplicate Stage Names
+## Duplicate stage names
 
 #### Summary
 
-Detect duplicate Stage names in a job.
+Detect duplicate Stage names in a flow.
 
 #### Description
 
@@ -301,15 +300,15 @@ This can create issues with Unit Testing and potentially other Information Serve
 
 #### Actions
 
-Adjust your Job’s Stage names to remove duplicates.
+Adjust your flow's stage names to remove duplicates.
 
 ---
 
-## File Reference Missing Required Parameter
+## File reference missing required parameter
 
 #### Summary
 
-Ensures that all File Stages must use variables for determining paths
+Ensures that all file stages must use variables for determining paths.
 
 #### Description
 
@@ -327,11 +326,11 @@ Use a project-specific variable to define the base path for file based stages.
 
 ---
 
-## File Row Limit
+## File row limit
 
 #### Summary
 
-Identifies row limits in file-based stages (Sequential File, Complex Flat File).
+Identifies row limits in file-based stages (sequential file, complex flat file).
 
 #### Description
 
@@ -343,11 +342,11 @@ Remove the row limit on identified Stages.
 
 ---
 
-## Flow Naming
+## Flow naming
 
 #### Summary
 
-Checks whether the Flow name matches one of a list of prohibited name patterns.
+Checks whether the flow name matches one of a list of prohibited name patterns.
 
 #### Description
 
@@ -357,11 +356,11 @@ See the documentation on asset naming standards for the default list of naming s
 
 #### Actions
 
-Rename the Flow to align with your coding standards and remove ambiguity. 
+Rename the flow to align with your coding standards and remove ambiguity. 
 
 ---
 
-## Flow Parameter Missing Default Value
+## Flow parameter missing default value
 
 #### Summary
 
@@ -377,31 +376,31 @@ Ensure all your flow parameters have a default value.
 
 ---
 
-## Flow Parameter Naming
+## Flow oarameter naming
 
 #### Summary
 
-Identifies where naming standards for Flow Parameters and Parameter Sets are breached.
+Identifies where naming standards for flow parameters and parameter sets are breached.
 
 #### Description
 
-Identifies where naming standards for Flow Parameters Parameter Sets are breached 
+Identifies where naming standards for flow parameters Parameter sets are breached 
 
 #### Actions
 
-Ensure your Flow Parameters and Parameter Sets are named according to your standards. 
+Ensure your flow parameters and parameter sets are named according to your standards. 
 
 ---
 
-## Flow Parameter Missing Default Value
+## Flow parameter missing default value
 
 #### Summary
 
-Identify Flow Parameters that are not in a Parameter Set.
+Identify flow parameters that are not in a parameter set.
 
 #### Description
 
-It is good practice to consider the use of Parameter Sets to store Flow Parameters.  Parameter Sets help to make your jobs more flexible and reusable across environments.
+It is good practice to consider the use of Parameter Sets to store Flow Parameters.  Parameter Sets help to make your flows more flexible and reusable across environments.
 
 #### Actions
 
@@ -449,7 +448,7 @@ Ensures that all Database Connectors must use variables for location and credent
 
 #### Description
 
-Developers occasionally hard code database credentials into their jobs. These will cause job failures when deploying to a different project or server.
+Developers occasionally hard code database credentials into their flows. These will cause job failures when deploying to a different project or server.
 
 #### Actions
 
@@ -513,9 +512,9 @@ Identifies link sorts.
 
 #### Description
 
-Developers where possible should utilise the sort stage rather than utilising the link sort facility. The sort stage allows more options for controlling the behaviour of the sort operation, appears in the job monitor as well as better communicating visually to other developers the main functions of the DataStage Flow.
+Developers where possible should utilise the sort stage rather than utilising the link sort facility. The sort stage allows more options for controlling the behaviour of the sort operation, appears as a distinct component in monitoring tools, and better communicates a flow's design intentions to other DataStage developers.
 
-This rule identifies Flows that utilise implicit sorts on a link which may prevent thedeveloper from taking advantqage of some opportunities for performance optimisation, and may reduce the easy maintainability of your Flows. Both link Sorts and explicit Sorts generate the same underlying orchestrate operators, however the explicit Sort stage offers the following options which are ot available on a link Sort:
+This rule identifies flows that utilise implicit sorts on a link which may prevent developers from taking advantage of some opportunities for performance optimisation, and may reduce the easy maintainability of your Flows. Both link Sorts and explicit Sorts generate the same underlying orchestrate operators, however the explicit Sort stage offers the following options which are ot available on a link Sort:
  
 - Sort Key Mode
 - Create Cluster Key Change Column
@@ -538,7 +537,7 @@ Identify Stages configured to Log column values on first row error
 
 #### Description
 
-The Log column values on first row error property is a feature used for debugging purpose. It outputs error rows in plain text to your DataStage Job log.
+The Log column values on first row error property is a feature used for debugging purpose. It outputs error rows in plain text to your DataStage job log.
 
 This creates the potential for error rows containing sensitive information to be divulged to unauthorised parties.
 
@@ -558,19 +557,16 @@ Identifies Lookup Stages with Lookup set to Fail.
 
 Lookup stages have a ‘Condition Not Met’ setting which describes what happens when a key lookup fails.  Options are:
 
-**Continue** - The fields from that link are set to NULL if the field is nullable, or to a default value if not, and processing continues
+- **Continue** - The fields from that link are set to NULL if the field is nullable, or to a default value if not, and processing continues
+- **Drop** - Drops the row and continues with the next lookup
+- **Fail** - Causes the job to issue a fatal error and stop
+- **Reject** - Sends the row to the reject link
 
-**Drop** - Drops the row and continues with the next lookup
-
-**Fail** - Causes the job to issue a fatal error and stop
-
-**Reject** - Sends the row to the reject link
-
-By default Lookup stages are configured to Fail should a key lookup fail. This unexpected job abort is, in most cases, not the behaviour the developer intended. These lookup fails should be handled gracefully in the ETL job.
+By default Lookup stages are configured to **Fail** should a key lookup fail. This unexpected job abort is, in most cases, not the behaviour the developer intended. These lookup failures should be handled gracefully in the DataStage job.
 
 #### Actions
 
-Reconfigure your Lookup stage so that reference links are not set to abort the job should a key lookup fail.
+Reconfigure your lookup stage so that reference links are not set to abort the job should a key lookup fail.
 
 ---
 
@@ -578,19 +574,19 @@ Reconfigure your Lookup stage so that reference links are not set to abort the j
 
 #### Summary
 
-Verifies that there is only one data flow in a DataStage Flow.
+Verifies that there is only one distinct data flow graph defined in a DataStage flow asset.
 
 #### Description
 
-A DataStage Flow has no restrictions on the number of independent data flows that can be created. Ideally a DataStage Flow should be created for each data flow to allow the calling application to manage the execution order.
+A DataStage flow has no restrictions on the number of independent data flows that can be created on its canvas. Ideally a DataStage flow asset should be created for each distinct data flow graph to [separate concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) and allow the calling application to manage the execution order most efficiently.
 
 #### Actions
 
-Split your Flow so that each separate data flow is defined within its own dedicated Flow. 
+Split your flow so that each separate data flow graph is defined within its own dedicated flow asset. 
 
 ---
 
-## Oracle Connector Not Using Partition Read
+## Oracle connector not using partition read
 
 #### Summary
 
@@ -606,7 +602,7 @@ Ensure that you [configure your Oracle Connector Stage](https://dataplatform.clo
 
 ---
 
-## Password Param Type Not Encrypted
+## Password param type not encrypted
 
 #### Summary
 
@@ -618,34 +614,34 @@ Job parameters with names that suggest they will be used for supplying passwords
 
 #### Actions
 
-Set Job parameters used for supplying passwords to use the type Encrypted.
+Set flow parameters used for supplying passwords to use the type Encrypted.
 
 ---
 
-## Watson Pipeline Calls DataStage Job with Hardcoded Parameter Values
+## Orchestration pipeline calls DataStage job with hardcoded parameter values
 
 #### Rationale:
 
-In Watson Pipelines, Job Activity stages calling DataStage jobs with parameters should have those parameters 
-populated from the pipeline itself, to ensure the pipelines and individual jobs operate conistently.
+In orchestration pipelines, Job Activity stages calling DataStage jobs with parameters should have those parameters 
+supplied from the pipeline definition itself, to ensure the pipelines and individual jobs operate conistently.
 
-In Watson Pipelines, parameters may come from 1 of 5 sources, as displayed in the configuration window:
+In orchestration pipelines, parameters may come from 1 of 5 sources, as displayed in the configuration window:
 
 * Default job parameter configuration - the default source. This parameter is known as being "linked" to the child job
-	* Note: As a key point of difference between Watson Pipelines and Sequence Jobs in DataStage Classic, these parameter references 
-are not stored in the Watson Pipeline asset, and are therefore invisible to this model
-* Enter Value - a hardcoded value passed in from the Watson Pipeline to the child DataStage job (known internally as 'SELECT_RESOURCE')
-	* Select From Another Node - a property from another Watson Pipeline node, eg: return status, stand output, etc  ('SELECT_FROM_NODE')
+	   - Note: As a key point of difference between Orchestration pipelines and Sequence Jobs in DataStage Classic, these parameter references 
+are not stored in the orchestration pipeline asset, and are therefore invisible to this model
+* Enter Value - a hardcoded value passed in from the orchestration pipeline to the child DataStage job (known internally as 'SELECT_RESOURCE')
+	   - Select From Another Node - a property from another orchestration pipeline node, e.g.: return status, stand output, etc.  ('SELECT_FROM_NODE')
 * Assign Pipeline Parameter - allows the Pipeline to control the input of the childe DataStage job at runtime ('FLOW_PARAM')
 * Enter Expression - Create a more complex input value, using a builder that offers a number of string, date/time and conversion functions ('EXPRESSION')
 
 ---
 
-## Watson Pipeline Contains Unmigrated Job Routine
+## Orchestration pipeline contains unmigrated job routine
 
 #### Summary
 
-Identifies stages in a migrated Watson Pipeline that unresolved placeholders for Server Routine conversion
+Identifies stages in a migrated orchestration pipeline that unresolved placeholders for Server Routine conversion
 
 #### Description
 
@@ -656,16 +652,16 @@ Once a bash script has been entered into the UI, saving the job converts this st
 
 ---
 
-## Watson Pipeline Not Restartable
+## Orchestration pipeline not restartable
 
 #### Summary
 
-Identifies Watson Pipeline jobs that are not "restartable", ie: if a job run partially succeeds before aboorting,
+Identifies orchestration pipeline jobs that are not "restartable", ie: if a job run partially succeeds before aboorting,
 re-running the job will skip the initial successful stages and re-commence from the previous point of failure.
 
 #### Rationale
 
-The concept of restartability in Watson Pipelines is a little more complex than it was in DataStage Classic.
+The concept of restartability in orchestration pipelines is a little more complex than it was in DataStage Classic.
  
 First, a job has to create a data cache, and then it has to decide to use the previously created cache.
 The options and their associate behaviour is documented [here](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/ml-orchestration-global-settings.html?context=wx&audience=wdp).
@@ -680,7 +676,7 @@ This rule identifies the following scenarios:
 
 ---
 
-## Prohibited Stages
+## Prohibited stages
 
 #### Summary
 
@@ -714,7 +710,7 @@ The list of prohibited stages is easily configurable, and is currently defined a
 
 ---
 
-## Range Lookup
+## Range lookup incorrectly configured
 
 #### Summary
 
@@ -732,7 +728,7 @@ Ensure range lookups are configured to allow duplicates on the reference link.
 
 ---
 
-## Redundant Sort
+## Redundant sort
 
 #### Summary
 
@@ -750,7 +746,7 @@ Remove redundant sorts.
 
 ---
 
-## SQL in DB Connectors
+## SQL in DB connectors
 
 #### Summary
 
@@ -802,9 +798,10 @@ Identifies where "select *" syntax has been used in custom SQL code in database 
 
 #### Description
 
-Using Select * in custom SQL code may be indicative of:
-	- SQL code that has been directly lifted from a SQL editor and inserted in to DataStage without further analysis or consideration
-	- code that ignores future changes to the source and possibly produces misleading errors in the DataStage logs
+Using Select * in custom SQL code may be indicative of ...
+
+- SQL code that has been directly lifted from a SQL editor and inserted in to DataStage without further analysis, or
+- Code that ignores future changes to the source and possibly produces misleading errors in the DataStage logs
 
 #### Actions
 
@@ -864,7 +861,7 @@ Review the Job design and remove the Sort if redundant.
 
 #### Summary
 
-Stage naming standards for DataStage flows and watson pipelines.
+Stage naming standards for DataStage flows and orchestration pipelines.
 
 #### Description
 
@@ -876,7 +873,7 @@ In most cases, this is achieved by having a prefix that reflects the stage type.
 
 #### Actions
 
-Ensure your flow stages or Watson pipeline DataStage components are named according to your naming standards.
+Ensure your flow stages or orchestration pipeline DataStage components are named according to your naming standards.
 
 ---
 

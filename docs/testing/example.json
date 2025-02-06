@@ -1,0 +1,37 @@
+{
+    "given": [
+        {
+            "stage": "sfCustomers",
+            "link": "Customers",
+            "path": "fileCustomers.csv"
+        },
+        {
+            "sparseLookup": "SparseLookup",
+            "path": "Database-Reference.csv",
+            "key": [
+                "KEY_COLUMN_1",
+                "KEY_COLUMN_2"
+            ]
+        }
+    ],
+    "when": {
+        "data_intg_flow_ref": "xxxx-xxxx",  
+        "parameters": {
+            "DSJobStartDate": "2012-01-15",
+            "DSJobStartTime": "11:05:01",
+            "paramStartKey": "100"
+        }
+    },
+    "then": [
+        {
+            "stage": "ODBC_customer",
+            "link": "customer_out",
+            "path": "ODBC_customers.csv",
+        },
+        {
+            "stage": "ODBC_order",
+            "link": "order_out"
+            "path": "ODBC_orders.csv",
+        }
+    ],
+}

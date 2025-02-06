@@ -1,9 +1,6 @@
 # [DevOps for DataStage](https://pages.github.ibm.com/datamigrators/devops-for-datastage)
 
-[![Build Status](https://v3.travis.ibm.com/datamigrators/devops-for-datastage.svg?token=&branch=main)](https://v3.travis.ibm.com/github/datamigrators/devops-for-datastage)
-
 ## Reviewing and providing feedback on the documents
-
 
 - Please submit a *Pull request* with your suggested changes. This is highly encouraged, as it's the best way to contribute.
 - Please open a [New Issue](https://github.ibm.com/datamigrators/devops-for-datastage/issues) if you have *general* feedback and comments.
