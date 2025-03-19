@@ -66,7 +66,46 @@ Like all MettleCI Compliance Rules, this rule is provided as an example intended
 
 #### Actions
 
-Remove the sensitive information from your Flow or Sequence annotation.
+Remove the sensitive information from your flow or pipeline annotation.
+
+---
+
+## AVI Stage Not Preceded by Sort Stage
+
+#### Summary
+
+Identifies where an AVI stage is not preceded by a Sort operator,
+
+#### Description
+
+This rule validates that the flow matches the following criteria:
+1. All AVI Stages are preceded by a Sort Stage (the sort mode is irrelevant), and
+1. The columns specified in the rule definition are the first sort keys defined in the preceding Sort Stage.
+
+When customising this rule you should use the `addressSortProperty` variable to specify which address property/properties you want to ensure your data is sorted by.
+
+#### Actions
+
+Ensure the `addressSortProperty` variable in the rule defines the address property/properties you want your data to be sorted by.
+
+Adjust your job design so that your AVI stage is immediately preceded by a Sort stage. The sort mode is irrelevant.
+
+---
+
+## AVI Stage Requires Country Code
+
+#### Summary
+	
+Always provide a column mapped to the country code when using the AVI stage.
+
+#### Description
+
+Providing the country code helps keep address search results country-specific, and optimises the performance of the algorithm.
+
+#### Actions
+
+Ensure you map a column to the country code in your AVI stage configuration.
+
 
 ---
 
@@ -74,7 +113,7 @@ Remove the sensitive information from your Flow or Sequence annotation.
 
 #### Summary
 
-Identifies Connections created by the migration from legacy DataStage to NextGen that contain references to Flow parameters.
+Identifies Connections created by the migration from legacy DataStage to NextGen that contain references to flow parameters.
 
 #### Description
 
@@ -144,7 +183,7 @@ Update the connector to use Auto Generate SQL.
 
 ---
 
-## Database Query From File
+## Database query from file
 
 #### Summary
 
@@ -166,7 +205,7 @@ Update the Connector to use the `Read select statement from file` property.
 
 ---
 
-## Database Row Limit
+## Database row limit
 
 #### Summary
 
@@ -182,7 +221,7 @@ Remove the configured row limit.
 
 ---
 
-## Database Table References are Fully Qualified
+## Database table references are fully qualified
 
 #### Summary
 
@@ -190,19 +229,19 @@ Identifies where database table references aren't fully qualified.
 
 #### Description
 
-Database table references can sometimes cause problems when migrating from Development to downstream QA and Production environments as they will likely be communicating with different databases to those used in Development. Those databases may well have different configurations to those that were iused to develop the the Flow and there may arise some confusion about which schemas or other database objects are being referenced by the Flow.
+Database table references can sometimes cause problems when migrating from Development to downstream QA and Production environments as they will likely be communicating with different databases to those used in Development. Those databases may well have different configurations to those that were iused to develop the the flow and there may arise some confusion about which schemas or other database objects are being referenced by the flow.
 
 #### Actions
 
-Ensure all database object references used by your Flow are fully qualified. For example, `{schema}.{tablename}`
+Ensure all database object references used by your flow are fully qualified. For example, `{schema}.{tablename}`
 
 ---
 
-## Data Format in Annotation
+## Data format in annotation
 
 #### Summary
 
-Identify whether the a Flow annotation contains instances of particular arbitrary text.  This example rule looks for dates.
+Identify whether the a flow annotation contains instances of particular arbitrary text.  This example rule looks for dates.
 
 #### Description
 
@@ -275,8 +314,8 @@ Ensure that all flows, Sequences, Stages, and Links are given user-chosen names 
 #### Summary
 
 Verifies that a sequential file is...
- - only referenced once in a DataStage Flow's Sequential File, Complex Flat File, or DataSet stages, and
- - not simlutaneously being read and written in the same DataStage Flow
+ - only referenced once in a DataStage flow's sequential file, complex flat file, or data set stages, and
+ - not simlutaneously being read and written in the same DataStage flow
 
 #### Description
 
@@ -350,7 +389,7 @@ Checks whether the flow name matches one of a list of prohibited name patterns.
 
 #### Description
 
-Developers will occasionally work on a copy or Work-In-Progress version of a Flow but forget to rename it before pushing it to Git. This simple compliance test makes these mistakes visible at check-in time by determining whether it matches a list of known prohibited name patterns (such as `CopyOf*`, for example.)
+Developers will occasionally work on a copy or Work-In-Progress version of a flow but forget to rename it before pushing it to Git. This simple compliance test makes these mistakes visible at check-in time by determining whether it matches a list of known prohibited name patterns (such as `CopyOf*`, for example.)
 
 See the documentation on asset naming standards for the default list of naming signatures on the prohibited list.
 
@@ -376,7 +415,7 @@ Ensure all your flow parameters have a default value.
 
 ---
 
-## Flow oarameter naming
+## Flow parameter naming
 
 #### Summary
 
@@ -400,11 +439,11 @@ Identify flow parameters that are not in a parameter set.
 
 #### Description
 
-It is good practice to consider the use of Parameter Sets to store Flow Parameters.  Parameter Sets help to make your flows more flexible and reusable across environments.
+It is good practice to consider the use of Parameter Sets to store flow Parameters.  Parameter Sets help to make your flows more flexible and reusable across environments.
 
 #### Actions
 
-Ensure all your Flow Parameters are included in a Parameter Set.
+Ensure all your flow parameters are included in a parameter set.
 
 ---
 
@@ -416,7 +455,7 @@ Identifies Transformers (or other stages) using DataStage functions which produc
 
 #### Description
 
-DataStage functions `Rand()`, `Random()` and `Srandom()` are examples of functions which produce non-deterministic output. Columns whose values are dependent upon these functions will produce unpredictable results which can't be used in MettleCI unit tests.
+DataStage functions `Rand()`, `Random()` and `Srandom()` are examples of functions which produce non-deterministic output. Columns whose values are dependent upon these functions will produce unpredictable results which can't be used in DataStage test cases.
 
 #### Actions
 
@@ -440,7 +479,7 @@ Adjust your flow design to use a Surrogate Key Generator stage instead.
 
 ---
 
-## Hardcoded DB Credentials
+## Hard-coded DB credentials
 
 #### Summary
 
@@ -456,7 +495,7 @@ Parameterise the identified hard-coded values.
 
 ---
 
-## Hardcoded File Paths
+## Hard-coded file paths
 
 #### Summary
 
@@ -464,7 +503,7 @@ Ensures that all File Stages must use variables for determining paths
 
 #### Description
 
-Developers occasionally hard code file paths while debugging or developing. These will cause job failures when deploying to a different project or server. This problem is usually solved by using a project specific variable to define the base path for file based stages such as datasets. This compliance rule will identify hard coded file paths by checking that the pathname includes at least one predefined path parameter.
+Developers occasionally hard-code file paths while debugging or developing. These will cause job failures when deploying to a different project or server. This problem is usually solved by using a project specific variable to define the base path for file based stages such as datasets. This compliance rule will identify hard-coded file paths by checking that the pathname includes at least one predefined path parameter.
 
 The predefined path parameters and the stages for which they can be used with can be customised by modifying the `pathParameters` variable.
 
@@ -474,7 +513,7 @@ Parameterise the identified hard-coded file paths.
 
 ---
 
-## Join Partition vs Join Key
+## Join partition mismatch with join key
 
 #### Summary
 
@@ -484,7 +523,7 @@ Reports Join stages where the join key does not match the partitioning of the in
 
 In the parallel DataStage engine, data is internal split into separate partitions in order to run a number of smaller operations concurrently. This results in faster and more efficient processing, especially when sorting and joining data.
 
-For Hash, Range and Modulus partitioning methods, they use column values to determine the partition which partition each record is placed into. For Same, the actual partitioning method is propagatedfrom upstream, and so we need to traverse up to the preceding stages until a specific method is selected (or until we reach the data source and can go no further).
+The **Hash**, **Range** and **Modulus** partitioning methods use column values to determine the partition within which each record is placed. For the **Same** method the actual partitioning method is propagated from the upstream selection, and so we need to traverse up to the preceding stages until a specific method is selected (or until we reach the data source and can go no further).
 
 For a pair of records in the left and right links to join, they must both be placed in the same partition.
 
@@ -504,7 +543,7 @@ Ensure partitioning methods and columns are in alignment with selected join keys
 
 ---
 
-## Link Sort
+## Link sort
 
 #### Summary
 
@@ -529,7 +568,7 @@ Replace link sorts with an explicit Sort stage.
 
 ---
 
-## Log Column Values
+## Log column values
 
 #### Summary
 
@@ -547,7 +586,7 @@ Disable the Log column values on first row error property.
 
 ---
 
-## Lookup Failure
+## Lookup failure
 
 #### Summary
 
@@ -570,7 +609,7 @@ Reconfigure your lookup stage so that reference links are not set to abort the j
 
 ---
 
-## One Data flow
+## One data flow
 
 #### Summary
 
@@ -602,7 +641,7 @@ Ensure that you [configure your Oracle Connector Stage](https://dataplatform.clo
 
 ---
 
-## Password param type not encrypted
+## Password parameter type not encrypted
 
 #### Summary
 
@@ -618,19 +657,19 @@ Set flow parameters used for supplying passwords to use the type Encrypted.
 
 ---
 
-## Orchestration pipeline calls DataStage job with hardcoded parameter values
+## Orchestration pipeline uses hard-coded parameter value
 
 #### Rationale:
 
-In orchestration pipelines, Job Activity stages calling DataStage jobs with parameters should have those parameters 
+In orchestration pipelines, a **Run DataStage Job** node with parameters should have those parameters 
 supplied from the pipeline definition itself, to ensure the pipelines and individual jobs operate conistently.
 
 In orchestration pipelines, parameters may come from 1 of 5 sources, as displayed in the configuration window:
 
-* Default job parameter configuration - the default source. This parameter is known as being "linked" to the child job
+* Default job parameter configuration - the default source. This parameter is known as being 'linked' to the child job
 	   - Note: As a key point of difference between Orchestration pipelines and Sequence Jobs in DataStage Classic, these parameter references 
 are not stored in the orchestration pipeline asset, and are therefore invisible to this model
-* Enter Value - a hardcoded value passed in from the orchestration pipeline to the child DataStage job (known internally as 'SELECT_RESOURCE')
+* Enter Value - a hard-coded value passed in from the orchestration pipeline to the child DataStage job (known internally as 'SELECT_RESOURCE')
 	   - Select From Another Node - a property from another orchestration pipeline node, e.g.: return status, stand output, etc.  ('SELECT_FROM_NODE')
 * Assign Pipeline Parameter - allows the Pipeline to control the input of the childe DataStage job at runtime ('FLOW_PARAM')
 * Enter Expression - Create a more complex input value, using a builder that offers a number of string, date/time and conversion functions ('EXPRESSION')
@@ -764,7 +803,7 @@ Both legacy Enterprise Database Stages and Connector Stages provide a number of 
 | Table Query 	| Select the name of the table to use from a drop-down list 		| Rule fails if SELECT or FILTER clauses specified 	| 
 | Generated 	| Underlying SQL is generated by the Stage at runtime 				| Rule fails if WHERE or OTHER clauses specified 	|
 
-This rule checks for the use of hardcoded SQL in properties of Database Enterprise Stages and Connector Stages. Development teams may choose to avoid using hardcoded SQL to filter data and instead opt to use downstream stages to process database output.
+This rule checks for the use of hard-coded SQL in properties of Database Enterprise Stages and Connector Stages. Development teams may choose to avoid using hard-coded SQL to filter data and instead opt to use downstream stages to process database output.
 
 This rule only permits generated SQL where there are no other clauses specified in connector with that option. Any use-defined SQL, generated SQL with additional clauses or query file inputs will fail. 
 
@@ -774,7 +813,7 @@ Configure your Enterprise Database Stages and Connector Stages to use an approac
 
 ---
 
-## Schema Files
+## Schema files are referenced
 
 #### Summary
 
@@ -790,7 +829,7 @@ Ensure your schema files are governed in the same manner as your other DataStage
 
 ---
 
-## "Select *" in Custom SQL
+## "Select *" in custom SQL
 
 #### Summary
 	
@@ -809,7 +848,7 @@ Modify your Connector Stages' SELECT statements to use explicit column names.
 
 ---
 
-## Sequential File Read Using Same Partitioning
+## Sequential file read using same partitioning
 
 #### Summary
 
@@ -825,7 +864,7 @@ Configure your Sequential File Stage to use a partitioning method other than 'Sa
 
 ---
 
-## Sequential File With Reject Mode Not Set To Fail
+## Sequential file with reject mode not set to fail
 
 #### Summary
 
@@ -841,7 +880,7 @@ Set your Sequential File’s Reject Mode appropriate to your needs.
 
 ---
 
-## Sort Post Join Stage
+## Sort after join stage
 
 #### Summary
 
@@ -857,7 +896,7 @@ Review the Job design and remove the Sort if redundant.
 
 ---
 
-## Stage Naming
+## Stage naming
 
 #### Summary
 
@@ -877,7 +916,7 @@ Ensure your flow stages or orchestration pipeline DataStage components are named
 
 ---
 
-## System Time Dependency
+## System time dependency
 
 #### Summary
 
@@ -893,7 +932,7 @@ Replace the reference to the system time or date with a Flow Parameter of the ap
 
 ---
 
-## Too Many Stages
+## Too many stages
 
 #### Summary
 
@@ -913,7 +952,7 @@ Split your flow into multiple flows, or remove unnecessary Stages.
 
 ---
 
-## Transformer Uses Abort After Rows
+## Transformer uses abort after rows
 
 #### Summary
 
@@ -929,7 +968,7 @@ Set the 'Abort after rows' value to 0 and provide downstream logic to report and
 
 ---
 
-## Transformer With Unreferenced Stage Variable
+## Transformer with unreferenced stage variable
 
 #### Summary
 
@@ -940,7 +979,7 @@ Identifies Transformer Stage with an unreferenced Stage Variable (including Loop
 A Transformer can be resource intensive, and having an unreferenced (i.e. unused) Stage/Loop variable...
 
  - can be an unnecessary waste of resources,
- - can cause confusion to Flow maintainers, and
+ - can cause confusion to flow maintainers, and
  - may present a security vulnerability.
 
 This rule identifies forgotten/unreferenced Stage/Loop variables.
@@ -962,15 +1001,15 @@ Identifies connector stages which do not use encrypted passwords
 
 Unencrypted passwords are a security risk and should be avoided. 
 
-In DataStage all hardcoded password values are encrypted, and references to parameters are in plain text. This rule, therefore, simply needs to exclude:
+In DataStage all hard-coded password values are encrypted, and references to parameters are in plain text. This rule, therefore, simply needs to exclude:
 
-- encrypted values, ie: `{dsnextenc}`
-- a parameter that is set as 'encrypted'
-- a reference to a parameterset, as the flow configuration does not store the details of parameters inside parametersets
+- encrypted values, i.e.: `{dsnextenc}`
+- a parameter that is set as **encrypted**
+- a reference to a parameter set, as the flow configuration does not store the details of parameters inside parameter sets
 
 ---
 
-## Unique Sort
+## Unique sort
 
 #### Summary
 
@@ -978,7 +1017,7 @@ Identifies unique sorts.
 
 #### Description
 
-Unique sorts are not visually represented on the DataStage canvas. Ideally the developer should use the Remove Duplicates stage so that this can be visually communicated with other developers. This rule will identify sort stages which have the `Allow Duplicates` property set to `false`.
+Unique sorts are not visually represented on the DataStage canvas. Ideally the developer should use the Remove Duplicates stage so that this can be visually communicated with other developers. This rule will identify sort stages which have the `Allow Duplicates` property set to **false**.
 
 #### Actions
 
