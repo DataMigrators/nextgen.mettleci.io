@@ -1,6 +1,0 @@
-title: DevOps Pipelines
-nav:
-    - pipelines.md
-    - repeatable-depoyments.md
-    - filesystem-deployment.md
-    - example-pipepline.md
