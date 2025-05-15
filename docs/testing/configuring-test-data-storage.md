@@ -12,7 +12,7 @@ tags:
 Start by creating a connection to a storage resource where test assets will be stored.
 
 1. From the CPD Cluster home page open an existing project or create a new project then, on the **Assets** tab, click **New Asset** > **Connect to a data source**.
-1. On the resulting page select one of the storage connection types supported by test cases and **Next**. Currently supported connection types are: 
+1. On the resulting page select one of the storage connection types supported by test cases and **Next**. Connection typesd currently supported as a DataStage test data connector are:
     - Storage volume,
     - Google Cloud Storage, 
     - IBM Cloud Object Storage,
