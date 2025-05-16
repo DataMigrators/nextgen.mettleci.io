@@ -17,7 +17,7 @@ Start by creating a connection to a storage resource where test assets will be s
     - Google Cloud Storage, 
     - IBM Cloud Object Storage,
     - Microsoft Azure Blob Storage, and 
-    - Generic S3, which should be used instead of the **Amazon S3** connector which is **not suported**.
+    - Generic S3, which should be used instead of the **Amazon S3** connector which is **not supported**.
 
 Using a **Storage volume** connection:
 
@@ -31,7 +31,7 @@ Using a **Storage volume** connection:
 1. Check the **Use my platform login credentials** then click **Test connection**.
 1. Assuming you have a successful connection, click **Save**.
 
-If you use one of the non-Storage Volume, cloud object storage connectors then see [the relevant documentation](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.1.x?topic=data-supported-sources) for the connection type you selected.  Remember to verify your connection, by clicking **Test connection**, before clicking **Save**.
+When using one of the cloud object storage connectors (i.e. **not Storage Volume**) then see [the relevant documentation](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.1.x?topic=data-supported-sources) for the connection type you selected.  Remember to verify your connection, by clicking **Test connection**, before clicking **Save**.
 
 ## Add the connection to your project settings
 
@@ -40,11 +40,11 @@ Next you'll configure DataStage® to use your test data connection for storing t
 1. From the CPD Cluster home page select the **Manage** tab then, under **Tools**, select **DataStage** and then select the tab **Test cases**.
 1. For **Test data connection type** select the type of test data storage connector you created in the step above.
 1. For **Test data storage** select the name of your test data connection.
-1. For **Default DataStage Test case job suffix** specify a suffix which will be appended to all test case jobs to help distinguish them in the job log from invocations of their associated flows. e.g. ` DataStage Test Case Job`. Note that you m,ay wish to include a leading space as DataStage will not automatically add one for you.
+1. For **Default DataStage Test case job suffix** specify a suffix which will be appended to all test case jobs to help distinguish them in the job log from invocations of their associated flows. e.g. ` DataStage Test Case Job`. Note that you may wish to include a leading space as DataStage will not automatically add one for you.
 
 ## Sharing a test data connection across projects
 
-Rather than creating individual test data connections for each of your project you may prefer to share your test data connection across projects by adding it to the catalog.  This allows you to share the connection with other projects in your organization, making it easier to manage and maintain your test data connections.  Note that sharing test data connections in this way will not permit multiple projects to access each other's test data, despite them sharing an underlying storage mechanism. 
+Rather than creating individual test data connections for each of your projects you may prefer to share your test data connection across projects by adding it to the catalog.  This allows you to share the connection with other projects in your organization, making it easier to manage and maintain your test data connections.  Note that sharing test data connections in this way will not permit multiple projects to access each other's test data, despite them sharing an underlying storage mechanism. 
 
 To share a test data connection using the catalog:
 
