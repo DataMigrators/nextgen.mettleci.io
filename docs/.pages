@@ -2,6 +2,7 @@ nav:
     - overview
     - flow-analysis
     - testing
+    - data-fabrication
     - patterns
     - pipelines
     - mettleci-cli
