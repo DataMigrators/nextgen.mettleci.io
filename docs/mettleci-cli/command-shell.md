@@ -7,26 +7,30 @@ tags:
 ---
 # MettleCI Command Shell
 
-The MettleCI Command Line Interface is available from either your Windows command line or Unix shell.  It provides one way of accessing MettleCI's build and deployment functions, and supports two different modes of operation: console or command line.  MettleCI commands accept various parameters which can optionally be sourced from a command file.
+The DataStage NextGen MettleCI Command Line Interface (referred to as **MCIX**) is available from either your Windows command line or Unix shell.  It provides one way of accessing MettleCI's build and deployment functions, and supports two different modes of operation: console or command line.  MettleCI commands accept various parameters which can optionally be sourced from a command file.
+
+???+ info "Note"
+
+    Note that the `mcix` command is the CPD-compatible equivalent to the [Classic MettleCI Command Line Interface](https://docs.mettleci.io/cli) for DataStage v11.x which is invoked with `mettleci` (UNIX) or `mettleci.cmd` (Windows).  The `mettleci` command is not available in DataStage NextGen, and so the `mcix` command should be used instead.
 
 ## Console Mode
 
-To enter console mode start the MettleCI Command Line Interface by entering `mettleci` (UNIX) or `mettleci.cmd` (Windows).
+To enter console mode start the MettleCI Command Line Interface by entering `mcix` (UNIX) or `mcix.cmd` (Windows). 
 
 ```bat
-C:\> mettleci.cmd
-MettleCI Command Line
-(C)2019 Data Migrators Pty Ltd
-Enter [namespace] [command] {options}
-or 'help', 'exit', or 'quit'.
-mettleci>
+C:\> mcix.cmd
+MettleCI Command Line (build 1234)
+(C) 2018-2025 Data Migrators Pty Ltd
+Enter [namespace] [command] [options]
+or 'help' for more information, 'exit' or 'quit' to leave.
+mcix>
 ```
 
 In console mode MettleCI prints a command prompt and waits for a command. Each command is processed without exiting MettleCI. You may need to provide authentication options for a commands which invoke functionality in third party systems.  You can enter help to get assistance, or exit the console mode by entering exit, or quit at the prompt.
 
 ## Command mode
 
-In command mode you can enter commands one at a time at your operating system's command line. Start each command (omitting the quotes) with `mettleci` (unix) or `mettleci.cmd` (Windows) followed by a namespace and command, then the parameters.
+In command mode you can enter commands one at a time at your operating system's command line. Start each command (omitting the quotes) with `mcix` (unix) or `mcix.cmd` (Windows) followed by a namespace and command, then the parameters.
 
 ![command mode](./images/cli-command-mode.png "command mode")
 
@@ -42,7 +46,7 @@ Here's an example of the MettleCI Command Line being used to compile an entire D
 ```shell
 # Note that the example below uses the line continuation charactere ('\' on Unix or '^' on Windows)
 # to aid readability, but your mettleci command line can all be on a single line if you prefer 
-$> mettleci datastage compile \
+$> mcix datastage compile \
    -domain test1-svcs.datamigrators.io:59445 \
    -server test1-engn.datamigrators.io -project dstage1 \
    -username isadmin -password isadminpwd
@@ -91,7 +95,7 @@ test1-engn.datamigrators.io
 -project
 dstage1
 # ... and here's how to invoke it
-$> mettleci @mycommand.txt
+$> mcix @mycommand.txt
 ```
 
 Note:
@@ -102,8 +106,8 @@ Note:
 
 ```bash
 #!/usr/bin/env bash
-mettleci @mycommand1.txt
-mettleci @mycommand2.txt
-mettleci @mycommand3.txt
+mcix @mycommand1.txt
+mcix @mycommand2.txt
+mcix @mycommand3.txt
 # etc.
 ``` 

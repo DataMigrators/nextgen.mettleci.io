@@ -11,3 +11,4 @@ nav:
     - executing-datastage-test-cases.md
     - verifying-test-results.md
     - troubleshoot-testing.md
+    - using-data-fabrication.md
