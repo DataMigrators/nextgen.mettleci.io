@@ -11,7 +11,7 @@ tags:
 
 ## Compliance List Tags
 
-![compliance quet syntax](./images/compliance-list-tags.png "compliance quet syntax")
+![compliance quet syntax](../railroads/svgs/compliance-list-tags.svg "compliance quet syntax")
 
 This command analyses a specified set of Compliance Rules or Asset Queries and reports the tags defined for each.  Output is available in an easy-to-read tabulated for, or as a CSV for downstream processing. When no format optin
 
