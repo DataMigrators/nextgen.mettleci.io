@@ -1,0 +1,56 @@
+<svg class="railroad-diagram" height="152" viewBox="0 0 1183.5 152" width="1183.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g>
+<style>/* <![CDATA[ */
+	svg.railroad-diagram {
+		background-color: white;
+	}
+	svg.railroad-diagram path {
+		stroke-width:2;
+		stroke:black;
+		fill: rgba(255, 255, 255, 1.0);
+	}
+	svg.railroad-diagram text {
+		font:bold 14px monospace;
+		text-anchor:middle;
+	}
+	svg.railroad-diagram text.arrow {
+		font:bold 24px monospace;
+		text-anchor:middle;
+	}
+	svg.railroad-diagram text.label{
+		text-anchor:start;
+	}
+	svg.railroad-diagram text.comment{
+		font:italic 12px monospace;
+	}
+	svg.railroad-diagram rect{
+		stroke-width:2;
+		stroke:black;
+		fill:white;
+	}
+
+/* ]]> */
+</style><g>
+<path d="M20 21v20m10 -20v20m-10 -10h20"></path></g><path d="M40 31h10"></path><g class="non-terminal">
+<path d="M50 31h0"></path><path d="M138.0 31h0.0"></path><rect height="22" width="88.0" x="50" y="20"></rect><text x="94.0" y="35">mettleci</text></g><path d="M138.0 31h10"></path><g>
+<path d="M148.0 31h0"></path><path d="M1143.5 31h0.0"></path><path d="M148.0 31h20"></path><g class="terminal">
+<path d="M168.0 31h0"></path><path d="M222.0 31h901.5"></path><rect height="22" rx="10" ry="10" width="54.0" x="168.0" y="20"></rect><text x="195.0" y="35">help</text></g><path d="M1123.5 31h20"></path><path d="M148.0 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path><g>
+<path d="M168.0 61h0"></path><path d="M1123.5 61h0.0"></path><g class="non-terminal">
+<path d="M168.0 61h0"></path><path d="M213.5 61h0.0"></path><rect height="22" width="45.5" x="168.0" y="50"></rect><text x="190.75" y="65">isx</text></g><path d="M213.5 61h10"></path><g>
+<path d="M223.5 61h0"></path><path d="M1123.5 61h0.0"></path><path d="M223.5 61h20"></path><g class="terminal">
+<path d="M243.5 61h0"></path><path d="M297.5 61h806.0"></path><rect height="22" rx="10" ry="10" width="54.0" x="243.5" y="50"></rect><text x="270.5" y="65">help</text></g><path d="M1103.5 61h20"></path><path d="M223.5 61a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path><g>
+<path d="M243.5 91h0"></path><path d="M1103.5 91h0.0"></path><g class="non-terminal">
+<path d="M243.5 91h0"></path><path d="M348.5 91h0.0"></path><rect height="22" width="105.0" x="243.5" y="80"></rect><text x="296.0" y="95">set-params</text></g><path d="M348.5 91h10"></path><g>
+<path d="M358.5 91h0"></path><path d="M1103.5 91h0.0"></path><path d="M358.5 91h20"></path><g class="terminal">
+<path d="M378.5 91h0"></path><path d="M432.5 91h651.0"></path><rect height="22" rx="10" ry="10" width="54.0" x="378.5" y="80"></rect><text x="405.5" y="95">help</text></g><path d="M1083.5 91h20"></path><path d="M358.5 91a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path><g>
+<path d="M378.5 121h0"></path><path d="M1083.5 121h0.0"></path><g>
+<path d="M378.5 121h0"></path><path d="M746.5 121h0.0"></path><path d="M408.5 121h10"></path><g>
+<path d="M418.5 121h0"></path><path d="M716.5 121h0.0"></path><g class="non-terminal">
+<path d="M418.5 121h0"></path><path d="M506.5 121h0.0"></path><rect height="22" width="88.0" x="418.5" y="110"></rect><text x="462.5" y="125">-pattern</text></g><path d="M506.5 121h10"></path><path d="M516.5 121h10"></path><g class="terminal">
+<path d="M526.5 121h0"></path><path d="M716.5 121h0.0"></path><rect height="22" rx="10" ry="10" width="190.0" x="526.5" y="110"></rect><text x="621.5" y="125">{File specification}</text></g></g><path d="M716.5 121h10"></path><g class="diagram-text">
+<title>take one or more branches, once each, in any order</title><path class="diagram-text" d="M 408.5 111 h -26 a 4 4 0 0 0 -4 4 v 12 a 4 4 0 0 0 4 4 h 26 z"></path><text class="diagram-text" x="393.5" y="125">1+</text><path class="diagram-text" d="M 726.5 111 h 16 a 4 4 0 0 1 4 4 v 12 a 4 4 0 0 1 -4 4 h -16 z"></path><text class="diagram-arrow" x="736.5" y="125">↺</text></g></g><path d="M746.5 121h10"></path><path d="M756.5 121h10"></path><g>
+<path d="M766.5 121h0"></path><path d="M1083.5 121h0.0"></path><path d="M796.5 121h10"></path><g>
+<path d="M806.5 121h0"></path><path d="M1053.5 121h0.0"></path><g class="non-terminal">
+<path d="M806.5 121h0"></path><path d="M843.5 121h0.0"></path><rect height="22" width="37.0" x="806.5" y="110"></rect><text x="825.0" y="125">-P</text></g><path d="M843.5 121h10"></path><path d="M853.5 121h10"></path><g class="terminal">
+<path d="M863.5 121h0"></path><path d="M1053.5 121h0.0"></path><rect height="22" rx="10" ry="10" width="190.0" x="863.5" y="110"></rect><text x="958.5" y="125">"{Variable}={Value}"</text></g></g><path d="M1053.5 121h10"></path><g class="diagram-text">
+<title>take one or more branches, once each, in any order</title><path class="diagram-text" d="M 796.5 111 h -26 a 4 4 0 0 0 -4 4 v 12 a 4 4 0 0 0 4 4 h 26 z"></path><text class="diagram-text" x="781.5" y="125">1+</text><path class="diagram-text" d="M 1063.5 111 h 16 a 4 4 0 0 1 4 4 v 12 a 4 4 0 0 1 -4 4 h -16 z"></path><text class="diagram-arrow" x="1073.5" y="125">↺</text></g></g></g><path d="M1083.5 121a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path></g></g><path d="M1103.5 91a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path></g></g><path d="M1123.5 61a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path></g><path d="M 1143.5 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
