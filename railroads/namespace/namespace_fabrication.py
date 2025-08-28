@@ -2,7 +2,7 @@ import cairosvg
 from railroad import *
 
 FABRICATION_LIST = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -31,7 +31,7 @@ FABRICATION_LIST = Diagram(
 )
 
 FABRICATION_TEST = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(

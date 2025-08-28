@@ -2,7 +2,7 @@ import cairosvg
 from railroad import *
 
 DSPARAMS_DELETE = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -28,7 +28,7 @@ DSPARAMS_DELETE = Diagram(
 )
 
 DSPARAMS_DIFF = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -54,7 +54,7 @@ DSPARAMS_DIFF = Diagram(
 )
 
 DSPARAMS_MERGE = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(

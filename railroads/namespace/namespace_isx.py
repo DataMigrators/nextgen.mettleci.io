@@ -2,7 +2,7 @@ import cairosvg
 from railroad import *
 
 ISX_CAT = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -33,7 +33,7 @@ ISX_CAT = Diagram(
 )
 
 ISX_CUT = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -58,7 +58,7 @@ ISX_CUT = Diagram(
 )
 
 ISX_EXPORT = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -95,7 +95,7 @@ ISX_EXPORT = Diagram(
 )
 
 ISX_IMPORT = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -133,7 +133,7 @@ ISX_IMPORT = Diagram(
 )
 
 ISX_MESSAGE_HANDLERS = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -158,7 +158,7 @@ ISX_MESSAGE_HANDLERS = Diagram(
 )
 
 ISX_SET_PARAMS = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(

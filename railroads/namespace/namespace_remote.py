@@ -2,7 +2,7 @@ import cairosvg
 from railroad import *
 
 REMOTE_DOWNLOAD = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -45,7 +45,7 @@ REMOTE_DOWNLOAD = Diagram(
 )
 
 REMOTE_EXECUTE = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -84,7 +84,7 @@ REMOTE_EXECUTE = Diagram(
 )
 
 REMOTE_UPLOAD = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(

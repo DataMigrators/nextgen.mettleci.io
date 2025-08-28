@@ -2,7 +2,7 @@ import cairosvg
 from railroad import *
 
 PROPERTIES_CONFIG = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
