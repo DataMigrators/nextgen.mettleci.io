@@ -1,183 +1,183 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/blog/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/tags/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/fabrication/fabrication/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/blog/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/fabrication/introduction-to-fabrication/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/fabrication/fabrication/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/flow-analysis/flow-analysis/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/fabrication/introduction-to-fabrication/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/flow-analysis/flow-rules/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/flow-analysis/flow-analysis/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/flow-analysis/flow-tagging/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/flow-analysis/flow-rules/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/command-shell/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/flow-analysis/flow-tagging/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/compliance-namespace/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/command-shell/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/datastage-namespace/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/compliance-namespace/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/fabrication-namespace/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/datastage-namespace/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/project-cache-directory/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/fabrication-namespace/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/unittest-namespace/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/project-cache-directory/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/overview/overview/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/unittest-namespace/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/high-volume-tests/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/overview/overview/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/testing-datastage-flow-rejects/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/high-volume-tests/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/testing-datastage-stored-procedures/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/testing-datastage-flow-rejects/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/testing-datastage-subflows/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/testing-datastage-stored-procedures/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/testing-datastage-surrogate-key-generators/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/testing-datastage-subflows/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/testing-flows-using-datetime-references/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/testing-datastage-surrogate-key-generators/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/example-pipepline/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/testing-flows-using-datetime-references/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/filesystem-deployment/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/example-pipepline/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/pipelines/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/filesystem-deployment/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/repeatable-depoyments/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/pipelines/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/wip-hotfixes/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/repeatable-depoyments/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/wip-selective-promotion/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/wip-hotfixes/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/railroads/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/wip-selective-promotion/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/baselining-test-results/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/railroads/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/capturing-test-data/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/baselining-test-results/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/configuring-test-data-storage/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/capturing-test-data/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/creating-datastage-test-cases/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/configuring-test-data-storage/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/editing-datastage-tests/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/creating-datastage-test-cases/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/excluding-columns-from-tests/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/editing-datastage-tests/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/executing-datastage-test-cases/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/excluding-columns-from-tests/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/high-volume-tests/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/executing-datastage-test-cases/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/migrating-datastage-tests-from-older-versions/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/high-volume-tests/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/row-count-comparisons/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/migrating-datastage-tests-from-older-versions/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/selective-stubbing/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/row-count-comparisons/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/test-datastage-sparse-lookup-stages/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/selective-stubbing/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/test-specification-format/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/test-datastage-sparse-lookup-stages/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/testing-datastage-flows/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/test-specification-format/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/troubleshoot-testing/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/testing-datastage-flows/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/using-data-fabrication/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/troubleshoot-testing/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/verifying-test-results/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/using-data-fabrication/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
     <url>
-         <loc>https://pages.github.com/datamigrators/devops-for-datastage/tags/</loc>
+         <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/verifying-test-results/</loc>
          <lastmod>2025-08-28</lastmod>
     </url>
 </urlset>
