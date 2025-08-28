@@ -1,7 +1,7 @@
 # Author: Mihai Criveti <crmihai1@ie.ibm.com>
 
 # Configuration section
-HANDBOOK_NAME := nextgen.mettleci.io
+HANDBOOK_NAME := devops-for-datastage
 
 # Do not change anything below this line
 VENVS_DIR := $(HOME)/.venv

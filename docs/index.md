@@ -7,8 +7,6 @@ owner: John McKeever
 
 !!! note "The latest version can always be found here: https://pages.github.ibm.com/datamigrators/nextgen.mettleci.io/"
 
-# [Download the latest (PDF)](pdf/devops-for-datastage.pdf){ .md-button } [Download the latest (DOCX)](out/devops-for-datastage.docx){ .md-button }
-
 <div class="grid cards" markdown>
 
 -   :material-school:{ .lg .middle } __Learn the basics__
