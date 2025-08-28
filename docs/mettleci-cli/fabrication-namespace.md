@@ -9,13 +9,13 @@ tags:
 
 ## Fabriction List
 
-![fabrication list syntax](./images/fabrication-list.png "fabrication list syntax")
+![fabrication list syntax](../railroads/svgs/fabrication-list.svg "fabrication list syntax")
 
 ---
 
 ## Fabrication Test
 
-![fabrication test syntax](./images/fabrication-test.png "fabrication test syntax")
+![fabrication test syntax](../railroads/svgs//fabrication-test.svg "fabrication test syntax")
 
 Here
 

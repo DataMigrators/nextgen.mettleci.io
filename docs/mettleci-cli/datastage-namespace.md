@@ -10,7 +10,7 @@ tags:
 
 ## DataStage Capture Command
 
-![datastage capture syntax](./images/datastage-capture.png "datastage capture syntax")
+![datastage capture syntax](../railroads/svgs/datastage-capture.svg "datastage capture syntax")
 
 This command captures the current state of a DataStage project by exporting its content to ISX files and updating the project cache.  The resulting ISX files and project cache can be used by the DataStage Deploy command to incrementally deploy changes that have occurred after DataStage Capture was performed.
 
@@ -24,7 +24,7 @@ This command captures the current state of a DataStage project by exporting its 
 Capture the current state of the project. 
 
 ```bat
-c:\> mettleci datastage capture ^
+c:\> mcix datastage capture ^
      -domain datastage-services.myorganization.com:59445 ^
      -server datastage-engine.myorganization.com ^
      -project myproject ^
@@ -57,7 +57,7 @@ Last change to project occurred at 2023-12-21 04:37:37 GMT
 The DataStage Project has been captured as a set of ISX files and the project cache.  Deploying the captured state back into the source project will not cause any changes to be detected:
 
 ```bat
-c:\> mettleci datastage deploy ^
+c:\> mcix datastage deploy ^
      -domain datastage-services.myorganization.com:59445 ^
      -server datastage-engine.myorganization.com ^
      -project myproject ^
@@ -78,14 +78,14 @@ Change identification complete, 0 asset changes detected in project
 
 ## DataStage Cleanup-Projects
 
-![datastage capture syntax](./images/datastage-cleanup-projects.png "datastage capture syntax")
+![datastage capture syntax](../railroads/svgs/datastage-cleanup-projects.svg "datastage capture syntax")
 
 Deletes redundant DataStage projects matching a supplied pattern.
 
 ### Example
 
 ```shell
-$> mettleci datastage cleanup-projects \
+$> mcix datastage cleanup-projects \
    -domain my-services.datamigrators.io:59445 \
    -username isadmin \
    -password isadminpwd \
@@ -116,14 +116,14 @@ Deleting project: SNTest1
 
 ## DataStage Compile
 
-![datastage compile syntax](./images/datastage-compile.png "datastage compile syntax")
+![datastage compile syntax](../railroads/svgs/datastage-compile.svg "datastage compile syntax")
 
 Compiles a DataStage Job producing a jUnit-compatible testing output that can be utilised by built tools orchestrating a CI/CD pipeline.  This command produces a [JUnit-compatible](https://junit.org/) XML file called `mettleci_compilation.xml` which reports each individual job’s compilation result.
 
 ### Example
 
 ```shell
-$> mettleci datastage compile \
+$> mcix datastage compile \
    -domain service_tier.datamigrators.io:59445 \
    -username isadmin \
    -password mypassword \
@@ -145,14 +145,14 @@ Compilation complete
 
 ## DataStage Create-Project
 
-![datastage create-project syntax](./images/datastage-create-project.png "datastage create-project syntax")
+![datastage create-project syntax](../railroads/svgs/datastage-create-project.svg "datastage create-project syntax")
 
 This command either creates a DataStage project in a nominated environment or simply exist with a success code if the DataStage project already exists. It is used frequently at the beginning of pipelines to assert that a target environment with which the pipeline will deploy and execute code is present and available.
 
 ### Example
 
 ```shell
-$> mettleci datastage create-project \
+$> mcix datastage create-project \
    -domain service_tier.datamigrators.io:59445 \
    -username isadmin -password mypassword \
    -server engine_tier.datamigrators.io \
@@ -175,14 +175,14 @@ There may be some situations in which this causes the `mettleci datastage create
 
 ## DataStage Delete-Project
 
-![datastage compile syntax](./images/datastage-compile.png "datastage compile syntax")
+![datastage compile syntax](../railroads/svgs/datastage-compile.svg "datastage compile syntax")
 
 Deletes a DataStage project.
 
 ### Example
 
 ```shell
-$> mettleci datastage delete-project \
+$> mcix datastage delete-project \
    -domain test2-svcs.datamigrators.io:59445 -server test2-engn.datamigrators.io \
    -username isadmin -password isadminpwd \
    -project Test3
@@ -192,7 +192,7 @@ $> mettleci datastage delete-project \
 
 ## DataStage Deploy
 
-![datastage compile syntax](./images/datastage-compile.png "datastage compile syntax")
+![datastage compile syntax](../railroads/svgs/datastage-compile.svg "datastage compile syntax")
 
 This command deploys a specified directory containing one or more DataStage ISX files to a specified target DataStage environment (project). 
 
@@ -208,7 +208,7 @@ See Repeatable DataStage Project Deployments for more details on how the `-proje
 ### Example
 
 ```bat
-c:\> mettleci datastage deploy \
+c:\> mcix datastage deploy \
      -domain datastage-services.myorganization.com:59445 \
      -server datastage-engine.myorganization.com \
      -project wwi_jenkins_ds_115_ci \
@@ -253,14 +253,14 @@ Last change to project occurred at 2023-12-17 22:07:00 GMT
 
 ## DataStage Execute
 
-![datastage compile syntax](./images/datastage-compile.png "datastage compile syntax")
+![datastage compile syntax](../railroads/svgs/datastage-compile.svg "datastage compile syntax")
 
 Execute a DataStage job.
 
 ### Example
 
 ```shell
-$> mettelci datastage execute \
+$> mcix datastage execute \
    -domain test1-svcs.datamigrators.io:59445 \
    -server test1-engn.datamigrators.io \
    -username isadmin -password password1 \

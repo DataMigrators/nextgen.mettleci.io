@@ -9,7 +9,7 @@ tags:
 
 ## UnitTest Generate
 
-![unittest generate syntax](./images/unittest-generate.png "unittest generate syntax")
+![unittest generate syntax](../railroads/svgs/unittest-generate.svg "unittest generate syntax")
 
 Generates a DataStage test case for one or more specified DataStage flows.
 
@@ -18,7 +18,7 @@ The optional `-check-row-count-only` flag will cause the generation of a test ca
 ### Example
 
 ```shell
-$> mettleci unittest generate \
+$> mcix unittest generate \
    -assets /opt/dm/mci/jobs \
    -joblist ./joblist.txt \
    -specs /opt/dm/mci/testspecs
@@ -28,7 +28,7 @@ $> mettleci unittest generate \
 
 ## UnitTest Test
 
-![unittest test syntax](./images/unittest-test.png "unittest test syntax")
+![unittest test syntax](../railroads/svgs/unittest-test.svg "unittest test syntax")
 
 
 Run one or more MettleCI Unit Tests against one or more DataStage jobs.
@@ -63,7 +63,7 @@ The `mettleci unittest test -ignore-test-failures` option will prevent a failing
 ### Example
 
 ```bat
-C:\> mettleci unittest test ^
+C:\> mcix unittest test ^
     -domain test1-svcs.datamigrators.io:59445 ^
     -server test1-engn.datamigrators.io ^
     -username isadmin ^

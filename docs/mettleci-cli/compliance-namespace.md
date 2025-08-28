@@ -11,7 +11,7 @@ tags:
 
 ## Compliance List Tags
 
-![compliance quet syntax](../railroads/svgs/compliance-list-tags.svg "compliance quet syntax")
+![compliance list-tags syntax](../railroads/svgs/compliance-list-tags.svg "compliance list-tags syntax")
 
 This command analyses a specified set of Compliance Rules or Asset Queries and reports the tags defined for each.  Output is available in an easy-to-read tabulated for, or as a CSV for downstream processing. When no format optin
 
@@ -23,7 +23,7 @@ This example shows how to list the tags of a directory of Compliance Rules in bo
 # ####################################
 # list-tags output in tabulated format
 # ####################################
-$> mettleci compliance list-tags -rules ~/Projects/bitbucket.org/compliance-rules -format table
+$> mcix compliance list-tags -rules ~/Projects/bitbucket.org/compliance-rules -format table
 MettleCI Command Line (build 174)
 (C) 2018-2022 Data Migrators Pty Ltd
 compliance list-tags (v2.2.x)
@@ -49,7 +49,7 @@ included rule - 'Unique Sort' (PARALLEL_JOB)
 # ##############################
 # list-tags output in CSV format
 # ##############################
-$> mettleci compliance list-tags -rules ~/Projects/bitbucket.org/compliance-rules -format csv
+$> mcix compliance list-tags -rules ~/Projects/bitbucket.org/compliance-rules -format csv
 MettleCI Command Line (build 174)
 (C) 2018-2022 Data Migrators Pty Ltd
 compliance list-tags (v2.2-SNAPSHOT)
@@ -76,7 +76,7 @@ $>
 
     If you're looking for the **Compliance Rules** returned by DataStage flow analysis then see the [Compliance Test](#compliance-test-command) Command.
 
-![compliance quet syntax](./images/compliance-query.png "compliance quet syntax")
+![compliance query syntax](../railroads/svgs/compliance-query.svg "compliance query syntax")
 
 The command line implementation of the Compliance Query functionality exposes the low-level mechanism to produce a report listing the results of the specified Asset Queries.
 
@@ -88,7 +88,7 @@ This example demonstrates how to export  a set of ISX files and run Asset Querie
 # ============================== 
 # Export the required ISX assets
 # ============================== 
-C:\> mettleci isx export ^
+C:\> mcix isx export ^
      -domain myteam-svcs.corp.com:59445 ^
      -username myuser -password mypassword ^
      -server myteam-engn.corp.com ^
@@ -104,7 +104,7 @@ Export complete
 # ================================================================
 # Run the specified asset queries against the exported ISX assets
 # ================================================================
-C:\> mettleci compliance query \
+C:\> mcix compliance query \
      -assets ./Jobs \
      -queries ./Queries \
      -report compliance.csv \
@@ -123,7 +123,7 @@ C:\>
 
     If you're looking for the **Asset Queries** typically used in a MettleCI Report Card then please see the [Compliance Query](#compliance-query-command) Command.
 
-![compliance quet syntax](./images/compliance-test.png "compliance quet syntax")
+![compliance test syntax](../railroads/svgs/compliance-test.svg "compliance test syntax")
 
 The command line implementation of the Compliance Test functionality enables the production of a Compliance Results report of the specified assets against the specified set of MettleCI Compliance Rules.
 
@@ -137,7 +137,7 @@ This example demonstrates how to export  a set of ISX files and run Compliance a
 # ============================== 
 # Export the required ISX assets
 # ============================== 
-C:\MettleCI\cli\> mettleci isx export ^
+C:\MettleCI\cli\> mcix isx export ^
      -domain myteam-svcs.corp.com:59445 ^
      -username myuser -password mypassword  ^
      -server myteam-engn.corp.com  ^
@@ -165,7 +165,7 @@ Last change identification complete
 # ==================================================================
 # Run the specified compliance rules against the exported ISX assets
 # ==================================================================
-$> mettleci compliance test
+$> mcix compliance test
   -rules compliance_rules
   -assets datastage
   -report compliance_report_warn.xml
