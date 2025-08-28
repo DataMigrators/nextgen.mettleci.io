@@ -80,11 +80,11 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/brands/slack
-      link: https://ibmaot.slack.com/archives/CU6UDHRAT
+      link: https://ibm.enterprise.slack.com/archives/C04N7C3LEG1
     - icon: fontawesome/brands/github
-      link: https://github.ibm.com/oic/
+      link: https://github.com/DataMigrators/nextgen.mettleci.io
     - icon: fontawesome/solid/globe
-      link: https://www.ibm.com/
+      link: https://www.mettleci.com
 
 # Configure the Markdown extensions for magic links
 markdown_extensions:

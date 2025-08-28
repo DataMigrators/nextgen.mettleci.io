@@ -5,17 +5,17 @@
 INHERIT: ./base.yml
 
 # Project Information
-site_name: "DevOps for DataStage"
-site_url: "https://pages.github.com/datamigrators/devops-for-datastage/"
-site_description: "Guidance one DataStage DevOps tools and technqiues"
-site_author: "John McKeever"
+site_name: "DevOps for NextGen DataStage"
+site_url: "https://pages.github.com/datamigrators/nextgen.mettleci.io/"
+site_description: "Guidance on DataStage NextGen DevOps tools and technqiues"
+site_author: "Data Migrators"
 
 # Repository Information
-repo_name: 'datamigrators/devops-for-datastage'
-repo_url: 'https://github.com/datamigrators/devops-for-datastage'
+repo_name: 'datamigrators/nextgen.mettleci.io'
+repo_url: 'https://github.com/datamigrators/nextgen.mettleci.io'
 
 # Copyright
-copyright: <a href="/datamigrators/devops-for-datastage/about/authors">Data Migrators Pty Ltd</a>.
+copyright: <a href="/datamigrators/nextgen.mettleci.io/about/authors">Data Migrators Pty Ltd</a>.
 
 # Customize Handbook Template information visibility
 oic_handbook:
@@ -57,57 +57,57 @@ markdown_extensions:
       repo_url_shorthand: false
       social_url_shorthand: true
       user: datamigrators
-      repo: datamigrators/devops-for-datastage
+      repo: datamigrators/nextgen.mettleci.io
   toc:
       permalink: true
       toc_depth: 3
 
 plugins:
+  # Allow Tags on the pages - see https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
+  tags:
+      tags_file: tags.md
   # Built-in blog plugin - see https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/
 #  blog:
 #      blog_dir: "blog"
 #      pagination_per_page: 5
 #      post_date_format: full
 #      post_url_date_format: yyyy/MM/dd
-  # Allow Tags on the pages - see https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
-  tags:
-      tags_file: tags.md
   # Configure the PDF export plugin - see https://github.com/zhaoterryy/mkdocs-pdf-export-plugin
-  with-pdf: # This creates a single PDF document for the whole site
-      author: John McKeever
-      copyright: Copyright &copy; Data Migrators Pty Ltd
-      cover: true
-      back_cover: false
-      #
-      cover_title: DevOps for DataStage
-      cover_subtitle: Guidance on DataStage DevOps tools and technqiues
-      cover_logo: 'theme/logo-ibm-dark.png'
-      #custom_template_path: TEMPLATES PATH
-      #
-      toc_title: Contents
-      # heading_shift: false
-      toc_level: 2
-      #ordered_chapter_level: 2
-      #excludes_children:
-      #    - 'release-notes/:upgrading'
-      #    - 'release-notes/:changelog'
-      #
-      # exclude_pages:
-      #    - 'blog'
-      #    - 'appendix/contribute/'
-      #convert_iframe:
-      #    - src: IFRAME SRC
-      #      img: POSTER IMAGE URL
-      #      text: ALTERNATE TEXT
-      #    - src: ...
-      #two_columns_level: 3
-      #
-      # render_js: true
-      #headless_chrome_path: headless-chromium
-      #
-      output_path: ./pdf/devops-for-datastage.pdf
-      enabled_if_env: ENABLE_PDF_EXPORT
-      #
-      debug_html: true
-      #show_anchors: true
-      verbose: true
+#  with-pdf: # This creates a single PDF document for the whole site
+#      author: John McKeever
+#      copyright: Copyright &copy; Data Migrators Pty Ltd
+#      cover: true
+#      back_cover: false
+#      #
+#      cover_title: DevOps for DataStage
+#      cover_subtitle: Guidance on DataStage DevOps tools and technqiues
+#      cover_logo: 'theme/logo-ibm-dark.png'
+#      #custom_template_path: TEMPLATES PATH
+#      #
+#      toc_title: Contents
+#      # heading_shift: false
+#      toc_level: 2
+#      #ordered_chapter_level: 2
+#      #excludes_children:
+#      #    - 'release-notes/:upgrading'
+#      #    - 'release-notes/:changelog'
+#      #
+#      # exclude_pages:
+#      #    - 'blog'
+#      #    - 'appendix/contribute/'
+#      #convert_iframe:
+#      #    - src: IFRAME SRC
+#      #      img: POSTER IMAGE URL
+#      #      text: ALTERNATE TEXT
+#      #    - src: ...
+#      #two_columns_level: 3
+#      #
+#      # render_js: true
+#      #headless_chrome_path: headless-chromium
+#      #
+#      output_path: ./pdf/devops-for-datastage.pdf
+#      enabled_if_env: ENABLE_PDF_EXPORT
+#      #
+#      debug_html: true
+#      #show_anchors: true
+#verbose: true
