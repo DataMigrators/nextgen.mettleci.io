@@ -27,5 +27,5 @@ CLI_COMMAND_MODE = Diagram(
 
 
 misc = {
-    'cli_command_mode': CLI_COMMAND_MODE
+    'cli-command-mode': CLI_COMMAND_MODE
 }
