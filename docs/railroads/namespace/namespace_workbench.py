@@ -2,7 +2,7 @@ import cairosvg
 from railroad import *
 
 WORKBENCH_SET_BRANCH = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(

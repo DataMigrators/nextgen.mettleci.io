@@ -2,7 +2,7 @@ import cairosvg
 from railroad import *
 
 DATASTAGE_CAPTURE = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -36,7 +36,7 @@ DATASTAGE_CAPTURE = Diagram(
 )
 
 DATASTAGE_CCMT = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -76,7 +76,7 @@ DATASTAGE_CCMT = Diagram(
 )
 
 DATASTAGE_CLEANUP_PROJECTS = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -111,7 +111,7 @@ DATASTAGE_CLEANUP_PROJECTS = Diagram(
 )
 
 DATASTAGE_CREATE_PROJECT = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -143,7 +143,7 @@ DATASTAGE_CREATE_PROJECT = Diagram(
 )
 
 DATASTAGE_COMPILE = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -176,7 +176,7 @@ DATASTAGE_COMPILE = Diagram(
 )
 
 DATASTAGE_DELETE_PROJECT = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -204,7 +204,7 @@ DATASTAGE_DELETE_PROJECT = Diagram(
 )
 
 DATASTAGE_DEPLOY = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -240,7 +240,7 @@ DATASTAGE_DEPLOY = Diagram(
 )
 
 DATASTAGE_EXECUTE = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(

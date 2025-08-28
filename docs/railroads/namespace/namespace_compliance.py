@@ -2,7 +2,7 @@ import cairosvg
 from railroad import *
 
 COMPLIANCE_QUERY = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -31,7 +31,7 @@ COMPLIANCE_QUERY = Diagram(
 )
 
 COMPLIANCE_REPORTCARD = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -58,7 +58,7 @@ COMPLIANCE_REPORTCARD = Diagram(
 )
 
 COMPLIANCE_TEST = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -94,7 +94,7 @@ COMPLIANCE_TEST = Diagram(
 )
 
 COMPLIANCE_CONSOLE = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -114,7 +114,7 @@ COMPLIANCE_CONSOLE = Diagram(
 )
 
 COMPLIANCE_LIST_TAGS = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(

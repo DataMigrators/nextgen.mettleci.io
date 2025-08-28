@@ -2,7 +2,7 @@ import cairosvg
 from railroad import *
 
 UNITTEST_GENERATE = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -32,7 +32,7 @@ UNITTEST_GENERATE = Diagram(
 )
 
 UNITTEST_INSTALL_SERVER_TEST_HARNESS = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -65,7 +65,7 @@ UNITTEST_INSTALL_SERVER_TEST_HARNESS = Diagram(
 )
 
 UNITTEST_MIGRATE = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -98,7 +98,7 @@ UNITTEST_MIGRATE = Diagram(
 )
 
 UNITTEST_TEST = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
@@ -135,7 +135,7 @@ UNITTEST_TEST = Diagram(
 )
 
 UNITTEST_UNINSTALL_SERVER_TEST_HARNESS = Diagram(
-    NonTerminal('mettleci'),
+    NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(

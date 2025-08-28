@@ -38,7 +38,7 @@ Some of the available commands (listed below) use IBM DataStage client component
 
 
 ```
-mettleci [namespace] [command] {commandoptions}
+mcix {namespace} {command} [options]
 ```
 
 Here's an example of the MettleCI Command Line being used to compile an entire DataStage project (using the ['compile' command provided by the 'datastage' namespace](datastage-namespace.md)) :
@@ -94,7 +94,8 @@ isadminpwd
 test1-engn.datamigrators.io
 -project
 dstage1
-# ... and here's how to invoke it
+
+# ... and here's how to use it
 $> mcix @mycommand.txt
 ```
 
