@@ -1,4 +1,4 @@
-<svg class="railroad-diagram" height="272" viewBox="0 0 1279.5 272" width="1279.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg class="railroad-diagram" height="272" viewBox="0 0 1245.5 272" width="1245.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g>
 <style>/* <![CDATA[ */
 	svg.railroad-diagram {
@@ -32,38 +32,38 @@
 /* ]]> */
 </style><g>
 <path d="M20 21v20m10 -20v20m-10 -10h20"></path></g><path d="M40 31h10"></path><g class="non-terminal">
-<path d="M50 31h0"></path><path d="M138.0 31h0.0"></path><rect height="22" width="88.0" x="50" y="20"></rect><text x="94.0" y="35">mettleci</text></g><path d="M138.0 31h10"></path><g>
-<path d="M148.0 31h0"></path><path d="M1239.5 31h0.0"></path><path d="M148.0 31h20"></path><g class="terminal">
-<path d="M168.0 31h0"></path><path d="M222.0 31h997.5"></path><rect height="22" rx="10" ry="10" width="54.0" x="168.0" y="20"></rect><text x="195.0" y="35">help</text></g><path d="M1219.5 31h20"></path><path d="M148.0 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path><g>
-<path d="M168.0 61h0"></path><path d="M1219.5 61h0.0"></path><g class="non-terminal">
-<path d="M168.0 61h0"></path><path d="M256.0 61h0.0"></path><rect height="22" width="88.0" x="168.0" y="50"></rect><text x="212.0" y="65">unittest</text></g><path d="M256.0 61h10"></path><g>
-<path d="M266.0 61h0"></path><path d="M1219.5 61h0.0"></path><path d="M266.0 61h20"></path><g class="terminal">
-<path d="M286.0 61h0"></path><path d="M340.0 61h859.5"></path><rect height="22" rx="10" ry="10" width="54.0" x="286.0" y="50"></rect><text x="313.0" y="65">help</text></g><path d="M1199.5 61h20"></path><path d="M266.0 61a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path><g>
-<path d="M286.0 91h0"></path><path d="M1199.5 91h0.0"></path><g class="non-terminal">
-<path d="M286.0 91h0"></path><path d="M535.5 91h0.0"></path><rect height="22" width="249.5" x="286.0" y="80"></rect><text x="410.75" y="95">install-server-test-harness</text></g><path d="M535.5 91h10"></path><g>
-<path d="M545.5 91h0"></path><path d="M1199.5 91h0.0"></path><path d="M545.5 91h20"></path><g class="terminal">
-<path d="M565.5 91h0"></path><path d="M619.5 91h560.0"></path><rect height="22" rx="10" ry="10" width="54.0" x="565.5" y="80"></rect><text x="592.5" y="95">help</text></g><path d="M1179.5 91h20"></path><path d="M545.5 91a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path><g>
-<path d="M565.5 121h0"></path><path d="M1179.5 121h0.0"></path><g>
-<path d="M565.5 121h0"></path><path d="M865.5 121h0.0"></path><path d="M595.5 121h10"></path><g>
-<path d="M605.5 121h0"></path><path d="M793.0 121h42.5"></path><g class="non-terminal">
-<path d="M605.5 121h0"></path><path d="M685.0 121h0.0"></path><rect height="22" width="79.5" x="605.5" y="110"></rect><text x="645.25" y="125">-domain</text></g><path d="M685.0 121h10"></path><path d="M695.0 121h10"></path><g class="terminal">
-<path d="M705.0 121h0"></path><path d="M793.0 121h0.0"></path><rect height="22" rx="10" ry="10" width="88.0" x="705.0" y="110"></rect><text x="749.0" y="125">{domain}</text></g></g><path d="M835.5 121h10"></path><path d="M595.5 121v20a10 10 0 0 0 10 10"></path><g>
-<path d="M605.5 151h0"></path><path d="M835.5 151h0.0"></path><g class="non-terminal">
-<path d="M605.5 151h0"></path><path d="M685.0 151h0.0"></path><rect height="22" width="79.5" x="605.5" y="140"></rect><text x="645.25" y="155">-server</text></g><path d="M685.0 151h10"></path><path d="M695.0 151h10"></path><g class="terminal">
-<path d="M705.0 151h0"></path><path d="M835.5 151h0.0"></path><rect height="22" rx="10" ry="10" width="130.5" x="705.0" y="140"></rect><text x="770.25" y="155">{engine tier}</text></g></g><path d="M835.5 151a10 10 0 0 0 10 -10v-10"></path><path d="M595.5 121v50a10 10 0 0 0 10 10"></path><g>
-<path d="M605.5 181h0"></path><path d="M810.0 181h25.5"></path><g class="non-terminal">
-<path d="M605.5 181h0"></path><path d="M693.5 181h0.0"></path><rect height="22" width="88.0" x="605.5" y="170"></rect><text x="649.5" y="185">-project</text></g><path d="M693.5 181h10"></path><path d="M703.5 181h10"></path><g class="terminal">
-<path d="M713.5 181h0"></path><path d="M810.0 181h0.0"></path><rect height="22" rx="10" ry="10" width="96.5" x="713.5" y="170"></rect><text x="761.75" y="185">{project}</text></g></g><path d="M835.5 181a10 10 0 0 0 10 -10v-40"></path><path d="M595.5 121v80a10 10 0 0 0 10 10"></path><g>
-<path d="M605.5 211h0"></path><path d="M793.0 211h42.5"></path><g class="non-terminal">
-<path d="M605.5 211h0"></path><path d="M702.0 211h0.0"></path><rect height="22" width="96.5" x="605.5" y="200"></rect><text x="653.75" y="215">-username</text></g><path d="M702.0 211h10"></path><path d="M712.0 211h10"></path><g class="terminal">
-<path d="M722.0 211h0"></path><path d="M793.0 211h0.0"></path><rect height="22" rx="10" ry="10" width="71.0" x="722.0" y="200"></rect><text x="757.5" y="215">{user}</text></g></g><path d="M835.5 211a10 10 0 0 0 10 -10v-70"></path><path d="M595.5 121v110a10 10 0 0 0 10 10"></path><g>
-<path d="M605.5 241h0"></path><path d="M827.0 241h8.5"></path><g class="non-terminal">
-<path d="M605.5 241h0"></path><path d="M702.0 241h0.0"></path><rect height="22" width="96.5" x="605.5" y="230"></rect><text x="653.75" y="245">-password</text></g><path d="M702.0 241h10"></path><path d="M712.0 241h10"></path><g class="terminal">
-<path d="M722.0 241h0"></path><path d="M827.0 241h0.0"></path><rect height="22" rx="10" ry="10" width="105.0" x="722.0" y="230"></rect><text x="774.5" y="245">{password}</text></g></g><path d="M835.5 241a10 10 0 0 0 10 -10v-100"></path><g class="diagram-text">
-<title>take all branches, once each, in any order</title><path class="diagram-text" d="M 595.5 111 h -26 a 4 4 0 0 0 -4 4 v 12 a 4 4 0 0 0 4 4 h 26 z"></path><text class="diagram-text" x="580.5" y="125">all</text><path class="diagram-text" d="M 845.5 111 h 16 a 4 4 0 0 1 4 4 v 12 a 4 4 0 0 1 -4 4 h -16 z"></path><text class="diagram-arrow" x="855.5" y="125">↺</text></g></g><path d="M865.5 121h10"></path><path d="M875.5 121h10"></path><g>
-<path d="M885.5 121h0"></path><path d="M1179.5 121h0.0"></path><path d="M915.5 121h10"></path><g>
-<path d="M925.5 121h0"></path><path d="M925.5 121h224.0"></path><g>
-<path d="M925.5 121h0"></path></g></g><path d="M1149.5 121h10"></path><path d="M915.5 121v10a10 10 0 0 0 10 10"></path><g class="non-terminal">
-<path d="M925.5 141h0"></path><path d="M1149.5 141h0.0"></path><rect height="22" width="224.0" x="925.5" y="130"></rect><text x="1037.5" y="145">-skip-stage-type-updater</text></g><path d="M1149.5 141a10 10 0 0 0 10 -10v0"></path><path d="M915.5 121v40a10 10 0 0 0 10 10"></path><g class="non-terminal">
-<path d="M925.5 171h0"></path><path d="M996.5 171h153.0"></path><rect height="22" width="71.0" x="925.5" y="160"></rect><text x="961.0" y="175">-trust</text></g><path d="M1149.5 171a10 10 0 0 0 10 -10v-30"></path><g class="diagram-text">
-<title>take one or more branches, once each, in any order</title><path class="diagram-text" d="M 915.5 111 h -26 a 4 4 0 0 0 -4 4 v 12 a 4 4 0 0 0 4 4 h 26 z"></path><text class="diagram-text" x="900.5" y="125">1+</text><path class="diagram-text" d="M 1159.5 111 h 16 a 4 4 0 0 1 4 4 v 12 a 4 4 0 0 1 -4 4 h -16 z"></path><text class="diagram-arrow" x="1169.5" y="125">↺</text></g></g></g><path d="M1179.5 121a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path></g></g><path d="M1199.5 91a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path></g></g><path d="M1219.5 61a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path></g><path d="M 1239.5 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
+<path d="M50 31h0"></path><path d="M104.0 31h0.0"></path><rect height="22" width="54.0" x="50" y="20"></rect><text x="77.0" y="35">mcix</text></g><path d="M104.0 31h10"></path><g>
+<path d="M114.0 31h0"></path><path d="M1205.5 31h0.0"></path><path d="M114.0 31h20"></path><g class="terminal">
+<path d="M134.0 31h0"></path><path d="M188.0 31h997.5"></path><rect height="22" rx="10" ry="10" width="54.0" x="134.0" y="20"></rect><text x="161.0" y="35">help</text></g><path d="M1185.5 31h20"></path><path d="M114.0 31a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path><g>
+<path d="M134.0 61h0"></path><path d="M1185.5 61h0.0"></path><g class="non-terminal">
+<path d="M134.0 61h0"></path><path d="M222.0 61h0.0"></path><rect height="22" width="88.0" x="134.0" y="50"></rect><text x="178.0" y="65">unittest</text></g><path d="M222.0 61h10"></path><g>
+<path d="M232.0 61h0"></path><path d="M1185.5 61h0.0"></path><path d="M232.0 61h20"></path><g class="terminal">
+<path d="M252.0 61h0"></path><path d="M306.0 61h859.5"></path><rect height="22" rx="10" ry="10" width="54.0" x="252.0" y="50"></rect><text x="279.0" y="65">help</text></g><path d="M1165.5 61h20"></path><path d="M232.0 61a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path><g>
+<path d="M252.0 91h0"></path><path d="M1165.5 91h0.0"></path><g class="non-terminal">
+<path d="M252.0 91h0"></path><path d="M501.5 91h0.0"></path><rect height="22" width="249.5" x="252.0" y="80"></rect><text x="376.75" y="95">install-server-test-harness</text></g><path d="M501.5 91h10"></path><g>
+<path d="M511.5 91h0"></path><path d="M1165.5 91h0.0"></path><path d="M511.5 91h20"></path><g class="terminal">
+<path d="M531.5 91h0"></path><path d="M585.5 91h560.0"></path><rect height="22" rx="10" ry="10" width="54.0" x="531.5" y="80"></rect><text x="558.5" y="95">help</text></g><path d="M1145.5 91h20"></path><path d="M511.5 91a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path><g>
+<path d="M531.5 121h0"></path><path d="M1145.5 121h0.0"></path><g>
+<path d="M531.5 121h0"></path><path d="M831.5 121h0.0"></path><path d="M561.5 121h10"></path><g>
+<path d="M571.5 121h0"></path><path d="M759.0 121h42.5"></path><g class="non-terminal">
+<path d="M571.5 121h0"></path><path d="M651.0 121h0.0"></path><rect height="22" width="79.5" x="571.5" y="110"></rect><text x="611.25" y="125">-domain</text></g><path d="M651.0 121h10"></path><path d="M661.0 121h10"></path><g class="terminal">
+<path d="M671.0 121h0"></path><path d="M759.0 121h0.0"></path><rect height="22" rx="10" ry="10" width="88.0" x="671.0" y="110"></rect><text x="715.0" y="125">{domain}</text></g></g><path d="M801.5 121h10"></path><path d="M561.5 121v20a10 10 0 0 0 10 10"></path><g>
+<path d="M571.5 151h0"></path><path d="M801.5 151h0.0"></path><g class="non-terminal">
+<path d="M571.5 151h0"></path><path d="M651.0 151h0.0"></path><rect height="22" width="79.5" x="571.5" y="140"></rect><text x="611.25" y="155">-server</text></g><path d="M651.0 151h10"></path><path d="M661.0 151h10"></path><g class="terminal">
+<path d="M671.0 151h0"></path><path d="M801.5 151h0.0"></path><rect height="22" rx="10" ry="10" width="130.5" x="671.0" y="140"></rect><text x="736.25" y="155">{engine tier}</text></g></g><path d="M801.5 151a10 10 0 0 0 10 -10v-10"></path><path d="M561.5 121v50a10 10 0 0 0 10 10"></path><g>
+<path d="M571.5 181h0"></path><path d="M776.0 181h25.5"></path><g class="non-terminal">
+<path d="M571.5 181h0"></path><path d="M659.5 181h0.0"></path><rect height="22" width="88.0" x="571.5" y="170"></rect><text x="615.5" y="185">-project</text></g><path d="M659.5 181h10"></path><path d="M669.5 181h10"></path><g class="terminal">
+<path d="M679.5 181h0"></path><path d="M776.0 181h0.0"></path><rect height="22" rx="10" ry="10" width="96.5" x="679.5" y="170"></rect><text x="727.75" y="185">{project}</text></g></g><path d="M801.5 181a10 10 0 0 0 10 -10v-40"></path><path d="M561.5 121v80a10 10 0 0 0 10 10"></path><g>
+<path d="M571.5 211h0"></path><path d="M759.0 211h42.5"></path><g class="non-terminal">
+<path d="M571.5 211h0"></path><path d="M668.0 211h0.0"></path><rect height="22" width="96.5" x="571.5" y="200"></rect><text x="619.75" y="215">-username</text></g><path d="M668.0 211h10"></path><path d="M678.0 211h10"></path><g class="terminal">
+<path d="M688.0 211h0"></path><path d="M759.0 211h0.0"></path><rect height="22" rx="10" ry="10" width="71.0" x="688.0" y="200"></rect><text x="723.5" y="215">{user}</text></g></g><path d="M801.5 211a10 10 0 0 0 10 -10v-70"></path><path d="M561.5 121v110a10 10 0 0 0 10 10"></path><g>
+<path d="M571.5 241h0"></path><path d="M793.0 241h8.5"></path><g class="non-terminal">
+<path d="M571.5 241h0"></path><path d="M668.0 241h0.0"></path><rect height="22" width="96.5" x="571.5" y="230"></rect><text x="619.75" y="245">-password</text></g><path d="M668.0 241h10"></path><path d="M678.0 241h10"></path><g class="terminal">
+<path d="M688.0 241h0"></path><path d="M793.0 241h0.0"></path><rect height="22" rx="10" ry="10" width="105.0" x="688.0" y="230"></rect><text x="740.5" y="245">{password}</text></g></g><path d="M801.5 241a10 10 0 0 0 10 -10v-100"></path><g class="diagram-text">
+<title>take all branches, once each, in any order</title><path class="diagram-text" d="M 561.5 111 h -26 a 4 4 0 0 0 -4 4 v 12 a 4 4 0 0 0 4 4 h 26 z"></path><text class="diagram-text" x="546.5" y="125">all</text><path class="diagram-text" d="M 811.5 111 h 16 a 4 4 0 0 1 4 4 v 12 a 4 4 0 0 1 -4 4 h -16 z"></path><text class="diagram-arrow" x="821.5" y="125">↺</text></g></g><path d="M831.5 121h10"></path><path d="M841.5 121h10"></path><g>
+<path d="M851.5 121h0"></path><path d="M1145.5 121h0.0"></path><path d="M881.5 121h10"></path><g>
+<path d="M891.5 121h0"></path><path d="M891.5 121h224.0"></path><g>
+<path d="M891.5 121h0"></path></g></g><path d="M1115.5 121h10"></path><path d="M881.5 121v10a10 10 0 0 0 10 10"></path><g class="non-terminal">
+<path d="M891.5 141h0"></path><path d="M1115.5 141h0.0"></path><rect height="22" width="224.0" x="891.5" y="130"></rect><text x="1003.5" y="145">-skip-stage-type-updater</text></g><path d="M1115.5 141a10 10 0 0 0 10 -10v0"></path><path d="M881.5 121v40a10 10 0 0 0 10 10"></path><g class="non-terminal">
+<path d="M891.5 171h0"></path><path d="M962.5 171h153.0"></path><rect height="22" width="71.0" x="891.5" y="160"></rect><text x="927.0" y="175">-trust</text></g><path d="M1115.5 171a10 10 0 0 0 10 -10v-30"></path><g class="diagram-text">
+<title>take one or more branches, once each, in any order</title><path class="diagram-text" d="M 881.5 111 h -26 a 4 4 0 0 0 -4 4 v 12 a 4 4 0 0 0 4 4 h 26 z"></path><text class="diagram-text" x="866.5" y="125">1+</text><path class="diagram-text" d="M 1125.5 111 h 16 a 4 4 0 0 1 4 4 v 12 a 4 4 0 0 1 -4 4 h -16 z"></path><text class="diagram-arrow" x="1135.5" y="125">↺</text></g></g></g><path d="M1145.5 121a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path></g></g><path d="M1165.5 91a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path></g></g><path d="M1185.5 61a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path></g><path d="M 1205.5 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path></g></svg>
