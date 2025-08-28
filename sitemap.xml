@@ -2,166 +2,182 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/blog/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/fabrication/fabrication/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
+    </url>
+    <url>
+         <loc>https://pages.github.com/datamigrators/devops-for-datastage/fabrication/introduction-to-fabrication/</loc>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/flow-analysis/flow-analysis/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/flow-analysis/flow-rules/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/flow-analysis/flow-tagging/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/command-shell/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/compliance-namespace/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/datastage-namespace/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
+    </url>
+    <url>
+         <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/fabrication-namespace/</loc>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/project-cache-directory/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/mettleci-cli/unittest-namespace/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/overview/overview/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/high-volume-tests/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/testing-datastage-flow-rejects/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/testing-datastage-stored-procedures/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/testing-datastage-subflows/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/testing-datastage-surrogate-key-generators/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/patterns/testing-flows-using-datetime-references/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/example-pipepline/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/filesystem-deployment/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/pipelines/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/repeatable-depoyments/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/wip-hotfixes/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/pipelines/wip-selective-promotion/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
+    </url>
+    <url>
+         <loc>https://pages.github.com/datamigrators/devops-for-datastage/railroads/</loc>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/baselining-test-results/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/capturing-test-data/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/configuring-test-data-storage/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/creating-datastage-test-cases/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/editing-datastage-tests/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/excluding-columns-from-tests/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/executing-datastage-test-cases/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/high-volume-tests/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/migrating-datastage-tests-from-older-versions/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/row-count-comparisons/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/selective-stubbing/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/test-datastage-sparse-lookup-stages/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/test-specification-format/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/testing-datastage-flows/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/troubleshoot-testing/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
+    </url>
+    <url>
+         <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/using-data-fabrication/</loc>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/testing/verifying-test-results/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/devops-for-datastage/tags/</loc>
-         <lastmod>2025-05-16</lastmod>
+         <lastmod>2025-08-28</lastmod>
     </url>
 </urlset>
