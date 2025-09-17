@@ -156,15 +156,15 @@ DATASTAGE_COMPILE = Diagram(
                         Terminal('help'),
                         Sequence(
                             MultipleChoice(0, 'all', 
-                                Sequence(NonTerminal('-domain'), '{domain}'),
-                                Sequence(NonTerminal('-server'), '{engine tier}'),
-                                Sequence(NonTerminal('-project'), '{project}'),
-                                Sequence(NonTerminal('-username'), '{user}'),
-                                Sequence(NonTerminal('-password'), '{password}')
+                                Sequence(NonTerminal('-api-key'), '{api-key}'),
+                                Sequence(NonTerminal('-url'), '{URL}'),
+                                Sequence(NonTerminal('-user'), '{user}'),
+                                Sequence(NonTerminal('-report'), '{filename}')
                             ),
                             MultipleChoice(0, 'any',
                                 Sequence(Skip()),
-                                Sequence(NonTerminal('-include_server_routines'), 'true/false'),
+                                Sequence(NonTerminal('-include-asset-in-test-name'), 'true/false'),
+                                Sequence(NonTerminal('-provision_rulesets'), 'true/false'),
                                 Sequence(NonTerminal('-provision_rulesets'), 'true/false')
                             )
                         )
@@ -174,6 +174,18 @@ DATASTAGE_COMPILE = Diagram(
         )
     )
 )
+
+- **api-key**: CP4D/CP4DaaS API key (required)
+- **-report**: JUnit compilation report file (required)
+- **-url**: Base url of CP4D/CP4DaaS (required)
+- **-user**: CP4D/CP4DaaS username (required)
+- **-include-asset-in-test-name**: Test case names will include the compiled asset name in the JUnit reports *(Default: false)*
+- **-project**: Name of target project (required when -project-id not specified)
+- **-project-id**: Id of target project (required when -project not specified)
+
+
+
+
 
 DATASTAGE_DELETE_PROJECT = Diagram(
     NonTerminal('mcix'),
