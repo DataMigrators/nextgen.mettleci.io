@@ -5,3 +5,4 @@ nav:
     - datastage-namespace.md
     - unittest-namespace.md
     - project-cache-directory.md
+    - system-namespace.md
