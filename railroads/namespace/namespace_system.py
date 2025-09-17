@@ -16,5 +16,5 @@ SYSTEM_VERSION = Diagram(
 )
 
 system = {
-    'system_version': SYSTEM_VERSION
+    'system-version': SYSTEM_VERSION
  }
