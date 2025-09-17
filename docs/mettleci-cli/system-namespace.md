@@ -13,16 +13,19 @@ The `system` namespace contains commands for understanding, diagnosing, and cust
 
 ![system version](../railroads/svgs/system-version.svg "system version syntax")
 
-This command displays.
-- The MettleCI CLI [command shell[(command-shell)] version number
-- Your OS versdion and architecture,
-- Your username and language/locale settings, and
+This command displays:
+
+- The MettleCI CLI [command shell](../command-shell) version number,
+- Your O/S version and architecture,
+- Your O/S username and language/locale settings, and
 - A list of MettleCI CLI plugins loaded from your `plugins` folder.
 
 #### Example
       
 ```shell
-mcix>system version
+$> mcix system version
+MettleCI Command Line (build 1.0-SNAPSHOT)
+(C) 2018-2025 Data Migrators Pty Ltd
 system version (1.0-SNAPSHOT)
 Mac OS X 26.0 (aarch64)
 johnmckeever, English (Australia)
@@ -32,5 +35,5 @@ Loaded plugins:
  * MettleCI CP4D Compilation Plugin (1.0-SNAPSHOT)
  * MettleCI CP4D Import Plugin (1.0-SNAPSHOT)
  * MettleCI CP4D Overlays Plugin (1.0-SNAPSHOT)
- $>
+ %>
 ``` 
