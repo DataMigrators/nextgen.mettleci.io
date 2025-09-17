@@ -4,18 +4,20 @@ owner: John McKeever
 tags:
   - Pipeline
   - CLI
-  - Flow Analysis
+  - Asset Analysis
   - Tags
 ---
-# Compliance namespace
+# Asset-Analysis namespace
 
-## Compliance List Tags
+The `asset-analysis` namespace contains commands for running MettleCI Asset Analysis Rules and Asset Queries from the command line.
 
-![compliance list-tags syntax](../railroads/svgs/compliance-list-tags.svg "compliance list-tags syntax")
+## asset-analysis list tags
 
-This command analyses a specified set of Compliance Rules or Asset Queries and reports the tags defined for each.  Output is available in an easy-to-read tabulated for, or as a CSV for downstream processing. When no format optin
+![asset-analysis list-tags syntax](../railroads/svgs/asset-analysis-list-tags.svg "aset-analysis list-tags syntax")
 
-### Example
+This command analyses a specified set of Asset Analysis Rules or Asset Analysis Queries and reports the tags defined for each.  Output is available in an easy-to-read tabulated for, or as a CSV for downstream processing. When no format optin
+
+#### Example
 
 This example shows how to list the tags of a directory of Compliance Rules in both tabulated and CSV formats:
       
@@ -23,7 +25,7 @@ This example shows how to list the tags of a directory of Compliance Rules in bo
 # ####################################
 # list-tags output in tabulated format
 # ####################################
-$> mcix compliance list-tags -rules ~/Projects/bitbucket.org/compliance-rules -format table
+$> mcix asset-analysis list-tags -rules ~/Projects/bitbucket.org/compliance-rules -format table
 MettleCI Command Line (build 174)
 (C) 2018-2022 Data Migrators Pty Ltd
 compliance list-tags (v2.2.x)
@@ -49,7 +51,7 @@ included rule - 'Unique Sort' (PARALLEL_JOB)
 # ##############################
 # list-tags output in CSV format
 # ##############################
-$> mcix compliance list-tags -rules ~/Projects/bitbucket.org/compliance-rules -format csv
+$> mcix asset-analysis list-tags -rules ~/Projects/bitbucket.org/compliance-rules -format csv
 MettleCI Command Line (build 174)
 (C) 2018-2022 Data Migrators Pty Ltd
 compliance list-tags (v2.2-SNAPSHOT)
@@ -70,7 +72,7 @@ $>
  
 ---
 
-## Compliance Query Command
+## asset-analysis query
  
 ???+ info "This command is for running MettleCI Asset Queries"
 
@@ -80,7 +82,7 @@ $>
 
 The command line implementation of the Compliance Query functionality exposes the low-level mechanism to produce a report listing the results of the specified Asset Queries.
 
-### Example
+#### Example
 
 This example demonstrates how to export  a set of ISX files and run Asset Queries against them. Note that asset paths specification in the export command uses the same wildcard rules as the istool command.
 
@@ -117,7 +119,7 @@ C:\>
 
 ---
 
-## Compliance Test Command
+## asset-analysis test
 
 ???+ info "This command is for running MettleCI Compliance Rules"
 
@@ -129,7 +131,7 @@ The command line implementation of the Compliance Test functionality enables the
 
 For more information on using the `-project-cache` parameter see our [detailed explanation]().
 
-### Example
+#### Example
 
 This example demonstrates how to export  a set of ISX files and run Compliance against them. Note that asset paths specification in the export command uses the same wildcard rules as the istool command.
 
@@ -198,4 +200,4 @@ $>
 
 ## References
 
-For a discussion on the use of the `include-tags` and `exclude-tags` options see [Compliance Rule Tags]().
+For a discussion on the use of the `include-tags` and `exclude-tags` options see [Asset-Analysis Rule Tags]().
