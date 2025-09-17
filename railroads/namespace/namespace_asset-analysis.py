@@ -1,12 +1,12 @@
 import cairosvg
 from railroad import *
 
-COMPLIANCE_QUERY = Diagram(
+ASSET_ANALYSIS_QUERY = Diagram(
     NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
-            NonTerminal('compliance'),
+            NonTerminal('asset-analysis'),
             Choice(0, 
                 Terminal('help'),
                 Sequence(
@@ -30,12 +30,12 @@ COMPLIANCE_QUERY = Diagram(
     )
 )
 
-COMPLIANCE_REPORTCARD = Diagram(
+ASSET_ANALYSIS_REPORTCARD = Diagram(
     NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
-            NonTerminal('compliance'),
+            NonTerminal('asset-analysis'),
             Choice(0, 
                 Terminal('help'),
                 Sequence(
@@ -57,12 +57,12 @@ COMPLIANCE_REPORTCARD = Diagram(
     )
 )
 
-COMPLIANCE_TEST = Diagram(
+ASSET_ANALYSIS_TEST = Diagram(
     NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
-            NonTerminal('compliance'),
+            NonTerminal('asset-analysis'),
             Choice(0, 
                 Terminal('help'),
                 Sequence(
@@ -93,12 +93,12 @@ COMPLIANCE_TEST = Diagram(
     )
 )
 
-COMPLIANCE_CONSOLE = Diagram(
+ASSET_ANALYSIS_CONSOLE = Diagram(
     NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
-            NonTerminal('compliance'),
+            NonTerminal('asset-analysis'),
             Choice(0, 
                 Terminal('help'),
                 Sequence(
@@ -113,12 +113,12 @@ COMPLIANCE_CONSOLE = Diagram(
     )
 )
 
-COMPLIANCE_LIST_TAGS = Diagram(
+ASSET_ANALYSIS_LIST_TAGS = Diagram(
     NonTerminal('mcix'),
     Choice(0,
         'help',
         Sequence(
-            NonTerminal('compliance'),
+            NonTerminal('asset-analysis'),
             Choice(0, 
                 Terminal('help'),
                 Sequence(
@@ -149,9 +149,9 @@ COMPLIANCE_LIST_TAGS = Diagram(
 )
 
 compliance = {
-    'compliance-query': COMPLIANCE_QUERY,
-    'compliance-reportcard': COMPLIANCE_REPORTCARD,
-    'compliance-test': COMPLIANCE_TEST,
-    'compliance-console': COMPLIANCE_CONSOLE,
-    'compliance-list-tags': COMPLIANCE_LIST_TAGS
+    'asset-analysis-query': ASSET_ANALYSIS_QUERY,
+    'asset-analysis-reportcard': ASSET_ANALYSIS_REPORTCARD,
+    'asset-analysis-test': ASSET_ANALYSIS_TEST,
+    'asset-analysis-console': ASSET_ANALYSIS_CONSOLE,
+    'asset-analysis-list-tags': ASSET_ANALYSIS_LIST_TAGS
 }
