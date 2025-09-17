@@ -12,16 +12,16 @@ To rebuild the PNG and SVG files in the `pngs` and `svgs` folders, run:
 $ python main.py
 ```
 
-Credit
-------
-
-`main.py` by John McKeever (with help from ChatGPT)
-`railroad.py` is adapted from https://github.com/tabatkins/railroad-diagrams.git
-
-Remember to commit these changes once creted locally:
+Remember to commit these changes once creeted locally:
 
 ```console
 $ git add namespaces pngs svgs
 $ git commit -m "Updated railroad diagrams"
 $ git push origin main
 ```
+
+Credits
+-------
+
+- `railroad.py` is adapted from https://github.com/tabatkins/railroad-diagrams.git
+
