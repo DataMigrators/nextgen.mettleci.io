@@ -161,11 +161,12 @@ DATASTAGE_COMPILE = Diagram(
                                 Sequence(NonTerminal('-user'), '{user}'),
                                 Sequence(NonTerminal('-report'), '{filename}')
                             ),
-                            MultipleChoice(0, 'any',
-                                Sequence(Skip()),
-                                Sequence(NonTerminal('-include-asset-in-test-name'), 'true/false'),
-                                Sequence(NonTerminal('-provision_rulesets'), 'true/false'),
-                                Sequence(NonTerminal('-provision_rulesets'), 'true/false')
+                            Choice(0,
+                                Sequence(NonTerminal('-project'), '{project-name}'),
+                                Sequence(NonTerminal('-proect-id'), '{project-id}')
+                            ),
+                            Optional(
+                                NonTerminal('-include-asset-in-test-name')
                             )
                         )
                     )
@@ -174,18 +175,6 @@ DATASTAGE_COMPILE = Diagram(
         )
     )
 )
-
-- **api-key**: CP4D/CP4DaaS API key (required)
-- **-report**: JUnit compilation report file (required)
-- **-url**: Base url of CP4D/CP4DaaS (required)
-- **-user**: CP4D/CP4DaaS username (required)
-- **-include-asset-in-test-name**: Test case names will include the compiled asset name in the JUnit reports *(Default: false)*
-- **-project**: Name of target project (required when -project-id not specified)
-- **-project-id**: Id of target project (required when -project not specified)
-
-
-
-
 
 DATASTAGE_DELETE_PROJECT = Diagram(
     NonTerminal('mcix'),
