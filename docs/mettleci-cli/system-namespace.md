@@ -5,7 +5,7 @@ tags:
   - Pipeline
   - CLI
 ---
-# System namespace
+# system namespace
 
 The `system` namespace contains commands for understanding, diagnosing, and customising your MettleCI CLI environment.
 
@@ -35,5 +35,9 @@ Loaded plugins:
  * MettleCI CP4D Compilation Plugin (1.0-SNAPSHOT)
  * MettleCI CP4D Import Plugin (1.0-SNAPSHOT)
  * MettleCI CP4D Overlays Plugin (1.0-SNAPSHOT)
- %>
+ $>
 ``` 
+
+--8<-- "abbreviations.md"
+
+{% include 'command-shell.md' %}

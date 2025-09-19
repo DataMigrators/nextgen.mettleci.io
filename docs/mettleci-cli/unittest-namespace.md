@@ -5,9 +5,9 @@ tags:
   - DataStage
   - Running Tests
 ---
-# UnitTest namespace
+# unittest namespace
 
-## UnitTest Generate
+## unittest Generate
 
 ![unittest generate syntax](../railroads/svgs/unittest-generate.svg "unittest generate syntax")
 

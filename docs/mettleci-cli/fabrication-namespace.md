@@ -5,15 +5,15 @@ tags:
   - DataStage
   - Data Fabrication
 ---
-# Fabrication namespace
+# fabrication namespace
 
-## Fabriction List
+## fabriction list
 
 ![fabrication list syntax](../railroads/svgs/fabrication-list.svg "fabrication list syntax")
 
 ---
 
-## Fabrication Test
+## fabrication test
 
 ![fabrication test syntax](../railroads/svgs//fabrication-test.svg "fabrication test syntax")
 
