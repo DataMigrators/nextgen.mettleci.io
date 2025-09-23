@@ -18,20 +18,34 @@ Compiles a DataStage Job producing a JUnit-compatible testing output that can be
 
 #### Parameters
 
-- **api-key** *(Required)*
-    - CP4D/CP4DaaS API key
-- **-url** *(Required)*
-    - Base url of CP4D/CP4DaaS
-- **-user** *(Required)*
-    - CP4D/CP4DaaS username
-- **-report** *(Required)*
-    - JUnit compilation report file
-- **-project** *(Required when `-project-id` not specified)*
-    - Name of target project
-- **-project-id** *(Required when `-project` not specified)*
-    - Id of target project
-- **-include-job-in-test-name** *(Default: false)*
-    - Test case names will include the compiled asset name in the JUnit reports
+  * **api-key** *(Required)*
+
+    CP4D/CP4DaaS API key
+
+  * **-url** *(Required)*
+
+    Base url of CP4D/CP4DaaS
+
+  * **-user** *(Required)*
+
+    CP4D/CP4DaaS username
+
+  * **-report** *(Required)*
+
+    JUnit compilation report file
+
+  * **-project** *(Required when `-project-id` not specified)*
+
+
+    Name of target project
+
+  * **-project-id** *(Required when `-project` not specified)*
+
+    Id of target project
+
+  * **-include-job-in-test-name** *(Default: false)*
+
+    Test case names will include the compiled asset name in the JUnit reports
 
 #### Example
 
@@ -65,18 +79,30 @@ Imports DataStage assets from a DataStage export zip file or directory into a CP
 
 #### Parameters
 
-- **api-key** *(Required)*
-    - CP4D/CP4DaaS API key
+  * **api-key** *(Required)*
+
+    CP4D/CP4DaaS API key
+
 - **-url** *(Required)*
-    - Base url of CP4D/CP4DaaS
+
+    Base url of CP4D/CP4DaaS
+
 - **-user** *(Required)*
-    - CP4D/CP4DaaS username   
+
+    CP4D/CP4DaaS username   
+
 - **-assets** *(Required)*
-    - Path to DataStage export zip file or directory
+
+    Path to DataStage export zip file or directory
+
 - **-project** *(Required when `-project-id` not specified)*
-    - Name of target project
+
+    Name of target project
+
 - **-project-id** *(Required when `-project` not specified)*
-    - Id of target project
+
+    Id of target project
+
 
 #### Example
 

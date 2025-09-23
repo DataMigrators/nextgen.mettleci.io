@@ -37,7 +37,3 @@ Loaded plugins:
  * MettleCI CP4D Overlays Plugin (1.0-SNAPSHOT)
  $>
 ``` 
-
---8<-- "abbreviations.md"
-
-{% include 'command-shell.md' %}

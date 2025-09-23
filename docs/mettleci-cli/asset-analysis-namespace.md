@@ -7,7 +7,7 @@ tags:
   - Asset Analysis
   - Tags
 ---
-# Asset-Analysis namespace
+# asset-analysis namespace
 
 The `asset-analysis` namespace contains commands for running MettleCI Asset Analysis Rules and Asset Queries from the command line.
 
@@ -15,7 +15,15 @@ The `asset-analysis` namespace contains commands for running MettleCI Asset Anal
 
 ![asset-analysis list-tags syntax](../railroads/svgs/asset-analysis-list-tags.svg "aset-analysis list-tags syntax")
 
-This command analyses a specified set of Asset Analysis Rules or Asset Analysis Queries and reports the tags defined for each.  Output is available in an easy-to-read tabulated for, or as a CSV for downstream processing. When no format optin
+This command analyses a specified set of Asset Analysis Rules or Asset Analysis Queries and reports the tags defined for each.  Output is available in an easy-to-read tabulated for, or as a CSV for downstream processing. When no format option is specified the default is tabulated.
+
+#### Parameters
+
+  * -rules
+      location of all the rule files
+    -format
+      output format, either 'table' or 'csv'
+      Default: table
 
 #### Example
 
@@ -78,9 +86,37 @@ $>
 
     If you're looking for the **Compliance Rules** returned by DataStage flow analysis then see the [Compliance Test](#compliance-test-command) Command.
 
-![compliance query syntax](../railroads/svgs/compliance-query.svg "compliance query syntax")
+![asset-analysis query syntax](../railroads/svgs/asset-analysis-query.svg "asset-analysis query syntax")
 
 The command line implementation of the Compliance Query functionality exposes the low-level mechanism to produce a report listing the results of the specified Asset Queries.
+
+#### Parameters
+
+  * ***-assets*** *(required)*
+
+    Location of all json assets to query
+
+  * ***-exclude-tag*** *(repeatable)*
+
+    Tags of asset queries to exclude (case insensitive)
+
+  * ***-include-tag*** *(repeatable)*
+
+    Tags of asset queries to include (case insensitive), includes everything by default
+
+  * ***-queries***
+
+    Location of all the query files
+
+  * ***-report***
+
+    Report name (.csv)
+
+  * ***-threads*** *(Default: 1)*
+
+    Number of threads of execution
+
+
 
 #### Example
 
@@ -130,6 +166,61 @@ C:\>
 The command line implementation of the Compliance Test functionality enables the production of a Compliance Results report of the specified assets against the specified set of MettleCI Compliance Rules.
 
 For more information on using the `-project-cache` parameter see our [detailed explanation]().
+
+#### Parameters
+
+  * **-api-key**
+
+      CP4D API key
+
+  * **-exclude-tag**
+
+    Tags of compliance rules to exclude (case insensitive)
+
+  * **-ignore-test-failures** *(Default: false)*
+
+    Returns zero when testing completes regardless of failures
+
+  * **-include-job-in-test-name** *(Default: false)*
+
+    Test case names will include the job name in the jUnit report
+
+  * **-include-tag**
+
+    Tags of compliance rules to include (case insensitive), includes everything by default
+
+  * **-path**
+
+    Location of project export directory or zip file
+
+  * **-project**
+
+    Project Name
+
+  * **-project-cache**
+
+    Project cache directory, enables incremental testing
+
+  * **-report** *(requried)*
+
+    Report name (.csv or .xml)
+
+  * **-rules** *(required)*
+
+    Location of all the rule files
+
+  * **-test-suite**
+
+    Name of test suite being run, only required if running this command multiple times for the same project
+
+  * **-url**
+
+    Base URL for CP4D instance
+
+  * **-username**
+
+    CP4D user name
+
 
 #### Example
 
@@ -201,3 +292,60 @@ $>
 ## References
 
 For a discussion on the use of the `include-tags` and `exclude-tags` options see [Asset-Analysis Rule Tags]().
+
+
+
+
+
+
+
+
+
+mcix>asset-analysis
+Expected a command
+Usage: asset-analysis [command] [command options]
+  Commands:
+    query      Query one or more Information Server assets
+    test      Compliance test one or more Information Server assets
+    console      Experimental REPL console
+    unittest      Unit test compliance rules using DS Flows with expected
+            results
+
+
+mcix>asset-analysis test^[[C
+Expected a command, got test
+Usage: asset-analysis [command] [command options]
+  Commands:
+    query      Query one or more Information Server assets
+    test      Compliance test one or more Information Server assets
+    console      Experimental REPL console
+    unittest      Unit test compliance rules using DS Flows with expected
+            results
+
+
+
+mcix>asset-analysis console
+asset-analysis console
+There was an error running command. It has been logged (ID 5f37a6e68e6b3e02).
+mcix>asset-analysis unittest
+The following options are required: [-specs], [-rules], [-report]
+Usage: asset-analysis unittest [options]
+  Options:
+    -api-key
+      CP4D API key
+    -path
+      location of project export zip files
+    -project
+      Project Name
+  * -report
+      report name (.xml)
+  * -rules
+      location of all the compliance rules to be tested
+  * -specs
+      location of all the compliance unit test specification files
+    -url
+      Base URL for CP4D instance
+    -username
+      CP4D user name
+
+mcix>

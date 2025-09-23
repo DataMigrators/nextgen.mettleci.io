@@ -2,7 +2,8 @@ title: DevOps CLI
 nav:
     - command-shell.md
     - asset-analysis-namespace.md
+    - asset-analysis-console.md
     - datastage-namespace.md
     - unittest-namespace.md
-    - project-cache-directory.md
     - system-namespace.md
+    - project-cache-directory.md
