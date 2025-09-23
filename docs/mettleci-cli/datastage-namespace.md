@@ -83,23 +83,23 @@ Imports DataStage assets from a DataStage export zip file or directory into a CP
 
     CP4D/CP4DaaS API key
 
-- **-url** *(Required)*
+  * **-url** *(Required)*
 
     Base url of CP4D/CP4DaaS
 
-- **-user** *(Required)*
+  * **-user** *(Required)*
 
     CP4D/CP4DaaS username   
 
-- **-assets** *(Required)*
+  * **-assets** *(Required)*
 
     Path to DataStage export zip file or directory
 
-- **-project** *(Required when `-project-id` not specified)*
+  * **-project** *(Required when `-project-id` not specified)*
 
     Name of target project
 
-- **-project-id** *(Required when `-project` not specified)*
+  * **-project-id** *(Required when `-project` not specified)*
 
     Id of target project
 
@@ -112,8 +112,7 @@ $> mcix datastage import \
    -url https://cp4d.datamigrators.io \
    -user isadmin \
    -assets C:\Apps\command-shell\examples\datastage\export\dstage1.zip \
-   -project dstage1 \
-   -include-job-in-test-name
+   -project dstage1 
 
 Importing DataStage assets
 Import folder location = C:\Apps\command-shell\log\import
