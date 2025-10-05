@@ -4,6 +4,7 @@ nav:
     - asset-analysis-namespace.md
     - asset-analysis-console.md
     - datastage-namespace.md
-    - unittest-namespace.md
+    - overlay-namespace.md
+    - unit-test-namespace.md
     - system-namespace.md
     - project-cache-directory.md

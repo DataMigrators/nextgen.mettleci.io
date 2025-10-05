@@ -10,19 +10,19 @@ tags:
 
 There are many benefits to using artifically generated data in software unit testing:
 
-  * It enables consistent and repeatable tests. Fabricated data is predictable and avoids reliance on external systems like live databases or APIs.  This makes tests deterministic - exhibiting the same behaviour every time they’re run - which is critical for debugging and automation.
+- It enables the construction of **consistent and repeatable tests**. Fabricated data is predictable and avoids reliance on external systems like live databases or APIs.  This makes tests deterministic - exhibiting the same behaviour every time they’re run - which is critical for debugging and automation.
 
-  * It can improve test coverage. You can fabricate edge cases, boundary conditions, and unusual scenarios that may not be present in real datasets. This allows you to stress-test logic under various conditions such as empty strings, large inputs, and invalid values.
+- It can **improve test coverage**. You can fabricate edge cases, boundary conditions, and unusual scenarios that may not be present in real datasets. This allows you to stress-test logic under various conditions such as empty strings, large inputs, and invalid values.
 
-  * It increases testing speed and efficiency. Tests run faster when they don’t have to query or populate real databases or APIs. The volume of your fabricated data can be optimised to supply no more and no less than is required to demonstrate your code’s correct behaviour, resulting in quicker execution, and consequently faster feedback, when used in CI/CD pipelines.
+- It **increases testing speed and efficiency**. Tests run faster when they don’t have to query or populate real databases or APIs. The volume of your fabricated data can be optimised to supply no more and no less than is required to demonstrate your code’s correct behaviour, resulting in quicker execution, and consequently faster feedback, when used in CI/CD pipelines.
 
-  * It supports test isolation. Data fabrication ensures that each unit test is self-contained and does not depend on the state of an external system, or the result of other tests. This promotes modular testing and avoids flaky tests caused by the use of shared data.
+- It **supports test isolation**. Data fabrication ensures that each unit test is self-contained and does not depend on the state of an external system, or the result of other tests. This promotes modular testing and avoids flaky tests caused by the use of shared data.
 
-  * It improves security and privacy. Synthetic data avoids the risks of exposing sensitive or production data in development or test environments.  This is particularly important for DataStage applications which commonly handle PII, health, or financial data.
+- It **improves security and privacy**. Synthetic data avoids the risks of exposing sensitive or production data in development or test environments.  This is particularly important for DataStage applications which commonly handle PII, health, or financial data.
 
-To deliver these benefits MettleCI provides a comprehensive set of test data fabrication tools which support a wide range of use cases.  You can learn how to use these capabilities below.
+To deliver these benefits MettleCI provides a comprehensive set of [test data fabrication tools]() which support a wide range of use cases.  You can learn how to use these capabilities here.
 
-Where you have additional data fabrication requirements, specific to your industry, organization, or team, MettleCI also enables you to develop your own custom data fabrication capabilities.
+Where you have additional data fabrication requirements, specific to your industry, organization, or team, MettleCI also enables you to [develop your own custom data fabrication capabilities](custom-fabricators.md).
 
 # Using MettleCI data fabrication
 
@@ -39,12 +39,15 @@ Back in the test data editor you can regenerate data using your supplied specifi
 Right click the column header and select Regenerate data,
 
 image-20250715-073543.png
+
 Right click the table header (the unlabelled top-left header cell) and select Regenerate data, or
 
 image-20250715-073510.png
+
 Select a subset of cells by clicking and dragging in the table, then right click the table selection and select Regenerate data.
 
 image-20250715-073630.png
+
 Note that these data fabrication settings are evaluated once, at the time that you select the Regenerate data option in the MettleCI Workbench test data editor. Once invoked they will populate the selected test data table cells with appropriate values.  The test data fabricaction settings will NOT be stored in the test data table’s metadata definition and the data itself will remain static, even when depoyed to downstream systems.  The only way to regenerate the test data is to use the test data editory in a MettleCI Workbench instance.
 
 Add label

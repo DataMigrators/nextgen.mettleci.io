@@ -1,0 +1,20 @@
+20:46:21,821  INFO Shell:201 - MettleCI Command Line (build 221)
+20:46:21,826  INFO Shell:202 - (C) 2018-2022 Data Migrators Pty Ltd
+20:46:21,826  INFO Shell:203 - Enter [namespace] [command] [options]
+20:46:21,826  INFO Shell:204 - or 'help' for more information, 'exit' or 'quit' to leave.
+20:46:27,028  INFO Input:42 - help
+20:46:27,188  INFO Shell:59 - Usage: [namespace] [command] [options]
+Namespaces:
+	s2px
+	nextgen
+	datastage
+	fabrication
+	compliance
+	dsparams
+	unittest
+	workbench
+	remote
+	properties
+	isx
+
+20:46:34,327  INFO Input:61 - quit

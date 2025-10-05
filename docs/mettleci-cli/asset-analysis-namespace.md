@@ -27,16 +27,16 @@ This command analyses a specified set of Asset Analysis Rules or Asset Analysis 
 
 #### Example
 
-This example shows how to list the tags of a directory of Compliance Rules in both tabulated and CSV formats:
+This example shows how to list the tags of a directory of Asset Analysis Rules in both tabulated and CSV formats:
       
 ```shell
 # ####################################
 # list-tags output in tabulated format
 # ####################################
-$> mcix asset-analysis list-tags -rules ~/Projects/bitbucket.org/compliance-rules -format table
+$> mcix asset-analysis list-tags -rules ~/Projects/bitbucket.org/asset-analysis-rules -format table
 MettleCI Command Line (build 174)
 (C) 2018-2022 Data Migrators Pty Ltd
-compliance list-tags (v2.2.x)
+asset-analysis list-tags (v2.2.x)
 rules configuration discovered
 included rule - 'Adjacent Transformers' (PARALLEL_JOB)
 included rule - 'Adjacent Transformers' (SERVER_JOB)
@@ -59,10 +59,10 @@ included rule - 'Unique Sort' (PARALLEL_JOB)
 # ##############################
 # list-tags output in CSV format
 # ##############################
-$> mcix asset-analysis list-tags -rules ~/Projects/bitbucket.org/compliance-rules -format csv
+$> mcix asset-analysis list-tags -rules ~/Projects/bitbucket.org/asset-analysis-rules -format csv
 MettleCI Command Line (build 174)
 (C) 2018-2022 Data Migrators Pty Ltd
-compliance list-tags (v2.2-SNAPSHOT)
+asset-analysis list-tags (v2.2-SNAPSHOT)
 rules configuration discovered
 ... <SNIP> ...
 Rule Name,Asset Type,example,fail-ci,fail-upgrade,functionality,governance,maintainability,performance,portability,security,testability
@@ -84,11 +84,11 @@ $>
  
 ???+ info "This command is for running MettleCI Asset Queries"
 
-    If you're looking for the **Compliance Rules** returned by DataStage flow analysis then see the [Compliance Test](#compliance-test-command) Command.
+    If you're looking for the **Asset Analysis Rules** returned by DataStage flow analysis then see the [asset-analysis test](#asset-analysis-test) Command.
 
 ![asset-analysis query syntax](../railroads/svgs/asset-analysis-query.svg "asset-analysis query syntax")
 
-The command line implementation of the Compliance Query functionality exposes the low-level mechanism to produce a report listing the results of the specified Asset Queries.
+The command line implementation of the Asset Analysis Query functionality exposes the low-level mechanism to produce a report listing the results of the specified Asset Queries.
 
 #### Parameters
 
@@ -142,7 +142,7 @@ Export complete
 # ================================================================
 # Run the specified asset queries against the exported ISX assets
 # ================================================================
-C:\> mcix compliance query \
+C:\> mcix asset-analysis query \
      -assets ./Jobs \
      -queries ./Queries \
      -report compliance.csv \
@@ -159,7 +159,7 @@ C:\>
 
 ???+ info "This command is for running MettleCI Compliance Rules"
 
-    If you're looking for the **Asset Queries** typically used in a MettleCI Report Card then please see the [Compliance Query](#compliance-query-command) Command.
+    If you're looking for the **Asset Queries** typically used in a MettleCI Report Card then please see the [asset-analysis query](#asset-analysis-query) Command.
 
 ![compliance test syntax](../railroads/svgs/compliance-test.svg "compliance test syntax")
 
@@ -224,41 +224,13 @@ For more information on using the `-project-cache` parameter see our [detailed e
 
 #### Example
 
-This example demonstrates how to export  a set of ISX files and run Compliance against them. Note that asset paths specification in the export command uses the same wildcard rules as the istool command.
+This example demonstrates the use of `asset-analysis test` to run a set of Flow Analysis Rules against a set of exported ISX files. Note that asset paths specification in the export command uses the [same wildcard rules](https://www.ibm.com/docs/en/iis/11.7.0?topic=command-asset-paths) as the `istool` command. 
 
 ```shell
-# ============================== 
-# Export the required ISX assets
-# ============================== 
-C:\MettleCI\cli\> mcix isx export ^
-     -domain myteam-svcs.corp.com:59445 ^
-     -username myuser -password mypassword  ^
-     -server myteam-engn.corp.com  ^
-     -project myproject  ^
-     -location C:\shared\myproject\export  ^
-     -include-binaries  ^
-     -project-cache C:\shared\myproject\cache
-Analyzing test2-engn.datamigrators.io/myproject
-Attempting to identify changes with 4 working threads.
-Inspecting DataStage assets for changes...
-<SNIP>
-Change identification complete
-Inspecting ParameterSet definition changes...
-ParameterSet definition change identification complete
-Deleting assets...
-<SNIP>
-Deletion complete
-Exporting DataStage assets...
-<SNIP>
-Export complete
-Attempting to identify last change with 4 working threads.
-Inspecting DataStage assets for last change...
-<SNIP>
-Last change identification complete
 # ==================================================================
 # Run the specified compliance rules against the exported ISX assets
 # ==================================================================
-$> mcix compliance test
+$> mcix asset-analysis test
   -rules compliance_rules
   -assets datastage
   -report compliance_report_warn.xml
@@ -292,60 +264,3 @@ $>
 ## References
 
 For a discussion on the use of the `include-tags` and `exclude-tags` options see [Asset-Analysis Rule Tags]().
-
-
-
-
-
-
-
-
-
-mcix>asset-analysis
-Expected a command
-Usage: asset-analysis [command] [command options]
-  Commands:
-    query      Query one or more Information Server assets
-    test      Compliance test one or more Information Server assets
-    console      Experimental REPL console
-    unittest      Unit test compliance rules using DS Flows with expected
-            results
-
-
-mcix>asset-analysis test^[[C
-Expected a command, got test
-Usage: asset-analysis [command] [command options]
-  Commands:
-    query      Query one or more Information Server assets
-    test      Compliance test one or more Information Server assets
-    console      Experimental REPL console
-    unittest      Unit test compliance rules using DS Flows with expected
-            results
-
-
-
-mcix>asset-analysis console
-asset-analysis console
-There was an error running command. It has been logged (ID 5f37a6e68e6b3e02).
-mcix>asset-analysis unittest
-The following options are required: [-specs], [-rules], [-report]
-Usage: asset-analysis unittest [options]
-  Options:
-    -api-key
-      CP4D API key
-    -path
-      location of project export zip files
-    -project
-      Project Name
-  * -report
-      report name (.xml)
-  * -rules
-      location of all the compliance rules to be tested
-  * -specs
-      location of all the compliance unit test specification files
-    -url
-      Base URL for CP4D instance
-    -username
-      CP4D user name
-
-mcix>
