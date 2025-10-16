@@ -1,0 +1,68 @@
+11:28:09,981  INFO Shell:201 - MettleCI Command Line (build 221)
+11:28:09,987  INFO Shell:202 - (C) 2018-2022 Data Migrators Pty Ltd
+11:28:09,987  INFO Shell:203 - Enter [namespace] [command] [options]
+11:28:09,987  INFO Shell:204 - or 'help' for more information, 'exit' or 'quit' to leave.
+11:28:13,784  INFO Input:42 -   
+11:28:13,916  INFO Input:61 - 
+11:28:14,052  INFO Input:61 - 
+11:28:15,069  INFO Input:61 - help
+11:28:15,422  INFO Shell:59 - Usage: [namespace] [command] [options]
+Namespaces:
+	s2px
+	nextgen
+	datastage
+	fabrication
+	compliance
+	dsparams
+	unittest
+	workbench
+	remote
+	properties
+	isx
+
+11:28:23,044  INFO Input:61 - workbench
+11:28:23,054 ERROR Shell:73 - Expected a command
+11:28:23,054  INFO Shell:96 - Usage: workbench [command] [options]
+11:28:23,054  INFO Shell:97 - Commands:
+11:28:23,054  INFO Shell:99 -         help
+11:28:23,054  INFO Shell:99 -         set-branch
+11:28:23,054  INFO Shell:101 - 
+11:28:26,530  INFO Input:61 - remote
+11:28:26,547 ERROR Shell:73 - Expected a command
+11:28:26,547  INFO Shell:96 - Usage: remote [command] [options]
+11:28:26,548  INFO Shell:97 - Commands:
+11:28:26,548  INFO Shell:99 -         help
+11:28:26,548  INFO Shell:99 -         download
+11:28:26,548  INFO Shell:99 -         execute
+11:28:26,549  INFO Shell:99 -         upload
+11:28:26,549  INFO Shell:101 - 
+11:28:31,047  INFO Input:61 - properties
+11:28:31,054 ERROR Shell:73 - Expected a command
+11:28:31,055  INFO Shell:96 - Usage: properties [command] [options]
+11:28:31,055  INFO Shell:97 - Commands:
+11:28:31,055  INFO Shell:99 -         help
+11:28:31,055  INFO Shell:99 -         config
+11:28:31,055  INFO Shell:101 - 
+11:28:36,591  INFO Input:61 - properties config
+11:28:36,611 ERROR Shell:73 - The following options are required: [-outDir], [-filePattern], [-baseDir], [-properties]
+11:28:36,615  INFO Shell:86 - Usage: properties config [options]
+  Options:
+  * -baseDir
+      The directory to look for files in
+  * -filePattern
+      Pattern to use to find files (can provide multiple. e.g: -filePattern 
+      dir1/* -filePattern dir2/*)
+      Default: []
+  * -outDir
+      Directory to write modified files to
+  * -properties
+      Properties file with replacement values
+
+11:28:44,532  INFO Input:61 - properties
+11:28:44,561 ERROR Shell:73 - Expected a command
+11:28:44,561  INFO Shell:96 - Usage: properties [command] [options]
+11:28:44,562  INFO Shell:97 - Commands:
+11:28:44,562  INFO Shell:99 -         help
+11:28:44,562  INFO Shell:99 -         config
+11:28:44,562  INFO Shell:101 - 
+15:24:27,149  INFO Input:61 - quit
