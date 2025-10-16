@@ -21,7 +21,7 @@ This command analyses a specified set of Asset Analysis Rules or Asset Analysis 
 
   * -rules
       location of all the rule files
-    -format
+  * -format
       output format, either 'table' or 'csv'
       Default: table
 
@@ -43,19 +43,24 @@ included rule - 'Adjacent Transformers' (SERVER_JOB)
 ... <SNIP> ...
 included rule - 'Transformer With Unreferenced Stage Variable' (SERVER_JOB)
 included rule - 'Unique Sort' (PARALLEL_JOB)
-                                       Rule Name  Asset Type                 example  fail-ci  fail-upgrade  functionality  governance  maintainability  performance  portability  security  testability
-================================================  =========================  =======  =======  ============  =============  ==========  ===============  ===========  ===========  ========  ===========
-                           Adjacent Transformers  PARALLEL_JOB               -------  -------  ------------  -------------  ----------  maintainability  -----------  -----------  --------  -----------
-                           Adjacent Transformers  SERVER_JOB                 -------  -------  ------------  -------------  ----------  maintainability  -----------  -----------  --------  -----------
-                                Audit Annotation  PARALLEL_JOB               example  -------  ------------  -------------  ----------  maintainability  -----------  -----------  security  -----------
-                                Audit Annotation  SEQUENCE_JOB               example  -------  ------------  -------------  ----------  maintainability  -----------  -----------  security  -----------
-                                Audit Annotation  SERVER_JOB                 example  -------  ------------  -------------  ----------  maintainability  -----------  -----------  security  -----------
-                                          <SNIP>  <SNIP>                     ...      ...      ...           ...            ...         ...              ...          ...          ...       ...
-               Transformer Uses Abort After Rows  PARALLEL_JOB               -------  -------  ------------  functionality  ----------  ---------------  -----------  -----------  --------  -----------
-               Transformer Uses Abort After Rows  PARALLEL_SHARED_CONTAINER  -------  -------  ------------  functionality  ----------  ---------------  -----------  -----------  --------  -----------
-    Transformer With Unreferenced Stage Variable  PARALLEL_JOB               -------  -------  ------------  functionality  ----------  maintainability  -----------  -----------  --------  -----------
-    Transformer With Unreferenced Stage Variable  SERVER_JOB                 -------  -------  ------------  functionality  ----------  maintainability  -----------  -----------  --------  -----------
-                                     Unique Sort  PARALLEL_JOB               -------  -------  ------------  -------------  ----------  maintainability  -----------  -----------  --------  -----------
+                                       Rule Name  fail-ci  maintainability  performance  portability  security
+================================================  =======  ===============  ===========  ===========  ========
+                           Adjacent Transformers  -------  maintainability  -----------  -----------  --------
+                                Audit Annotation  -------  maintainability  -----------  -----------  security
+               Transformer Uses Abort After Rows  -------  ---------------  -----------  -----------  --------
+    Transformer With Unreferenced Stage Variable  -------  maintainability  -----------  -----------  --------
+                                     Unique Sort  -------  maintainability  -----------  -----------  --------
+        Connection Contains Parameter References  -------  ---------------  -----------  portability  --------
+              Connection Not Using Secrets Vault  fail-ci  ---------------  -----------  -----------  security
+        DB Tables Referenced Are Fully Qualified  -------  ---------------  -----------  portability  --------
+                        Hardcoded DB Credentials  -------  ---------------  -----------  portability  security 
+                            Hardcoded File Paths  fail-ci  ---------------  -----------  portability  --------
+                                    One Dataflow  -------  maintainability  -----------  -----------  --------
+     Oracle Connector Not Using Partitioned Read  -------  ---------------  performance  -----------  --------
+           Password Parameter Type Not Encrypted  fail-ci  ---------------  -----------  -----------  security
+                                  Redundant Sort  -------  maintainability  performance  -----------  --------  
+                        Unencrypted DB Passwords  fail-ci  ---------------  -----------  -----------  security
+
 # ##############################
 # list-tags output in CSV format
 # ##############################

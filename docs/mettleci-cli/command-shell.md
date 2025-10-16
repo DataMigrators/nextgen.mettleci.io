@@ -17,8 +17,8 @@ The DataStage NextGen MettleCI Command Line Interface (referred to as **MCIX**) 
 
 To enter console mode start the MettleCI Command Line Interface by entering `mcix` (UNIX) or `mcix.cmd` (Windows). 
 
-```bat
-C:\> mcix.cmd
+```shell
+$> mcix
 MettleCI Command Line (build 1234)
 (C) 2018-2025 Data Migrators Pty Ltd
 Enter [namespace] [command] [options]
@@ -37,7 +37,7 @@ In command mode you can enter commands one at a time at your operating system's 
 Some of the available commands (listed below) use IBM DataStage client components, and so are platform specific.  For example, job compilation requires access to Windows-only components, and so will not be supported on Unix environments.  The MettleCI command is followed by a namespace, which groups a collection of build and deployment operations.  Each of these commands accepts a number of mandatory and/or optional parameters. 
 
 
-```
+```shell
 mcix {namespace} {command} [options]
 ```
 
@@ -51,7 +51,7 @@ $> mcix datastage compile \
    -server test1-engn.datamigrators.io -project dstage1 \
    -username isadmin -password isadminpwd
 Analyzing assets to compile
-Compilation folder location = C:\Apps\command-shell\log\compiliation
+Compilation folder location = \opt\mci\command-shell\log\compiliation
 Attempting to compile with 4 working threads.
 Compiling DataStage jobs...
  * Compile 'test2-engn.datamigrators.io/dstage1/Jobs/Load/EX_Account.pjb' - COMPLETED
@@ -105,7 +105,7 @@ Note:
 * A command file can only contain the definition of a single MettleCI command
 * You can run the MettleCI Command Line with multiple commands by invoking it with individual command files from a shell script with one command per line. E.g.
 
-```bash
+```shell
 #!/usr/bin/env bash
 mcix @mycommand1.txt
 mcix @mycommand2.txt

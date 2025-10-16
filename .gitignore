@@ -4,3 +4,4 @@ site/
 .idea/
 *.swp
 build.log
+docs/mettleci-cli/log/stdout.log

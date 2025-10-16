@@ -18,4 +18,6 @@ One of the many tools MettleCI provides for fabricating authentic-looking data i
 
 We strongly encourage you to share your data generators with the DataStage community by committing them to the public GitHub repository at https://github.mettleci.io/datafab.
 
-⚠️ Please ensure any data generator definitions submitted to this public repository do not contain any Intellectual Property or Personally Identifiable Information.
+???+ warning "Warning"
+
+    Please ensure any data generator definitions submitted to this public repository do not contain any Intellectual Property or Personally Identifiable Information.

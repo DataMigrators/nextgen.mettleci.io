@@ -33,7 +33,7 @@ $> mcix unittest generate \
 
 Run one or more MettleCI Unit Tests against one or more DataStage jobs.
 
-The `-reports` option is used to specify the directory into which the JUnit XML files produced by this command will be placed.  Each job tested will produce a separate XML file named after the Job (e.g. Job MY_JOB_ABC will produce a JUnit file named  MY_JOB_ABC.xml)
+The `-reports` option is used to specify the directory into which the JUnit XML files produced by this command will be placed.  Each job tested will produce a separate XML file named after the Job (e.g. Job `MY_JOB_ABC` will produce a JUnit file named `MY_JOB_ABC.xml`)
 
 The `-ignore-test-failures` option will prevent a failing Unit Test from being interpreted as a command failure by your build system, and consequently halting your CI/CD pipeline. 
 
@@ -47,7 +47,7 @@ MettleCI unit tests can be executed in two ways:
 1. Manually, using the Cloud Pak interface, or
 2. From the command line using the `mcix unit-test execute` command.
 
-When using the MettleCI command line to execute unit tests from within a build orchestration system (Jenkins, GitHub actions, Bamboo, etc.) it’s important to understand how the `mcix unit-test execute` command and your build system interact.
+When using the MettleCI command line to execute unit tests from within a build orchestration system (Jenkins, GitHub Actions, Bamboo, etc.) it’s important to understand how the `mcix unit-test execute` command and your build system interact.
 
 Calling the `mcix unit-test execute` command has three potential outcomes:
 
@@ -62,8 +62,8 @@ The `mcix unit-test execute -ignore-test-failures` option will prevent a failing
 
 #### Example
 
-```bat
-C:\> mcix unit-test execute ^
+```shell
+$> mcix unit-test execute ^
     -domain test1-svcs.datamigrators.io:59445 ^
     -server test1-engn.datamigrators.io ^
     -username isadmin ^
@@ -82,5 +82,5 @@ Executing 4 test cases with 2 concurrent jobs...
  * Test ForJustin - PASSED (27s)
  * Test TxTransformedSales - PASSED (35s)
 SUCCESS: Executed 4 tests
-C:\>
+$> 
 ```

@@ -7,13 +7,13 @@ tags:
 ---
 # overlay namespace
 
-The `overlay` namespace contains commands for ...
+The `overlay` namespace contains commands wich enable you to define and apply changes to DataStage assets in order to modify their behavior or configuration without altering the original asset directly. This is particularly useful in scenarios where you want to maintain different configurations for different environments (e.g., development, testing, production) or when you want to apply temporary changes for specific use cases.
 
 ## overlay apply
 
 ![overlay apply](../railroads/svgs/overlay-apply.svg "overlay apply syntax")
 
-This command ...
+This command applies changes - defined in a [json5-formatted](https://json5.org/) overlay file - to one or more specified DataStage assets supplied in a directory or `.zip` file.
 
 #### Parameters
 
@@ -28,11 +28,29 @@ This command ...
 
 #### Example
       
+The format of the command looks like this...
+
 ```shell
 $> mcix overlay apply \
    -assets /path/to/datastage-export.zip \
    -overlay /path/to/overlay-directory \
    -output /path/to/updated-assets.zip \
+   -properties /path/to/properties-file.properties
+```
+
+Here's a practical example:
+
+```shell
+$> cat /overlays/ci/parameter_set/my-parameterset.json5
+{
+   param1: "value1",
+   param2: "value2"
+}
+
+$> mcix overlay apply \
+   -assets /datastage/datastage-export.zip \
+   -overlay /overlays/ci/parameter_set/my-parameterset.json5 \
+   -output ~/updated-assets.zip \
    -properties /path/to/properties-file.properties
 
 MettleCI Command Line (build 1.0-SNAPSHOT)
