@@ -5,3 +5,4 @@ site/
 *.swp
 build.log
 docs/mettleci-cli/log/stdout.log
+docs/railroads/namespace/__pycache__/
