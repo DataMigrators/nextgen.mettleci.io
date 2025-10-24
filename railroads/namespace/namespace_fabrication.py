@@ -65,6 +65,6 @@ FABRICATION_TEST = Diagram(
 )
 
 fabrication = {
-    'fabrication_list': FABRICATION_LIST,
-    'fabrication_test': FABRICATION_TEST
+    'fabrication-list': FABRICATION_LIST,
+    'fabrication-test': FABRICATION_TEST
 }
