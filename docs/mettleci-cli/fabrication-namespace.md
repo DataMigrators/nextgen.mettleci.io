@@ -114,6 +114,8 @@ $>
 
 ## fabrication test
 
+![fabrication test syntax](../../railroads/svgs//fabrication-test.svg "fabrication test syntax")
+
 This command invokes a specific test data fabrication generator, from either…
 
 - a supplied test data fabrication bundle file (or directory of bundle files), or
@@ -143,9 +145,6 @@ This command invokes a specific test data fabrication generator, from either…
 
     Include pre-existing generators from our internal libraries<br>
     Default: false
-
-![fabrication test syntax](../railroads/svgs//fabrication-test.svg "fabrication test syntax")
-
 
 
 #### Example
