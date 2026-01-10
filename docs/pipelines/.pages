@@ -3,4 +3,7 @@ nav:
     - pipelines.md
     - repeatable-depoyments.md
     - filesystem-deployment.md
+    - overlays-introduction.md
+    - overlays-example.md
+    - overlays-extending.md
     - example-pipepline.md
