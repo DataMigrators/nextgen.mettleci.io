@@ -15,14 +15,20 @@ Generates a DataStage test case for one or more specified DataStage flows.
 
 The optional `-check-row-count-only` flag will cause the generation of a test case which checks row counts, rather than the default option which is to compare data row-by-row.
 
-#### Example
+#### Examples
+
+##### Command Line
 
 ```shell
-$> mcix unittest generate \
-   -assets /opt/dm/mci/jobs \
-   -joblist ./joblist.txt \
-   -specs /opt/dm/mci/testspecs
+mcix unittest generate \
+  -assets /opt/dm/mci/jobs \
+  -joblist ./joblist.txt \
+  -specs /opt/dm/mci/testspecs
 ```
+
+???+ info "This command is not available as a CI/CD native task/plugin"
+
+    This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
 
 ---
 
@@ -60,27 +66,51 @@ Like all shell commands, the `mcix unit-test execute` command returns an [exit c
 The `mcix unit-test execute -ignore-test-failures` option will prevent a failing unit test from being interpreted as a command failure by your build system, and consequently halting your CI/CD pipeline.
 
 
-#### Example
+#### Examples
+
+##### Command Line
 
 ```shell
-$> mcix unit-test execute ^
-    -domain test1-svcs.datamigrators.io:59445 ^
-    -server test1-engn.datamigrators.io ^
-    -username isadmin ^
-    -password my_password ^
-    -project my_project ^
-    -specs unittest ^
-    -reports unittest_reports ^
-    -project-cache "/mettleci/cache/test1-engn.datamigrators.io/my_project"
-MettleCI Command Line (build 128)
-(C) 2018-2025 Data Migrators Pty Ltd
-unit-test execute (1.0-SNAPSHOT)
-Reading test cases...
-Executing 4 test cases with 2 concurrent jobs...
- * Test TxFactFinanceDs - PASSED (28s)
- * Test TxFactFinanceDs-test - PASSED (29s)
- * Test ForJustin - PASSED (27s)
- * Test TxTransformedSales - PASSED (35s)
-SUCCESS: Executed 4 tests
-$> 
+mcix unit-test execute \
+  -domain services.datamigrators.io:59445 \
+  -server engine.datamigrators.io \
+  -username isadmin \
+  -password my_password \
+  -project my_project \
+  -specs unittest \
+  -reports unittest_reports \
+  -project-cache "/mettleci/cache/engine.datamigrators.io/my_project"
+```
+
+##### Azure DevOps Task
+
+```yaml
+- task: mcixUnitTestExecute@1
+  inputs:
+    url: ${{ parameters.CP4DHostName }}
+    user: ${{ parameters.CP4DUsername }}
+    apiKey: ${{ parameters.CP4DKey }}
+    project: ${{ parameters.DatastageProject }}
+    report: '$(Build.SourcesDirectory)/unittest-reports/${{ parameters.DatastageProject }}.xml'
+    testSuite: 'MettleCI CP4D Unit Tests - ${{ parameters.DatastageProject }}'
+    ignoreTestFailures: true
+    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+  displayName: 'Run Unit Tests'
+```
+
+##### GitHub Action
+
+```yaml
+- name: Invoke 'mcix unit-test execute' action
+  uses: datamigrators/mcix/unit-test/execute@latest
+  id: mcix-unittest-execute
+  with:
+    url: "${{ vars.CP4DHOSTNAME }}" 
+    api-key: ${{ secrets.CP4DKEY }}
+    user: ${{ vars.CP4DUSERNAME }}
+    project: ${{ env.DatastageProject }}
+    max-concurrency: "2"
+    test-suite: "MettleCI CP4D Unit Tests - ${{ env.DatastageProject }}"
+    report: "${{ github.workspace }}/unittest-reports/${{ env.DatastageProject }}.xml"
+    ignore-test-failures: true
 ```

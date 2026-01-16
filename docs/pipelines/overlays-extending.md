@@ -48,27 +48,26 @@ parameter_set/common_parameters/ :
 
 ```
 └── overlays/
-├── test/
-│   └── parameter_set/
-│   ├── common_parameters/
-│   │   ├── performance_testing.json5
-│   │   └── unit_testing.json5
-│   └── common_parameters.json5
-├── qa/
-│   ├── connection/
-│   │   └── database.json5
-│   └── parameter_set/
-│       └── common_parameters.json5
-└── prod/
-    └── parameter_set/
-        ├── common_parameters/
-        │    └── unit_testing.json5
-        └── common_parameters.json5
+    ├── test/
+    │   └── parameter_set/
+    │   ├── common_parameters/
+    │   │   ├── performance_testing.json5
+    │   │   └── unit_testing.json5
+    │   └── common_parameters.json5
+    ├── qa/
+    │   ├── connection/
+    │   │   └── database.json5
+    │   └── parameter_set/
+    │       └── common_parameters.json5
+    └── prod/
+        └── parameter_set/
+            ├── common_parameters/
+            │    └── unit_testing.json5
+            └── common_parameters.json5
 ```
 
-Instead of configuring `/overlays/prod/parameter_set/common_parameters/
-unit_testing.json5` with the parameters you want changed for your production environment,
-set its content to `null`.
+Instead of configuring `/overlays/prod/parameter_set/common_parameters/unit_testing.json5` with the 
+parameters you want changed for your production environment, set its content to `null`.
 
 ```
 null
@@ -81,12 +80,13 @@ When applying this overlay configuration, the `unit_testing` parameter set value
 The examples use a single overlay per environment but mcix overlay allows the application of
 multiple overlays when generating the environment specific releases. It also allows variable
 substitutions from both environment variables and properties file.
-In the examples above, environment-specific overlays have been used. This would be achieved by
+
+**In the examples above**, environment-specific overlays have been used. This would be achieved by
 running ...
 
 ```
 mcix overlay apply \
-   -assets ./datastage \
+    -assets ./datastage \
     -overlay ./overlays/<environment> \
     -output release.zip
 ```
@@ -132,7 +132,7 @@ database.username = scott
 database.password = tiger
 ```
 
-This would then be executed like this...
+This would then be executed like this ...
 
 ```
  mcix overlay apply \
@@ -157,7 +157,7 @@ The `mcix overlay apply` (documentation) command is not restricted to applying a
 └── prod.var
 ```
 
-This approach would be executed like this...
+This approach would be executed like this ...
 
 ```
 mcix overlay apply \

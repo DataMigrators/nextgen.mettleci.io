@@ -7,7 +7,7 @@ INHERIT: ./base.yml
 # Project Information
 site_name: "DevOps for NextGen DataStage"
 site_url: "https://pages.github.com/datamigrators/nextgen.mettleci.io/"
-site_description: "Guidance on DataStage NextGen DevOps tools and technqiues"
+site_description: "Guidance on DataStage NextGen DevOps tools and techniques"
 site_author: "Data Migrators"
 
 # Repository Information
@@ -15,14 +15,14 @@ repo_name: 'datamigrators/nextgen.mettleci.io'
 repo_url: 'https://github.com/datamigrators/nextgen.mettleci.io'
 
 # Copyright
-copyright: <a href="/datamigrators/nextgen.mettleci.io/about/authors">Data Migrators Pty Ltd</a>.
+copyright: <a href="/datamigrators/nextgen.mettleci.io/about/authors">© 2025-2026 Data Migrators Pty. Ltd.</a>
 
 # Customize Handbook Template information visibility
 oic_handbook:
-  #template_display_info: false    # version information in the footer, defaults to true in base.yml
+  template_display_info: false    # version information in the footer, defaults to true in base.yml
   announce_text: >
-    MettleCI release v1.3 is now available on IBM Passport Advantage.  
-    See <a href="https://docs.mettleci.io" target="_blank">docs.mettleci.io</a> for more details.
+    MettleCI release v2.0 is now available on IBM Passport Advantage.  
+    See <a href="https://release.mettleci.io" target="_blank">docs.mettleci.io</a> for more details.
   # instana_key: 'SwqWI68BRyCMhG-g5zgsAA'
 
 # Provide some control over theme features.  Comment or un-comment as needed.

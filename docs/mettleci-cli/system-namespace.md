@@ -7,7 +7,7 @@ tags:
 ---
 # system namespace
 
-The `system` namespace contains commands for understanding, diagnosing, and customising your MettleCI CLI environment.
+The `system` namespace contains commands for understanding, diagnosing, and customizing your MettleCI CLI environment.  It can be useful in CI/CD pipelines as a diagnostic step to ensure the MettleCI CLI container environment is correctly configured. 
 
 ## system version
 
@@ -20,13 +20,12 @@ This command displays:
 - Your O/S username and language/locale settings, and
 - A list of MettleCI CLI plugins loaded from your `plugins` folder.
 
-#### Example
-      
+Example output is ...
+
 ```shell
-$> mcix system version
-MettleCI Command Line (build 1.0-SNAPSHOT)
+MettleCI Command Line (build 1.0-123)
 (C) 2018-2025 Data Migrators Pty Ltd
-system version (1.0-SNAPSHOT)
+system version (1.0-123)
 Mac OS X 26.0 (aarch64)
 johnmckeever, English (Australia)
 
@@ -35,5 +34,29 @@ Loaded plugins:
  * MettleCI CP4D Compilation Plugin (1.0-SNAPSHOT)
  * MettleCI CP4D Import Plugin (1.0-SNAPSHOT)
  * MettleCI CP4D Overlays Plugin (1.0-SNAPSHOT)
- $>
-``` 
+```
+
+#### Examples
+
+##### Command Line
+ 
+```shell
+mcix system version
+```
+
+##### Azure DevOps Task
+
+```yaml
+- task: mcixSystemVersion@1
+  inputs:
+    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+  displayName: mcix system version action
+```
+
+##### GitHub Action
+
+```yaml
+- name: mcix system version action
+  uses: datamigrators/mcix/system/version@latest
+  id: mcix-system-version
+```

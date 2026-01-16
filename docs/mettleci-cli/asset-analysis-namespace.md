@@ -51,54 +51,32 @@ The command line implementation of the Asset Analysis Query functionality expose
 
 
 
-#### Example
+#### Examples
 
-This example demonstrates how to export  a set of ISX files and run Asset Queries against them. Note that asset paths specification in the export command uses the same wildcard rules as the istool command.
+This example demonstrates how run Asset Queries against one or more ISX files. 
 
 ```shell
-# ============================== 
-# Export the required ISX assets
-# ============================== 
-C:\> mcix isx export ^
-     -domain myteam-svcs.corp.com:59445 ^
-     -username myuser -password mypassword ^
-     -server myteam-engn.corp.com ^
-     -project myproject ^
-     -jobname .*LD_S.*
-Exporting [.*LD_S.*] from repository...
-Exporting DataStage assets...
- * Export 'test2-engn.datamigrators.io/myproject/Jobs/Load/LD_SUPPLIER.pjb' - COMPLETED
- * Export 'test2-engn.datamigrators.io/myproject/Jobs/Load/LD_STOCK_HOLDING.pjb' - COMPLETED
- * Export 'test2-engn.datamigrators.io/myproject/Jobs/Load/LD_STOCKITEM.pjb' - COMPLETED
- * Export 'test2-engn.datamigrators.io/myproject/Jobs/Load/LD_SALE.pjb' - COMPLETED
-Export complete
-# ================================================================
-# Run the specified asset queries against the exported ISX assets
-# ================================================================
-C:\> mcix asset-analysis query \
-     -assets ./Jobs \
-     -queries ./Queries \
-     -report compliance.csv \
-MettleCI Command Line (build 122)
-(C) 2018-2020 Data Migrators Pty Ltd
- <SNIP>
-# Done!
-C:\>
+mcix asset-analysis query \
+  -assets ./Jobs \
+  -queries ./Queries \
+  -report compliance.csv \
 ```
+
+???+ info "This command is not available as a CI/CD native task/plugin"
+
+    This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
 
 ---
 
 ## asset-analysis test
 
-???+ info "This command is for running MettleCI Compliance Rules"
+???+ info "This command is for running MettleCI Asset Analysis Rules"
 
     If you're looking for the **Asset Queries** typically used in a MettleCI Report Card then please see the [asset-analysis query](#asset-analysis-query) Command.
 
 ![compliance test syntax](../railroads/svgs/compliance-test.svg "compliance test syntax")
 
 The command line implementation of the Compliance Test functionality enables the production of a Compliance Results report of the specified assets against the specified set of MettleCI Compliance Rules.
-
-For more information on using the `-project-cache` parameter see our [detailed explanation]().
 
 #### Parameters
 
@@ -108,7 +86,7 @@ For more information on using the `-project-cache` parameter see our [detailed e
 
   * **-exclude-tag**
 
-    Tags of compliance rules to exclude (case insensitive)
+    Tags (case insensitive) of compliance rules to exclude ([Read more](../asset-analysis-rule-tags))
 
   * **-ignore-test-failures** *(Default: false)*
 
@@ -120,7 +98,8 @@ For more information on using the `-project-cache` parameter see our [detailed e
 
   * **-include-tag**
 
-    Tags of compliance rules to include (case insensitive), includes everything by default
+    Tags (case insensitive)of compliance rules to include, includes everything by default ([Read more](../asset-analysis-rule-tags))
+
 
   * **-path**
 
@@ -132,7 +111,7 @@ For more information on using the `-project-cache` parameter see our [detailed e
 
   * **-project-cache**
 
-    Project cache directory, enables incremental testing
+    Project cache directory, enables incremental testing ([Read more](../project-cache-directory))
 
   * **-report** *(requried)*
 
@@ -155,45 +134,59 @@ For more information on using the `-project-cache` parameter see our [detailed e
     CP4D user name
 
 
-#### Example
+#### Examples
 
-This example demonstrates the use of `asset-analysis test` to run a set of Flow Analysis Rules against a set of exported ISX files. Note that asset paths specification in the export command uses the [same wildcard rules](https://www.ibm.com/docs/en/iis/11.7.0?topic=command-asset-paths) as the `istool` command. 
+These examples demonstrate the use of the `asset-analysis test` command to execute a set of Flow Analysis Rules against one or more exported ISX files. Note that the asset path specification in the export command uses the [same wildcard rules](https://www.ibm.com/docs/en/iis/11.7.0?topic=command-asset-paths) as the `istool` command. 
+
+##### Command Line
 
 ```shell
-# ==================================================================
-# Run the specified compliance rules against the exported ISX assets
-# ==================================================================
-$> mcix asset-analysis test
-  -rules compliance_rules
-  -assets datastage
-  -report compliance_report_warn.xml
-  -junit
-  -project-cache ./project-cache
-  -test-suite warnings
-  -ignore-test-failures
+mcix asset-analysis test \
+  -rules compliance_rules \
+  -assets datastage \
+  -report compliance_report_warn.xml \
+  -junit \
+  -project-cache ./project-cache \
+  -test-suite warnings \
+  -ignore-test-failures \
   -include-job-in-test-name
-MettleCI Command Line (build 122)
-(C) 2018-2020 Data Migrators Pty Ltd
-rules configuration discovered
-new rule discovered - 'Adjacent Transformers' (PARALLEL_JOB)
-new rule discovered - 'CCMigrateTool Stages' (PARALLEL_JOB)
-new rule discovered - 'CCMigrateTool Stages' (SERVER_JOB)
-new rule discovered - 'Database Row Limit' (PARALLEL_JOB)
-new rule discovered - 'Database Row Limit' (SERVER_JOB)
-new rule discovered - 'Debug Row Limit' (PARALLEL_JOB)
-<SNIP>
-new rule discovered - 'One Dataflow' (SERVER_JOB)
-new rule discovered - 'Range Lookup' (PARALLEL_JOB)
-new rule discovered - 'Too Many Stages' (PARALLEL_JOB)
-new rule discovered - 'Too Many Stages' (SERVER_JOB)
-new rule discovered - 'Unique Sort' (PARALLEL_JOB)
-[1/3] TestJob_0921 (PARALLEL_JOB)
-[2/3] TestJob_0930 (PARALLEL_JOB)
-[3/3] TestJob (PARALLEL_JOB)
-# Done!
-$>
 ```
 
-## References
+##### GitHub Actions
 
-For a discussion on the use of the `include-tags` and `exclude-tags` options see [Asset-Analysis Rule Tags]().
+```yaml
+- name: DataStage static code analysis using mcix asset-analysis test action
+  uses: datamigrators/mcix/asset-analysis/test@latest
+  id: mcix-asset-analysis-test
+  with:
+    api-key: ${{ secrets.CP4DKEY }}
+    url: "${{ vars.CP4DHOSTNAME }}" 
+    username: ${{ vars.CP4DUSERNAME }}
+    project: ${{ env.DatastageProject }}         
+    report: "${{ github.workspace }}/analysis-reports/report_${{ inputs.AnalysisSuite }}.xml"
+    rules: "${{ github.workspace }}/analysis-rules/rules"
+    included-tags: ${{ inputs.IncludeTags }}
+    excluded-tags: ${{ inputs.ExcludeTags }}
+    ignore-test-failures: true
+    test-suite: "${{ inputs.AnalysisSuite }}"
+```
+
+##### Azure DevOps Task
+
+```yaml
+- task: mcixAssetanalysisTest@1
+  inputs:
+    url: ${{ parameters.CP4DHostName }}
+    user: ${{ parameters.CP4DUsername }}
+    apiKey: ${{ parameters.CP4DKey }}
+    project: ${{ parameters.DatastageProject }}
+    rules: '$(Build.SourcesDirectory)/${{ parameters.AssetAnalysisRepoName }}'
+    report: '$(Build.SourcesDirectory)/analysis-reports/${{ variables.suiteName }}.xml'
+    includeTags: ${{ parameters.IncludeTags }}
+    excludeTags: ${{ parameters.ExcludeTags }}
+    ignoreTestFailures: true
+    includeAssetInTestName: true
+    testSuite: ${{ parameters.AssetAnalysisSuite }}
+    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+    displayName: 'Run Asset Analysis (${{ parameters.AssetAnalysisSuite }})'
+```

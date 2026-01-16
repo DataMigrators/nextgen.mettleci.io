@@ -26,37 +26,34 @@ This command applies changes - defined in a [json5-formatted](https://json5.org/
 - **-properties**
     - Properties file with replacement values
 
-#### Example
-      
-The format of the command looks like this...
+#### Examples
+
+##### Command Line
 
 ```shell
-$> mcix overlay apply \
-   -assets /path/to/datastage-export.zip \
-   -overlay /path/to/overlay-directory \
-   -output /path/to/updated-assets.zip \
-   -properties /path/to/properties-file.properties
+mcix overlay apply \
+    -assets /path/to/datastage-export.zip \
+    -output /path/to/updated-assets.zip \
+    -overlay /path/to/overlay-directory \
+    -properties /path/to/properties-file.properties
 ```
 
-Here's a practical example:
+##### Azure DevOps Task
 
-```shell
-$> cat /overlays/ci/parameter_set/my-parameterset.json5
-{
-   param1: "value1",
-   param2: "value2"
-}
+```yaml
+TBC
+```
 
-$> mcix overlay apply \
-   -assets /datastage/datastage-export.zip \
-   -overlay /overlays/ci/parameter_set/my-parameterset.json5 \
-   -output ~/updated-assets.zip \
-   -properties /path/to/properties-file.properties
+#### GitHub Action
 
-MettleCI Command Line (build 1.0-SNAPSHOT)
-(C) 2018-2025 Data Migrators Pty Ltd
-overlay apply (1.0-SNAPSHOT)
+```yaml
+- name: Overlay apply using mcix overlay apply action
+uses: datamigrators/mcix/overlay/apply@latest
+id: mcix-overlay-apply
+with:
+    assets: "${{ github.workspace }}/datastage"
+    output: "${{ github.workspace }}/something-something"
+    overlay: "${{ github.workspace }}/overlay-file"
+    properties: "${{ github.workspace }}/peroperties-file"
+```
 
-.....
-
-``` 
