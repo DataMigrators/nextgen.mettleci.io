@@ -40,11 +40,11 @@ File system deployments are executed after the DataStage project has been create
 Everything required for file system deployment lives within the filesystem directory inside the Git repository for the DataStage project being deployed.  At a minimum, the filesystem components of a DataStage project Git directory structure should contain:
 
 ```
-📁
+┆
 ├── datastage
-│   └── DSParams
+│   └── DSParams
 └── filesystem
-    └── deploy.sh
+    └── deploy.sh
 ```
 
 During file system deployment, MettleCI will (recursively) transfer the entire contents of the filesystem directory to a temporary directory on the DataStage engine that hosts the target DataStage project.  MettleCI will then source dsenv and execute the deploy.sh script on the DataStage engine with the following arguments:
@@ -62,17 +62,17 @@ The parameters <datastage project> and <environment> refer to the name of the ta
 As a simple example of how filesystem deployments should work, consider a DataStage project that depends on the following directory structure in order to function:
 
 ```
-📁
+┆
 └── data
     └── example_prod
-        ├── scripts
-        │   ├── wait_for_file.sh
-        │   └── transfer_file.sh
-        ├──reference
-        │   ├── valid_countries.csv
-        │   └── system_accounts.csv
-        ├── input
-        ├── output
+        ├── scripts
+        │   ├── wait_for_file.sh
+        │   └── transfer_file.sh
+        ├──reference
+        │   ├── valid_countries.csv
+        │   └── system_accounts.csv
+        ├── input
+        ├── output
         └── transient
 ```
 
@@ -89,7 +89,7 @@ The following table describes the purpose of each of directory:
 To automatically deploy this file system with MettleCI, we first need to check in all the scripts and reference files into Git somewhere under the filesystem directory. The *.sh and *.csv file could be checked directly into the root of the filesystem directory structure but maintenance is easier if the Git directory structure closely matches the deployed file system.  We also need to check-in deploy.sh, resulting in a directory structure in Git which looks like this:
 
 ```
-📁
+┆
 ├── datastage
 └── filesystem
     ├── scripts
@@ -114,8 +114,10 @@ Finally, the content of the `deploy.sh` shell script would be:
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Validate input arguments
 # 
+
 USAGE="${0} syntax:
 -p <project name> -e <environment>"
+
 while getopts e:w: OPT
 do
     case $OPT in
@@ -125,32 +127,38 @@ do
         exit -1 ;; 
     esac
 done
+
 # Environment required
 if [[ "${ENV_NAME}x" = "x" ]]; then
     echo "ERROR: Parameter <environment> is required.\n${USAGE}";
     exit -1;
 fi
+
 # Project required
 if [[ "${PROJECT_NAME}x" = "x" ]]; then
     echo "ERROR: Parameter <project name> is required.\n${USAGE}";
     exit -1;
 fi
-#------------------------------------------------------------------------------
+
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Deploy filesystem
 #
+
 # directory structures
 mkdir -p /data/${PROJECT_NAME}/scripts
 mkdir -p /data/${PROJECT_NAME}/reference
 mkdir -p /data/${PROJECT_NAME}/input
 mkdir -p /data/${PROJECT_NAME}/output
 mkdir -p /data/${PROJECT_NAME}/transient
+
 # scripts
 rm -rf /data/${PROJECT_NAME}/scripts/*
 cp -r ./scripts/* /data/${PROJECT_NAME}/scripts/
+
 # reference data
 rm -rf /data/${PROJECT_NAME}/reference/*
 cp -r ./reference/* /data/${PROJECT_NAME}/reference/
+
 # clear transient files when running Continuous Integration
 if [[ "$ENV_NAME" = "CI" ]]; then
     rm -rf /data/${PROJECT_NAME}/transient
@@ -159,10 +167,11 @@ fi
 
 There are a few important things to note about this script:
 
-* The first half of `deploy.sh` contains boilerplate validation code.  This can be re-used across all your `deploy.sh` scripts.
-* All required directories are created if they don’t already exist using `mkdir -p`
-* Rather than copy each Project script or reference file individually, deploy.sh deletes the existing content of the scripts and reference directories and replaces it with the files being deployed.  This keeps deploy.sh easy to maintain and understand and it also means that the file system is automatically cleaned up when files are removed from Git.
-* The `${ENV_NAME}` variable can be used to perform deployment steps specific to a given environment.  In this example we clear the transient directory for Continuous Integration (CI), an explanation of why you may want to do this is covered in the Best Practices section.
+ - The first half of `deploy.sh` contains boilerplate validation code.  This can be re-used across all your `deploy.sh` scripts, or externalized into a shared utility script.
+ - All required directories are created, if they don’t already exist, using `mkdir -p`
+ - Rather than copy each Project script or reference file individually, `deploy.sh` deletes the existing content of the `scripts` and `reference` directories and replaces it with the files being deployed. This keeps `deploy.sh` easy to maintain and understand and also means that the file system is automatically cleaned up when files are removed from Git.
+ - The `input` and `output` directories are created but not populated as these directories are expected to be populated by external systems.
+ - The `${ENV_NAME}` variable can be used to perform deployment steps specific to a given environment.  In this example we clear the transient directory for Continuous Integration (CI), an explanation of why you may want to do this is covered in the Best Practices section.
 
 ### Best Practices
 
@@ -184,7 +193,7 @@ For example, lets say we have two DataStage projects with the following filesyst
 
 
 ```
-📁
+┆
 ├── project_1
 │   ├── datastage
 │   └── filesystem

@@ -9,33 +9,67 @@ tags:
 
 ## What are Overlays?
 
-Assets in your Development environment typically contain 'hard coded' references other development-specific assets, values and configurations. Some examples of these are:
+Assets in your Development environment typically contain [hard coded](https://en.wikipedia.org/wiki/Hard_coding) references other development-specific assets, values and configurations. Overlays can be used to modify a variety of DataStage and non-DataStage asset types, including:
 
-- **Jobs** ([documentation](https://dataplatform.cloud.ibm.com/docs/content/dstage/dsnav/topics/create-manage-jobs.html?context=cpdaas))
-- **Local parameters** ([documentation](https://dataplatform.cloud.ibm.com/docs/content/dstage/dsnav/topics/creating_parameters.html?context=cpdaas))
-- **DataStage Parameter Sets**, **Value Sets**, and **Value Set Files** ([documentation](https://dataplatform.cloud.ibm.com/docs/content/dstage/dsnav/topics/create-and-use-parameter-sets.html?context=cpdaas))
-- **Data Connections** ([documentation](https://dataplatform.cloud.ibm.com/docs/content/dstage/dsnav/topics/datastage-connectors.html?context=cpdaas))
+- **Jobs** ([documentation](https://dataplatform.cloud.ibm.com/docs/content/dstage/dsnav/topics/create-manage-jobs.html?context=cpdaas)) - You can modify job properties, such as runtime parameters and configuration settings, to ensure that jobs run correctly in the target environment.
+- **Local parameters** ([documentation](https://dataplatform.cloud.ibm.com/docs/content/dstage/dsnav/topics/creating_parameters.html?context=cpdaas)),
+- **DataStage Parameter Sets**, **Value Sets**, and **Value Set Files** ([documentation](https://dataplatform.cloud.ibm.com/docs/content/dstage/dsnav/topics/create-and-use-parameter-sets.html?context=cpdaas)) - You can use overlays to change the values of parameters in a Parameter Set, allowing you to adapt the behavior of DataStage Jobs and Flows for different environments.
+- **Data Connections** ([documentation](https://dataplatform.cloud.ibm.com/docs/content/dstage/dsnav/topics/datastage-connectors.html?context=cpdaas)) - Overlays can be used to update connection details, such as database hostnames, usernames, and passwords, enabling DataStage assets to connect to the appropriate data sources in each environment.
+- **Non-DataStage assets** - Ovelays can also be used to adapt non-DataStage assets, such as **Filesystem scripts** and **Configuration files** used alongside your DataStage Jobs and Orchestration Pipelines.
 
-Deploying these assets into downstream environments like Test and Production can be challenging as the deployment process requires adapting these Development-specific values or references to those that will allow the asset to behave correctly in the new target environment.  This process of adaption needs to be fast, accurate, repeatable, and traceable, with the ideal solution being to automate it as part of your CI/CD pipeline. This capability is provided in DataStage NextGen by the MettleCI Overlays feature, and is accessed using the MettleCI command line ([documentation](https://nextgen.mettleci.io/mettleci-cli/command-shell/)). Note that for the most common CI/CD build platforms (Jenkins, GitHub Actions, Azure DevOps, etc.) there are also MettleCI [mcix build tasks/plugins](link) which provide the same functionality without needing to directly invoke the command line.
+Deploying these assets into downstream environments, such as Test and Production, can be challenging as the deployment process requires adapting these Development environment-specific values/references to those that will allow the asset to behave correctly in the target environment.  This process of adaption needs to be fast, accurate, repeatable, and traceable, and is ideally implemented as an automation step in your CI/CD pipeline. This automation capability is provided in DataStage NextGen by the **MettleCI Overlays** feature, and is accessed using the MettleCI command line's ([mcix overlay apply](https://nextgen.mettleci.io/mettleci-cli/overlay-namespace/#overlay-apply)) command.
 
-???+ info "Note"
 
-    Note that **Data Connections** in NextGen don't support Parameter Sets like those in DataStage Classic as their values are 'baked in' at compilation
-    time. Adapting Data Connections for different environments therefore requires that the altered asset be re-compiled after deployment.
+
+
+
+## How Overlays work
+
+Overlays are implemented by taking one or more DataStage NextGen export files and modifying them using the `mcix overlay apply` command ([documentation](http://nextgen.mettleci.io/mettleci-cli/overlay-namespace/#overlay-apply)).  This command takes its parameters from one or more text configuration files provided in one of two formats:
+
+1. Overlay files in [json5](https://json5.org/) format, or
+2. Properties files in key/value format.
+
+These configuration files specify the changes that need to be applied to the DataStage assets in order to adapt them for the target environment.  The `mcix overlay apply` command reads the specified configuration files and applies the defined changes to the relevant DataStage assets, producing a new set of modified assets which are then deployed to the target environment.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Where to use Overlays
 
-You can use the `mcix overlay apply` command in a number of contexts - even manually if that's how you wish to perform your deployments, but the ideal application of overlays is within the context of a build and deployment pipeline implemented in your chosen CI/CD tool (Jenkins, GitHub Actions, Azure DevOps, etc.) In this context, the typical process is as follows:
+You can use the `mcix overlay apply` command in a number of contexts - even manually if that's how you wish to perform your deployments - but the ideal application of overlays is within the context of a build and deployment pipeline implemented in your chosen CI/CD tool (Jenkins, GitHub Actions, Azure DevOps, etc.) 
+
+
+In this context, the typical process (demonstrated  the example pipelines available [here](https://github.com/MettleCI)) is as follows: 
 
 1. Commit your Development-specific assets from your development environment (DataStage NextGen) which will trigger your configured CI/CD pipeline.
-2. The CI/CD pipeline checks out the committed Development-specific assets into a working directory then runs the `mcix overlay apply` command to apply a set of overlays for the target environment (CI, Test, Prod, etc.)
+2. The CI/CD pipeline checks out the committed Development-specific assets into a working directory then runs the `mcix overlay apply` command (or native task - see below) to apply a set of 'overlays' for the target environment (CI, Test, Prod, etc.)
 3. The modified assets are then deployed to the target environment (DataStage NextGen project)
 
-This will use the `mcix overlay apply` command (or, in supported build tools, the `mcix overlay apply` build action/task – REFERENCE HERE)
+ 
+
+This process uses the `mcix overlay apply` command (or, in supported build tools, the `mcix overlay apply` build action/task - [REFERENCE HERE](../mcix-build-tasks)) to apply the overlays which modify the Development-specific assets into target environment-specific assets.
 
 For example, a typical CI process will respond to a Git commit by triggering a pipeline which will take the repository contents, move it into a working directory and running `mcix overlay apply` for a nominated target environment ('CI', in this case).  The `mcix overlay apply` command will look for the relevant overlay files defined in your repository and apply them by substituting the specified values in the specified assets. This modified set of assets will then be deployed to the relevant CI project after which your CI pipeline’s other processes will be performed - typically running flow analysis and unit tests.
 
 Once CI has completed successfully you can then invoke (either manually, or automatically) a subsequent deployment process for another environment (testing or production) which will also use the `mcix overlay apply` command to perform the same asset customization process using a set of overlays files for that target environment.
+
+
+
+
+
+
+
+
 
 
 
@@ -82,12 +116,6 @@ mcix datastage compile \
 
 
 
-## How Overlays work
-
-Overlays are implemented by taking a DataStage NextGen export and modifying it using the `mcix overlay apply` command ([documentation](http://nextgen.mettleci.io/mettleci-cli/overlay-namespace/#overlay-apply)).  This command takes its parameters from one or more text configuration files provided in either key/value or [json5](https://json5.org/) format - more details on the roles of these files and their format are detailed later.
-
-
-
 ## Project Structure
 
 A typical MCIX project is organized into two main sections:
@@ -120,6 +148,16 @@ Here's an example directory structure:
     ├── qa/
     └── prod/
 ```
+
+
+
+
+
+
+
+
+
+
 
 ### DataStage Assets
 
@@ -220,8 +258,7 @@ Database credentials, for example. This is done by adding a database configurati
 ┆
 └── overlays/
     ├── test/
-    │   └── parameter_set/
-    │       └── common_parameters.json5
+    │   └── ...
     ├── qa/
     │   ├── connection/
     │   │   └── database.json5
@@ -230,7 +267,7 @@ Database credentials, for example. This is done by adding a database configurati
     └── prod/
 ```
 
-Alongside a QA specific version of `common_parameters.json5`, define the following`database.json5` file to update the connection details of the database connection:
+Alongside a QA specific version of `common_parameters.json5`, define the following `database.json5` file to update the connection details of the database connection:
 
 ```
 {
@@ -248,30 +285,31 @@ property file passed to the mcix overlay command** - more details on this are co
 Substitutions like this allows parameters to be provided externally from your CI/CD Pipeline or setting sensitive credentials
 without needing to store them in Git.
 
+???+ info "Note"
+
+    Note that **Data Connections** in NextGen don't support Parameter Sets like those in DataStage Classic as their values are 'baked in' at compilation
+    time. Adapting Data Connections for different environments therefore requires that the altered asset be re-compiled after deployment.
+
 ### A Production environment job configuration
 
 In your Production environment you may want to customize not only the parameter set and connection details as
 described in the previous examples, but also the properties used when running Jobs. This may include changing 
-the warning limit to 0, for example, so that a DataStage job fails if it produces any warnings, or setting an
+the warning limit to `0`, for example, so that a DataStage job fails if it produces any warnings, or setting an
 environment variable parameter for the Flow.  To do this you would define a new overlay configuration file in
-the `overlays/prod/job` directory which, for this example, we'll call `transform.DataStage job.json5`:
+the `overlays/prod/job` directory which, for this example, we'll call `transform.DataStage-job.json5`:
 
 ```
 ┆
 └── overlays/
     ├── test/
-    │   └── parameter_set/
-    │       └── common_parameters.json5
+    │   └── ...
     ├── qa/
-    │   ├── connection/
-    │   │   └── database.json5
-    │   └── parameter_set/
-    │       └── common_parameters.json5
+    │   └── ...
     └── prod/
         ├── connection/
         │   └── database.json5
         ├── job/
-        │   └── transform.DataStage job.json5
+        │   └── transform.DataStage-job.json5
         └── parameter_set/
             └── common_parameters.json5
 ```

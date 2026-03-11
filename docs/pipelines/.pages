@@ -1,9 +1,9 @@
 title: DevOps Pipelines
 nav:
     - pipelines.md
-    - repeatable-depoyments.md
+    - repeatable-deployments.md
     - filesystem-deployment.md
     - overlays-introduction.md
-    - overlays-examples.md
     - overlays-extending.md
-    - example-pipepline.md
+    - example-pipeline.md
+    - mcix-build-tasks.md

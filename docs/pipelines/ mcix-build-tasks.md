@@ -1,13 +1,20 @@
+---
+status: draft #Status can be draft, reviewed or published. 
+owner: John McKeever
+tags:
+  - Pipelines
+---
 
+# Using mcix Build Tasks in your CI/CD Pipelines
 
-Your CI/CD pipelines (and which are demonstrated in the example pipelines) use a variety of mcix commands to achieve their outcomes.  These commands can be invoked within your pipeline using either of two different mechanisms:
+The MettleCI CLI (`mcix`) provides a set of build tasks/plugins that can be integrated into popular CI/CD platforms such as Jenkins, GitHub Actions, Azure DevOps, and Bitbucket Pipelines. These build tasks allow you to easily incorporate MettleCI functionality into your CI/CD pipelines, enabling automated testing and deployment of your DataStage assets.
 
-1. Directly invoking the mcix CLI commands using a command line task within your pipeline, or
-2. Using native mcix build tasks/plugins available for popular CI/CD platforms like Jenkins, GitHub Actions, Azure DevOps, and Bitbucket Pipelines.
+Your CI/CD pipelines—illustrated in the accompanying example pipelines—leverage a range of mcix commands to achieve their desired outcomes. These commands can be executed within your pipeline using one of two approaches:
 
-The mcix build tasks/plugins provide a more integrated experience within your chosen CI/CD platform, allowing you to configure the tasks using the platform's native UI and features.  They also provide additional capabilities such as better logging, error handling, and integration with other tasks within your pipeline.
+1. Direct invocation of the mcix CLI ([documentation](https://nextgen.mettleci.io/mettleci-cli/)) via a command-line task in your pipeline, or
+2. Using **native mcix build tasks** designed for popular CI/CD platforms such as Jenkins, GitHub Actions, Azure DevOps, and Bitbucket Pipelines.
 
-The following sections provide examples of how to use the mcix build tasks/plugins within your CI/CD pipelines for different platforms.
+Using the native mcix build tasks offers a more seamless and integrated experience within your chosen CI/CD platform. They allow configuration through the platform’s standard user interface and provide enhanced reporting and error handling capabilities.  The following sections provide examples of how to use the mcix build tasks/plugins within your CI/CD pipelines for different platforms.
 
 ## Jenkins
 
@@ -41,8 +48,6 @@ jobs:
           project: ${{ env.DatastageProject }}         
           assets: "${{ github.workspace }}/datastage"
 ````
-
-
 
 ## GitHub Actions
 

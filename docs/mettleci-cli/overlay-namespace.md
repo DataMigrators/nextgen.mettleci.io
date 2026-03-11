@@ -41,7 +41,16 @@ mcix overlay apply \
 ##### Azure DevOps Task
 
 ```yaml
-TBC
+- task: mcixOverlayApply@1
+inputs:
+    assets: 'datastage'
+    overlays: |
+    '$(Build.SourcesDirectory)/overlays/common'
+    '$(Build.SourcesDirectory)/overlays/${{ parameters.EnvironmentID }}'
+    properties: '$(Build.SourcesDirectory)/varfiles/var.${{ parameters.EnvironmentID }}'
+    output: '$(Build.SourcesDirectory)/release.zip'
+    imageName: 'mettleci.azurecr.io/mettleci/mcix'
+displayName: 'Apply Overlays to Assets'
 ```
 
 #### GitHub Action
