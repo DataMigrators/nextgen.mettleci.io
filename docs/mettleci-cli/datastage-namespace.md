@@ -91,6 +91,119 @@ mcix datastage compile \
 
 ---
 
+## datastage export
+
+![datastage export syntax](../railroads/svgs/datastage-export.svg "datastage export syntax")
+
+Exports DataStage assets from a DataStage CP4D/CP4DaaS project to a destination zip file.
+
+#### Parameters
+
+  * **api-key** *(Required)*
+
+    CP4D/CP4DaaS API key
+
+  * **-export-path** *(Required)*
+
+    Path to DataStage export zip file or directory
+
+  * **include-binaries**
+
+    Whether to include executable binaries in the export (default: false)
+
+  * **-project** *(Required when `-project-id` not specified)*
+
+    Name of target project
+
+  * **-project-id** *(Required when `-project` not specified)*
+
+    Id of target project
+
+  * **-url** *(Required)*
+
+    Base url of CP4D/CP4DaaS
+
+  * **-user** *(Required)*
+
+    CP4D/CP4DaaS username   
+
+
+#### Examples
+
+##### Command Line
+
+```shell
+mcix datastage export \
+  -api-key XXXXXXXXXXXXXXXXXXXXXXXX \
+  -url https://cp4d.datamigrators.io \
+  -user isadmin \
+  -export-path dstage1.zip \
+  -project dstage1 
+```
+
+!!!+ info "Command Line" ```shell
+mcix datastage export \
+  -api-key XXXXXXXXXXXXXXXXXXXXXXXX \
+  -url https://cp4d.datamigrators.io \
+  -user isadmin \
+  -export-path dstage1.zip \
+  -project dstage1 
+```
+
+##### GitHub Actions
+
+```yaml
+- name: DataStage export using mcix datastage export action
+  uses: datamigrators/mcix/datastage/export@latest
+  id: mcix-datastage-export
+  with:
+    api-key: ${{ secrets.CP4DKEY }}
+    url: ${{ vars.CP4DHOSTNAME }}
+    user: ${{ vars.CP4DUSERNAME }}
+    project: ${{ env.DatastageProject }}         
+    assets: "${{ github.workspace }}/datastage"
+```
+
+!!!+ info "Github Actions" ```yaml
+- name: DataStage export using mcix datastage export action
+  uses: datamigrators/mcix/datastage/export@latest
+  id: mcix-datastage-export
+  with:
+    api-key: ${{ secrets.CP4DKEY }}
+    url: ${{ vars.CP4DHOSTNAME }}
+    user: ${{ vars.CP4DUSERNAME }}
+    project: ${{ env.DatastageProject }}         
+    assets: "${{ github.workspace }}/datastage"
+```
+
+##### Azure DevOps Tasks
+
+```yaml
+- task: mcixDatastageExport@1
+  inputs:
+    url: ${{ parameters.CP4DHostName }}
+    user: ${{ parameters.CP4DUsername }}
+    apiKey: ${{ parameters.CP4DKey }}
+    project: ${{ parameters.DatastageProject }}
+    exportPath: '$(Build.SourcesDirectory)/datastage'
+    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+  displayName: 'Export DataStage Assets'
+```
+
+!!!+ "Azure DevOps Tasks" ```yaml
+- task: mcixDatastageExport@1
+  inputs:
+    url: ${{ parameters.CP4DHostName }}
+    user: ${{ parameters.CP4DUsername }}
+    apiKey: ${{ parameters.CP4DKey }}
+    project: ${{ parameters.DatastageProject }}
+    exportPath: '$(Build.SourcesDirectory)/datastage'
+    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+  displayName: 'Export DataStage Assets'
+```
+
+---
+
 ## datastage import
 
 ![datastage import syntax](../railroads/svgs/datastage-import.svg "datastage import syntax")

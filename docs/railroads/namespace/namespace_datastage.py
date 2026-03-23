@@ -67,6 +67,42 @@ DATASTAGE_IMPORT = Diagram(
 )
 
 
+DATASTAGE_EXPORT = Diagram(
+    NonTerminal('mcix'),
+    Choice(0,
+        'help',
+        Sequence(
+            NonTerminal('datastage'),
+            Choice(0,
+                'help',
+                Sequence(
+                    NonTerminal('export'),
+                    Choice(0, 
+                        Terminal('help'),
+                        Sequence(
+                            MultipleChoice(0, 'all', 
+                                Sequence(NonTerminal('-api-key'), '{api-key}'),
+                                Sequence(NonTerminal('-url'), '{URL}'),
+                                Sequence(NonTerminal('-user'), '{user}'),
+                                Sequence(NonTerminal('-export-path'), '{file-pattern}')
+                            ),
+                            Choice(0,
+                                Sequence(NonTerminal('-project'), '{project-name}'),
+                                Sequence(NonTerminal('-proect-id'), '{project-id}')
+                            ),
+                            MultipleChoice(0, 'any',
+                                Sequence(Skip()), 
+                                Sequence(NonTerminal('-include-binaries'), '{boolean}')
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    )
+)
+
+
 DATASTAGE_CAPTURE = Diagram(
     NonTerminal('mcix'),
     Choice(0,
@@ -312,6 +348,7 @@ DATASTAGE_EXECUTE = Diagram(
 datastage = {
     'datastage-compile': DATASTAGE_COMPILE,
     'datastage-import': DATASTAGE_IMPORT,
+    'datastage-export': DATASTAGE_EXPORT,
     'datastage-capture': DATASTAGE_CAPTURE,
     'datastage-ccmt': DATASTAGE_CCMT,
     'datastage-cleanup-projects': DATASTAGE_CLEANUP_PROJECTS,
