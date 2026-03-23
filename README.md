@@ -1,5 +1,7 @@
 # DevOps for DataStage
 
+[![pages-build-deployment](https://github.com/DataMigrators/nextgen.mettleci.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/DataMigrators/nextgen.mettleci.io/actions/workflows/pages/pages-build-deployment)
+
 ## Getting Started
 
 ### Install prerequisites.
