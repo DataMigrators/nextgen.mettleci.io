@@ -92,7 +92,7 @@ DATASTAGE_EXPORT = Diagram(
                             ),
                             MultipleChoice(0, 'any',
                                 Sequence(Skip()), 
-                                Sequence(NonTerminal('-include-binaries'), '{boolean}')
+                                Sequence(NonTerminal('-include-binaries'))
                             )
                         )
                     )
