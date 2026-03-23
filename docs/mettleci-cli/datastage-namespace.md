@@ -130,6 +130,24 @@ Exports DataStage assets from a DataStage CP4D/CP4DaaS project to a destination 
 
 #### Examples
 
+=== "Command Line"
+    Markdown **content**.
+
+    Multiple paragraphs.
+
+=== "GitHub Actions"
+    More Markdown **content**.
+
+    - list item a
+    - list item b
+
+=== "Azure DevOps Tasks"
+    More Markdown **content**.
+    ```yaml
+    - list item a
+    - list item b
+    ```
+
 ##### Command Line
 
 ```shell

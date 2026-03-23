@@ -51,36 +51,7 @@ theme:
     edit: 'material/pencil-outline'
 
 markdown_extensions:
-  - pymdownx.inlinehilite:
-        custom_inline:
-        - name: math
-          class: arithmatex
-          format: !!python/name:pymdownx.arithmatex.inline_mathjax_format
-  - pymdownx.tilde:
-  - pymdownx.caret:
-  - pymdownx.smartsymbols:
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_png
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.escapeall:
-      hardbreak: true
-      nbsp: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.progressbar:
-  - pymdownx.arithmatex:
-  - pymdownx.mark:
-  - pymdownx.striphtml:
-  - pymdownx.snippets:
-      auto_append:
-        - includes/abbreviations.md
-  - pymdownx.keys:
-      separator: "\uff0b"
-  - pymdownx.details:
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.magiclink:
+  pymdownx.magiclink:
       provider: 'github'
       repo_url_shortener: true
       repo_url_shorthand: false
