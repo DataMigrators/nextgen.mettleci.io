@@ -2,210 +2,210 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/tags/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/blog/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/fabrication/custom-fabricators/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/fabrication/fabrication/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/flow-analysis/flow-analysis/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/flow-analysis/flow-rules/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/flow-analysis/flow-tagging/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/asset-analysis-console/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/asset-analysis-namespace/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/command-shell/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/datastage-namespace/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/fabrication-namespace/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/overlay-namespace/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/project-cache-directory/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/system-namespace/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/mettleci-cli/unit-test-namespace/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/overview/overview/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/high-volume-tests/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/testing-datastage-flow-rejects/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/testing-datastage-stored-procedures/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/testing-datastage-subflows/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/testing-datastage-surrogate-key-generators/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/patterns/testing-flows-using-datetime-references/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/example-pipepline/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/filesystem-deployment/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/mcix-build-tasks/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/overlays-examples/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/overlays-extending/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/overlays-introduction/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/pipelines/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/repeatable-depoyments/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/wip-hotfixes/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/pipelines/wip-selective-promotion/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/railroads/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/baselining-test-results/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/capturing-test-data/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/configuring-test-data-storage/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/creating-datastage-test-cases/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/editing-datastage-tests/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/excluding-columns-from-tests/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/executing-datastage-test-cases/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/high-volume-tests/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/migrating-datastage-tests-from-older-versions/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/row-count-comparisons/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/selective-stubbing/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/test-datastage-sparse-lookup-stages/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/test-specification-format/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/testing-datastage-flows/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/troubleshoot-testing/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/using-data-fabrication/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
     <url>
          <loc>https://pages.github.com/datamigrators/nextgen.mettleci.io/testing/verifying-test-results/</loc>
-         <lastmod>2026-03-11</lastmod>
+         <lastmod>2026-03-23</lastmod>
     </url>
 </urlset>
