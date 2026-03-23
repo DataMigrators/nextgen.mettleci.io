@@ -49,45 +49,41 @@ Compiles a DataStage Job producing a JUnit-compatible testing output that can be
 
 #### Examples 
 
-##### Command Line
+=== "Command Line"
+    ```shell
+    mcix datastage compile \
+      -api-key XXXXXXXXXXXXXXXXXXXXXXXX \
+      -url https://cp4d.datamigrators.io \
+      -user isadmin \
+      -report mettleci_compilation.xml \
+      -project dstage1 \
+      -include-asset-in-test-name
+    ``` 
 
-```shell
-mcix datastage compile \
-  -api-key XXXXXXXXXXXXXXXXXXXXXXXX \
-  -url https://cp4d.datamigrators.io \
-  -user isadmin \
-  -report mettleci_compilation.xml \
-  -project dstage1 \
-  -include-asset-in-test-name
-``` 
-
-##### GitHub Actions
-
-````yaml
-- name: DataStage Compile using mcix datastage compile action
-  uses: datamigrators/mcix/datastage/compile@latest
-  id: mcix-datastage-compile
-  with:
-    api-key: ${{ secrets.CP4DKEY }}
-    url: ${{ vars.CP4DHOSTNAME }}
-    user: ${{ vars.CP4DUSERNAME }}
-    project: ${{ env.DatastageProject }}         
-````
-
-##### Azure DevOps Tasks
-
-```yaml
-- task: mcixDatastageCompile@1
-  inputs:
-    url: ${{ parameters.CP4DHostName }}
-    user: ${{ parameters.CP4DUsername }}
-    apiKey: ${{ parameters.CP4DKey }}
-    project: ${{ parameters.DatastageProject }}
-    report: '$(Build.SourcesDirectory)/log/compile/compilation_results.xml'
-    includeAssetInTestName: true
-    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
-  displayName: 'Compile DataStage Assets'
-```
+=== "GitHub Actions"
+    ```yaml
+    - name: DataStage Compile using mcix datastage compile action
+      uses: datamigrators/mcix/datastage/compile@latest
+      id: mcix-datastage-compile
+      with:
+        api-key: ${{ secrets.CP4DKEY }}
+        url: ${{ vars.CP4DHOSTNAME }}
+        user: ${{ vars.CP4DUSERNAME }}
+        project: ${{ env.DatastageProject }}         
+    ```
+=== "Azure DevOps Tasks"
+    ```yaml
+    - task: mcixDatastageCompile@1
+      inputs:
+        url: ${{ parameters.CP4DHostName }}
+        user: ${{ parameters.CP4DUsername }}
+        apiKey: ${{ parameters.CP4DKey }}
+        project: ${{ parameters.DatastageProject }}
+        report: '$(Build.SourcesDirectory)/log/compile/compilation_results.xml'
+        includeAssetInTestName: true
+        imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+      displayName: 'Compile DataStage Assets'
+    ```
 
 ---
 
@@ -131,94 +127,40 @@ Exports DataStage assets from a DataStage CP4D/CP4DaaS project to a destination 
 #### Examples
 
 === "Command Line"
-    Markdown **content**.
-
-    Multiple paragraphs.
-
-=== "GitHub Actions"
-    More Markdown **content**.
-
-    - list item a
-    - list item b
-
-=== "Azure DevOps Tasks"
-    More Markdown **content**.
-    ```yaml
-    - list item a
-    - list item b
+    ```shell
+    mcix datastage export \
+      -api-key XXXXXXXXXXXXXXXXXXXXXXXX \
+      -url https://cp4d.datamigrators.io \
+      -user isadmin \
+      -export-path dstage1.zip \
+      -project dstage1 
     ```
 
-##### Command Line
+=== "GitHub Actions"
+    ```yaml
+    - name: DataStage export using mcix datastage export action
+      uses: datamigrators/mcix/datastage/export@latest
+      id: mcix-datastage-export
+      with:
+        api-key: ${{ secrets.CP4DKEY }}
+        url: ${{ vars.CP4DHOSTNAME }}
+        user: ${{ vars.CP4DUSERNAME }}
+        project: ${{ env.DatastageProject }}         
+        assets: "${{ github.workspace }}/datastage"
+    ```
 
-```shell
-mcix datastage export \
-  -api-key XXXXXXXXXXXXXXXXXXXXXXXX \
-  -url https://cp4d.datamigrators.io \
-  -user isadmin \
-  -export-path dstage1.zip \
-  -project dstage1 
-```
-
-!!!+ info "Command Line" ```shell
-mcix datastage export \
-  -api-key XXXXXXXXXXXXXXXXXXXXXXXX \
-  -url https://cp4d.datamigrators.io \
-  -user isadmin \
-  -export-path dstage1.zip \
-  -project dstage1 
-```
-
-##### GitHub Actions
-
-```yaml
-- name: DataStage export using mcix datastage export action
-  uses: datamigrators/mcix/datastage/export@latest
-  id: mcix-datastage-export
-  with:
-    api-key: ${{ secrets.CP4DKEY }}
-    url: ${{ vars.CP4DHOSTNAME }}
-    user: ${{ vars.CP4DUSERNAME }}
-    project: ${{ env.DatastageProject }}         
-    assets: "${{ github.workspace }}/datastage"
-```
-
-!!!+ info "Github Actions" ```yaml
-- name: DataStage export using mcix datastage export action
-  uses: datamigrators/mcix/datastage/export@latest
-  id: mcix-datastage-export
-  with:
-    api-key: ${{ secrets.CP4DKEY }}
-    url: ${{ vars.CP4DHOSTNAME }}
-    user: ${{ vars.CP4DUSERNAME }}
-    project: ${{ env.DatastageProject }}         
-    assets: "${{ github.workspace }}/datastage"
-```
-
-##### Azure DevOps Tasks
-
-```yaml
-- task: mcixDatastageExport@1
-  inputs:
-    url: ${{ parameters.CP4DHostName }}
-    user: ${{ parameters.CP4DUsername }}
-    apiKey: ${{ parameters.CP4DKey }}
-    project: ${{ parameters.DatastageProject }}
-    exportPath: '$(Build.SourcesDirectory)/datastage'
-    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
-  displayName: 'Export DataStage Assets'
-```
-
-!!!+ "Azure DevOps Tasks" ```yaml
-- task: mcixDatastageExport@1
-  inputs:
-    url: ${{ parameters.CP4DHostName }}
-    user: ${{ parameters.CP4DUsername }}
-    apiKey: ${{ parameters.CP4DKey }}
-    project: ${{ parameters.DatastageProject }}
-    exportPath: '$(Build.SourcesDirectory)/datastage'
-    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
-  displayName: 'Export DataStage Assets'
-```
+=== "Azure DevOps Tasks"
+    ```yaml
+    - task: mcixDatastageExport@1
+      inputs:
+        url: ${{ parameters.CP4DHostName }}
+        user: ${{ parameters.CP4DUsername }}
+        apiKey: ${{ parameters.CP4DKey }}
+        project: ${{ parameters.DatastageProject }}
+        exportPath: '$(Build.SourcesDirectory)/datastage'
+        imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+      displayName: 'Export DataStage Assets'
+    ```
 
 ---
 
@@ -257,42 +199,39 @@ Imports DataStage assets from a DataStage export zip file or directory into a CP
 
 #### Examples
 
-##### Command Line
+=== "Command Line"
+    ```shell
+    mcix datastage import \
+      -api-key XXXXXXXXXXXXXXXXXXXXXXXX \
+      -url https://cp4d.datamigrators.io \
+      -user isadmin \
+      -assets dstage1.zip \
+      -project dstage1 
+    ```
 
-```shell
-mcix datastage import \
-  -api-key XXXXXXXXXXXXXXXXXXXXXXXX \
-  -url https://cp4d.datamigrators.io \
-  -user isadmin \
-  -assets dstage1.zip \
-  -project dstage1 
-```
+=== "GitHub Actions"
+    ```yaml
+    - name: DataStage import using mcix datastage import action
+      uses: datamigrators/mcix/datastage/import@latest
+      id: mcix-datastage-import
+      with:
+        api-key: ${{ secrets.CP4DKEY }}
+        url: ${{ vars.CP4DHOSTNAME }}
+        user: ${{ vars.CP4DUSERNAME }}
+        project: ${{ env.DatastageProject }}         
+        assets: "${{ github.workspace }}/datastage"
+    ```
 
-##### GitHub Actions
-
-````yaml
-- name: DataStage import using mcix datastage import action
-  uses: datamigrators/mcix/datastage/import@latest
-  id: mcix-datastage-import
-  with:
-    api-key: ${{ secrets.CP4DKEY }}
-    url: ${{ vars.CP4DHOSTNAME }}
-    user: ${{ vars.CP4DUSERNAME }}
-    project: ${{ env.DatastageProject }}         
-    assets: "${{ github.workspace }}/datastage"
-````
-
-##### Azure DevOps Tasks
-
-```yaml
-- task: mcixDatastageImport@1
-  inputs:
-    url: ${{ parameters.CP4DHostName }}
-    user: ${{ parameters.CP4DUsername }}
-    apiKey: ${{ parameters.CP4DKey }}
-    project: ${{ parameters.DatastageProject }}
-    assetsPath: '$(Build.SourcesDirectory)/datastage'
-    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
-  displayName: 'Import DataStage Assets'
-```                  
+=== "Azure DevOps Tasks"
+    ```yaml
+    - task: mcixDatastageImport@1
+      inputs:
+        url: ${{ parameters.CP4DHostName }}
+        user: ${{ parameters.CP4DUsername }}
+        apiKey: ${{ parameters.CP4DKey }}
+        project: ${{ parameters.DatastageProject }}
+        assetsPath: '$(Build.SourcesDirectory)/datastage'
+        imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+      displayName: 'Import DataStage Assets'
+    ```
 
