@@ -52,9 +52,9 @@ This command displays:
 
     This will produce a step summary of the form...
 
-    ## MCIX System Version
+    #### MCIX System Version
 
-    ``
+    ```
     MettleCI Command Line (build 1.0-94)
     (C) 2018-2026 Data Migrators Pty Ltd
     system version (1.0-94)
@@ -68,9 +68,11 @@ This command displays:
 
     ▶ MCIX plugins loaded
 
-    ... where the "Image compliance information" section lists the compliance status of the MettleCI CLI container image, 
-    the "GitHub execution environment" section lists details of the GitHub-hosted runner executing the command, and the 
-    "MCIX plugins loaded" section lists all MettleCI CLI plugins provided by the `mcix` command.
+    ... where the expandable sections provide extra information:
+    
+    - "Image compliance information" lists the compliance status of the MettleCI CLI container image,
+    - "GitHub execution environment" lists details of the GitHub-hosted runner executing the command, and 
+    - "MCIX plugins loaded" lists all MettleCI CLI plugins provided by the `mcix` command.
 
 === "Azure DevOps Task"
     ```yaml

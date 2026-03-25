@@ -15,7 +15,7 @@ The `asset-analysis` namespace contains commands for running MettleCI Asset Anal
 
 ## asset-analysis query
  
-??? info "This command is for running MettleCI Asset Queries"
+???+ info "This command is for running MettleCI Asset Queries"
 
     If you're looking for the **Asset Analysis Rules** returned by DataStage flow analysis then see the [asset-analysis test](#asset-analysis-test) Command.
 
@@ -65,13 +65,13 @@ The command line implementation of the Asset Analysis Query functionality expose
 
 === "GitHub Action"
 
-    ??? info "This command is not available as a GitHub Actions native action"
+    ???+ info "This command is not available as a GitHub Actions native action"
 
         This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
 
 === "Azure DevOps Task"
 
-    ??? info "This command is not available as an Azure DevOps native task"
+    ???+ info "This command is not available as an Azure DevOps native task"
 
         This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
 
@@ -79,7 +79,7 @@ The command line implementation of the Asset Analysis Query functionality expose
 
 ## asset-analysis test
 
-??? info "This command is for running MettleCI Asset Analysis Rules"
+???+ info "This command is for running MettleCI Asset Analysis Rules"
 
     If you're looking for the **Asset Queries** typically used in a MettleCI Report Card then please see the [asset-analysis query](#asset-analysis-query) Command.
 
