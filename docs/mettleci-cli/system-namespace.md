@@ -38,25 +38,25 @@ Loaded plugins:
 
 #### Examples
 
-##### Command Line
+=== "Command Line"
  
 ```shell
 mcix system version
 ```
 
-##### Azure DevOps Task
+=== "GitHub Actions"
+
+```yaml
+- name: mcix system version action
+  uses: mettleci/mcix/system/version@latest
+  id: mcix-system-version
+```
+
+=== "Azure DevOps Task"
 
 ```yaml
 - task: mcixSystemVersion@1
   inputs:
-    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+    imageName: 'mettleci.azurecr.io/mettleci/mcix'
   displayName: mcix system version action
-```
-
-##### GitHub Action
-
-```yaml
-- name: mcix system version action
-  uses: datamigrators/mcix/system/version@latest
-  id: mcix-system-version
 ```

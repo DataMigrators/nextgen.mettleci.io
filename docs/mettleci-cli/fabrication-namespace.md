@@ -40,7 +40,9 @@ This command lists all the MettleCI data fabrication generators available in eit
     Include pre-existing generators from MettleCI's internal libraries
 
 
-#### Example
+#### Examples
+
+=== "Command Line"
 
 This example shows how to list the tags of a directory of Compliance Rules in both tabulated and CSV formats:
 
@@ -110,6 +112,18 @@ star_wars.wookiee_word
 $>
 ```
 
+=== "GitHub Actions"
+
+???+ info "This command is not available as a GitHub Actions native action"
+
+    This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
+
+=== "Azure DevOps Task"
+
+???+ info "This command is not available as an Azure DevOps native task"
+
+    This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
+
 ---
 
 ## fabrication test
@@ -148,6 +162,8 @@ This command invokes a specific test data fabrication generator, from either…
 
 
 #### Example
+
+=== "Command Line"
 
 This example shows how to list the tags of a directory of Compliance Rules in both tabulated and CSV formats:
 

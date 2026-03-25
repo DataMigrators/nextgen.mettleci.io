@@ -28,7 +28,7 @@ This command applies changes - defined in a [json5-formatted](https://json5.org/
 
 #### Examples
 
-##### Command Line
+=== "Command Line"
 
 ```shell
 mcix overlay apply \
@@ -38,7 +38,20 @@ mcix overlay apply \
     -properties /path/to/properties-file.properties
 ```
 
-##### Azure DevOps Task
+=== "GitHub Actions"
+
+```yaml
+- name: Overlay apply using mcix overlay apply action
+uses: datamigrators/mcix/overlay/apply@latest
+id: mcix-overlay-apply
+with:
+    assets: "${{ github.workspace }}/datastage"
+    output: "${{ github.workspace }}/something-something"
+    overlay: "${{ github.workspace }}/overlay-file"
+    properties: "${{ github.workspace }}/peroperties-file"
+```
+
+=== "Azure DevOps Task"
 
 ```yaml
 - task: mcixOverlayApply@1
@@ -52,17 +65,3 @@ inputs:
     imageName: 'mettleci.azurecr.io/mettleci/mcix'
 displayName: 'Apply Overlays to Assets'
 ```
-
-#### GitHub Action
-
-```yaml
-- name: Overlay apply using mcix overlay apply action
-uses: datamigrators/mcix/overlay/apply@latest
-id: mcix-overlay-apply
-with:
-    assets: "${{ github.workspace }}/datastage"
-    output: "${{ github.workspace }}/something-something"
-    overlay: "${{ github.workspace }}/overlay-file"
-    properties: "${{ github.workspace }}/peroperties-file"
-```
-

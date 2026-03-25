@@ -17,7 +17,7 @@ The optional `-check-row-count-only` flag will cause the generation of a test ca
 
 #### Examples
 
-##### Command Line
+=== "Command Line"
 
 ```shell
 mcix unittest generate \
@@ -26,7 +26,15 @@ mcix unittest generate \
   -specs /opt/dm/mci/testspecs
 ```
 
-???+ info "This command is not available as a CI/CD native task/plugin"
+=== "GitHub Actions"
+
+???+ info "This command is not available as a GitHub Actions native action"
+
+    This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
+
+=== "Azure DevOps Task"
+
+???+ info "This command is not available as an Azure DevOps native task"
 
     This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
 
@@ -68,7 +76,7 @@ The `mcix unit-test execute -ignore-test-failures` option will prevent a failing
 
 #### Examples
 
-##### Command Line
+=== "Command Line"
 
 ```shell
 mcix unit-test execute \
@@ -82,23 +90,7 @@ mcix unit-test execute \
   -project-cache "/mettleci/cache/engine.datamigrators.io/my_project"
 ```
 
-##### Azure DevOps Task
-
-```yaml
-- task: mcixUnitTestExecute@1
-  inputs:
-    url: ${{ parameters.CP4DHostName }}
-    user: ${{ parameters.CP4DUsername }}
-    apiKey: ${{ parameters.CP4DKey }}
-    project: ${{ parameters.DatastageProject }}
-    report: '$(Build.SourcesDirectory)/unittest-reports/${{ parameters.DatastageProject }}.xml'
-    testSuite: 'MettleCI CP4D Unit Tests - ${{ parameters.DatastageProject }}'
-    ignoreTestFailures: true
-    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
-  displayName: 'Run Unit Tests'
-```
-
-##### GitHub Action
+=== "GitHub Actions"
 
 ```yaml
 - name: Invoke 'mcix unit-test execute' action
@@ -113,4 +105,20 @@ mcix unit-test execute \
     test-suite: "MettleCI CP4D Unit Tests - ${{ env.DatastageProject }}"
     report: "${{ github.workspace }}/unittest-reports/${{ env.DatastageProject }}.xml"
     ignore-test-failures: true
+```
+
+=== "Azure DevOps Task"
+
+```yaml
+- task: mcixUnitTestExecute@1
+  inputs:
+    url: ${{ parameters.CP4DHostName }}
+    user: ${{ parameters.CP4DUsername }}
+    apiKey: ${{ parameters.CP4DKey }}
+    project: ${{ parameters.DatastageProject }}
+    report: '$(Build.SourcesDirectory)/unittest-reports/${{ parameters.DatastageProject }}.xml'
+    testSuite: 'MettleCI CP4D Unit Tests - ${{ parameters.DatastageProject }}'
+    ignoreTestFailures: true
+    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+  displayName: 'Run Unit Tests'
 ```

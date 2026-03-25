@@ -50,8 +50,9 @@ The command line implementation of the Asset Analysis Query functionality expose
     Number of threads of execution
 
 
-
 #### Examples
+
+=== "Command Line"
 
 This example demonstrates how run Asset Queries against one or more ISX files. 
 
@@ -62,7 +63,15 @@ mcix asset-analysis query \
   -report compliance.csv \
 ```
 
-???+ info "This command is not available as a CI/CD native task/plugin"
+=== "GitHub Actions"
+
+???+ info "This command is not available as a GitHub Actions native action"
+
+    This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
+
+=== "Azure DevOps Task"
+
+???+ info "This command is not available as an Azure DevOps native task"
 
     This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
 
@@ -138,7 +147,7 @@ The command line implementation of the Compliance Test functionality enables the
 
 These examples demonstrate the use of the `asset-analysis test` command to execute a set of Flow Analysis Rules against one or more exported ISX files. Note that the asset path specification in the export command uses the [same wildcard rules](https://www.ibm.com/docs/en/iis/11.7.0?topic=command-asset-paths) as the `istool` command. 
 
-##### Command Line
+=== "Command Line"
 
 ```shell
 mcix asset-analysis test \
@@ -152,7 +161,7 @@ mcix asset-analysis test \
   -include-job-in-test-name
 ```
 
-##### GitHub Actions
+=== "GitHub Actions"
 
 ```yaml
 - name: DataStage static code analysis using mcix asset-analysis test action
@@ -171,7 +180,7 @@ mcix asset-analysis test \
     test-suite: "${{ inputs.AnalysisSuite }}"
 ```
 
-##### Azure DevOps Task
+=== "Azure DevOps Task"
 
 ```yaml
 - task: mcixAssetanalysisTest@1
