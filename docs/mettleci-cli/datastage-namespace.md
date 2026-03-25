@@ -71,6 +71,7 @@ Compiles a DataStage Job producing a JUnit-compatible testing output that can be
         user: ${{ vars.CP4DUSERNAME }}
         project: ${{ env.DatastageProject }}         
     ```
+
 === "Azure DevOps Tasks"
     ```yaml
     - task: mcixDatastageCompile@1

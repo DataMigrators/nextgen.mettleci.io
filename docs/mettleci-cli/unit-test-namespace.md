@@ -18,25 +18,22 @@ The optional `-check-row-count-only` flag will cause the generation of a test ca
 #### Examples
 
 === "Command Line"
-
-```shell
-mcix unittest generate \
-  -assets /opt/dm/mci/jobs \
-  -joblist ./joblist.txt \
-  -specs /opt/dm/mci/testspecs
-```
+    ```shell
+    mcix unittest generate \
+      -assets /opt/dm/mci/jobs \
+      -joblist ./joblist.txt \
+      -specs /opt/dm/mci/testspecs
+    ```
 
 === "GitHub Actions"
+    ???+ info "This command is not available as a GitHub Actions native action"
 
-???+ info "This command is not available as a GitHub Actions native action"
-
-    This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
+        This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
 
 === "Azure DevOps Task"
+    ???+ info "This command is not available as an Azure DevOps native task"
 
-???+ info "This command is not available as an Azure DevOps native task"
-
-    This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
+        This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
 
 ---
 
