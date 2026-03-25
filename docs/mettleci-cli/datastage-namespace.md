@@ -60,7 +60,7 @@ Compiles a DataStage Job producing a JUnit-compatible testing output that can be
       -include-asset-in-test-name
     ``` 
 
-=== "GitHub Actions"
+=== "GitHub Action"
     ```yaml
     - name: DataStage Compile using mcix datastage compile action
       uses: datamigrators/mcix/datastage/compile@latest
@@ -137,7 +137,7 @@ Exports DataStage assets from a DataStage CP4D/CP4DaaS project to a destination 
       -project dstage1 
     ```
 
-=== "GitHub Actions"
+=== "GitHub Action"
     ```yaml
     - name: DataStage export using mcix datastage export action
       uses: datamigrators/mcix/datastage/export@latest
@@ -210,7 +210,7 @@ Imports DataStage assets from a DataStage export zip file or directory into a CP
       -project dstage1 
     ```
 
-=== "GitHub Actions"
+=== "GitHub Action"
     ```yaml
     - name: DataStage import using mcix datastage import action
       uses: datamigrators/mcix/datastage/import@latest

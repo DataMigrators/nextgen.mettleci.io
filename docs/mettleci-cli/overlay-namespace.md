@@ -30,38 +30,40 @@ This command applies changes - defined in a [json5-formatted](https://json5.org/
 
 === "Command Line"
 
-```shell
-mcix overlay apply \
-    -assets /path/to/datastage-export.zip \
-    -output /path/to/updated-assets.zip \
-    -overlay /path/to/overlay-directory \
-    -properties /path/to/properties-file.properties
-```
+    ```shell
+    mcix overlay apply \
+        -assets /path/to/datastage-export.zip \
+        -output /path/to/updated-assets.zip \
+        -overlay /path/to/overlay-directory \
+        -properties /path/to/properties-file.properties
+    ```
 
-=== "GitHub Actions"
+=== "GitHub Action"
 
-```yaml
-- name: Overlay apply using mcix overlay apply action
-uses: datamigrators/mcix/overlay/apply@latest
-id: mcix-overlay-apply
-with:
-    assets: "${{ github.workspace }}/datastage"
-    output: "${{ github.workspace }}/something-something"
-    overlay: "${{ github.workspace }}/overlay-file"
-    properties: "${{ github.workspace }}/peroperties-file"
-```
+    ```yaml
+    - name: Overlay apply using mcix overlay apply action
+    uses: datamigrators/mcix/overlay/apply@latest
+    id: mcix-overlay-apply
+    with:
+        assets: "${{ github.workspace }}/datastage"
+        output: "${{ github.workspace }}/something-something"
+        overlay: "${{ github.workspace }}/overlay-file"
+        properties: "${{ github.workspace }}/peroperties-file"
+    ```
 
 === "Azure DevOps Task"
 
-```yaml
-- task: mcixOverlayApply@1
-inputs:
-    assets: 'datastage'
-    overlays: |
-    '$(Build.SourcesDirectory)/overlays/common'
-    '$(Build.SourcesDirectory)/overlays/${{ parameters.EnvironmentID }}'
-    properties: '$(Build.SourcesDirectory)/varfiles/var.${{ parameters.EnvironmentID }}'
-    output: '$(Build.SourcesDirectory)/release.zip'
-    imageName: 'mettleci.azurecr.io/mettleci/mcix'
-displayName: 'Apply Overlays to Assets'
-```
+    ```yaml
+    - task: mcixOverlayApply@1
+    inputs:
+        assets: 'datastage'
+        overlays: |
+        '$(Build.SourcesDirectory)/overlays/common'
+        '$(Build.SourcesDirectory)/overlays/${{ parameters.EnvironmentID }}'
+        properties: '$(Build.SourcesDirectory)/varfiles/var.${{ parameters.EnvironmentID }}'
+        output: '$(Build.SourcesDirectory)/release.zip'
+        imageName: 'mettleci.azurecr.io/mettleci/mcix'
+    displayName: 'Apply Overlays to Assets'
+    ```
+
+---

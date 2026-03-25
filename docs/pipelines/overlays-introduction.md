@@ -285,7 +285,7 @@ property file passed to the mcix overlay command** - more details on this are co
 Substitutions like this allows parameters to be provided externally from your CI/CD Pipeline or setting sensitive credentials
 without needing to store them in Git.
 
-???+ info "Note"
+??? info "Note"
 
     Note that **Data Connections** in NextGen don't support Parameter Sets like those in DataStage Classic as their values are 'baked in' at compilation
     time. Adapting Data Connections for different environments therefore requires that the altered asset be re-compiled after deployment.

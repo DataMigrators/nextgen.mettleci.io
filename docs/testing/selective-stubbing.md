@@ -40,7 +40,7 @@ To define a link which should not be stubbed simply omit the link from the `give
 &nbsp;
 ![screen capture](./images/ds-test-case-selective-stubbing.png "test screen capture")
 
-???+ info "Note"
+??? info "Note"
 
     When defining test cases that use selective stubbing you should to exercise caution when deploying those test cases to downstream test environments.  Those environments will need to be configured to permit stages which have not been stubbed to retrieve data from their configured data sources.
 

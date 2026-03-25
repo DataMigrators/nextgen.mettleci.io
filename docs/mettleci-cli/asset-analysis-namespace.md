@@ -15,7 +15,7 @@ The `asset-analysis` namespace contains commands for running MettleCI Asset Anal
 
 ## asset-analysis query
  
-???+ info "This command is for running MettleCI Asset Queries"
+??? info "This command is for running MettleCI Asset Queries"
 
     If you're looking for the **Asset Analysis Rules** returned by DataStage flow analysis then see the [asset-analysis test](#asset-analysis-test) Command.
 
@@ -54,32 +54,32 @@ The command line implementation of the Asset Analysis Query functionality expose
 
 === "Command Line"
 
-This example demonstrates how run Asset Queries against one or more ISX files. 
+    This example demonstrates how run Asset Queries against one or more ISX files. 
 
-```shell
-mcix asset-analysis query \
-  -assets ./Jobs \
-  -queries ./Queries \
-  -report compliance.csv \
-```
+    ```shell
+    mcix asset-analysis query \
+      -assets ./Jobs \
+      -queries ./Queries \
+      -report compliance.csv \
+    ```
 
-=== "GitHub Actions"
+=== "GitHub Action"
 
-???+ info "This command is not available as a GitHub Actions native action"
+    ??? info "This command is not available as a GitHub Actions native action"
 
-    This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
+        This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
 
 === "Azure DevOps Task"
 
-???+ info "This command is not available as an Azure DevOps native task"
+    ??? info "This command is not available as an Azure DevOps native task"
 
-    This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
+        This command is not available as a CI/CD native task/plugin as there is no identified need for this functionality within the context of a CI/CD pipeline. If you require this functionality within your CI/CD pipeline then you can invoke the command line directly using a command line pipeline task.
 
 ---
 
 ## asset-analysis test
 
-???+ info "This command is for running MettleCI Asset Analysis Rules"
+??? info "This command is for running MettleCI Asset Analysis Rules"
 
     If you're looking for the **Asset Queries** typically used in a MettleCI Report Card then please see the [asset-analysis query](#asset-analysis-query) Command.
 
@@ -149,53 +149,55 @@ These examples demonstrate the use of the `asset-analysis test` command to execu
 
 === "Command Line"
 
-```shell
-mcix asset-analysis test \
-  -rules compliance_rules \
-  -assets datastage \
-  -report compliance_report_warn.xml \
-  -junit \
-  -project-cache ./project-cache \
-  -test-suite warnings \
-  -ignore-test-failures \
-  -include-job-in-test-name
-```
+    ```shell
+    mcix asset-analysis test \
+      -rules compliance_rules \
+      -assets datastage \
+      -report compliance_report_warn.xml \
+      -junit \
+      -project-cache ./project-cache \
+      -test-suite warnings \
+      -ignore-test-failures \
+      -include-job-in-test-name
+    ```
 
-=== "GitHub Actions"
+=== "GitHub Action"
 
-```yaml
-- name: DataStage static code analysis using mcix asset-analysis test action
-  uses: datamigrators/mcix/asset-analysis/test@latest
-  id: mcix-asset-analysis-test
-  with:
-    api-key: ${{ secrets.CP4DKEY }}
-    url: "${{ vars.CP4DHOSTNAME }}" 
-    username: ${{ vars.CP4DUSERNAME }}
-    project: ${{ env.DatastageProject }}         
-    report: "${{ github.workspace }}/analysis-reports/report_${{ inputs.AnalysisSuite }}.xml"
-    rules: "${{ github.workspace }}/analysis-rules/rules"
-    included-tags: ${{ inputs.IncludeTags }}
-    excluded-tags: ${{ inputs.ExcludeTags }}
-    ignore-test-failures: true
-    test-suite: "${{ inputs.AnalysisSuite }}"
-```
+    ```yaml
+    - name: DataStage static code analysis using mcix asset-analysis test action
+      uses: datamigrators/mcix/asset-analysis/test@latest
+      id: mcix-asset-analysis-test
+      with:
+        api-key: ${{ secrets.CP4DKEY }}
+        url: "${{ vars.CP4DHOSTNAME }}" 
+        username: ${{ vars.CP4DUSERNAME }}
+        project: ${{ env.DatastageProject }}         
+        report: "${{ github.workspace }}/analysis-reports/report_${{ inputs.AnalysisSuite }}.xml"
+        rules: "${{ github.workspace }}/analysis-rules/rules"
+        included-tags: ${{ inputs.IncludeTags }}
+        excluded-tags: ${{ inputs.ExcludeTags }}
+        ignore-test-failures: true
+        test-suite: "${{ inputs.AnalysisSuite }}"
+    ```
 
 === "Azure DevOps Task"
 
-```yaml
-- task: mcixAssetanalysisTest@1
-  inputs:
-    url: ${{ parameters.CP4DHostName }}
-    user: ${{ parameters.CP4DUsername }}
-    apiKey: ${{ parameters.CP4DKey }}
-    project: ${{ parameters.DatastageProject }}
-    rules: '$(Build.SourcesDirectory)/${{ parameters.AssetAnalysisRepoName }}'
-    report: '$(Build.SourcesDirectory)/analysis-reports/${{ variables.suiteName }}.xml'
-    includeTags: ${{ parameters.IncludeTags }}
-    excludeTags: ${{ parameters.ExcludeTags }}
-    ignoreTestFailures: true
-    includeAssetInTestName: true
-    testSuite: ${{ parameters.AssetAnalysisSuite }}
-    imageName: 'mettleci.azurecr.io/datamigrators/mcix'
-    displayName: 'Run Asset Analysis (${{ parameters.AssetAnalysisSuite }})'
-```
+    ```yaml
+    - task: mcixAssetanalysisTest@1
+      inputs:
+        url: ${{ parameters.CP4DHostName }}
+        user: ${{ parameters.CP4DUsername }}
+        apiKey: ${{ parameters.CP4DKey }}
+        project: ${{ parameters.DatastageProject }}
+        rules: '$(Build.SourcesDirectory)/${{ parameters.AssetAnalysisRepoName }}'
+        report: '$(Build.SourcesDirectory)/analysis-reports/${{ variables.suiteName }}.xml'
+        includeTags: ${{ parameters.IncludeTags }}
+        excludeTags: ${{ parameters.ExcludeTags }}
+        ignoreTestFailures: true
+        includeAssetInTestName: true
+        testSuite: ${{ parameters.AssetAnalysisSuite }}
+        imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+        displayName: 'Run Asset Analysis (${{ parameters.AssetAnalysisSuite }})'
+    ```
+
+---
