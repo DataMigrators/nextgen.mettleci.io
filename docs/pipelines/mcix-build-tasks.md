@@ -39,7 +39,7 @@ jobs:
 
       # Import the DataStage assets to CPD using the mcix datastage import action
       - name: DataStage import using mcix datastage import action
-        uses: datamigrators/mcix/datastage/import@latest
+        uses: mettleci/mcix/datastage/import@latest
         id: mcix-datastage-import
         with:
           api-key: ${{ secrets.CP4DKEY }}

@@ -165,7 +165,7 @@ These examples demonstrate the use of the `asset-analysis test` command to execu
 
     ```yaml
     - name: DataStage static code analysis using mcix asset-analysis test action
-      uses: datamigrators/mcix/asset-analysis/test@latest
+      uses: mettleci/mcix/asset-analysis/test@latest
       id: mcix-asset-analysis-test
       with:
         api-key: ${{ secrets.CP4DKEY }}
@@ -196,7 +196,7 @@ These examples demonstrate the use of the `asset-analysis test` command to execu
         ignoreTestFailures: true
         includeAssetInTestName: true
         testSuite: ${{ parameters.AssetAnalysisSuite }}
-        imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+        imageName: 'mettleci.azurecr.io/mettleci/mcix'
         displayName: 'Run Asset Analysis (${{ parameters.AssetAnalysisSuite }})'
     ```
 

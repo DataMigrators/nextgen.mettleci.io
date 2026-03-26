@@ -42,7 +42,7 @@ This command applies changes - defined in a [json5-formatted](https://json5.org/
 
     ```yaml
     - name: Overlay apply using mcix overlay apply action
-    uses: datamigrators/mcix/overlay/apply@latest
+    uses: mettleci/mcix/overlay/apply@latest
     id: mcix-overlay-apply
     with:
         assets: "${{ github.workspace }}/datastage"

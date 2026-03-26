@@ -89,7 +89,7 @@ The `mcix unit-test execute -ignore-test-failures` option will prevent a failing
 === "GitHub Action"
     ```yaml
     - name: Invoke 'mcix unit-test execute' action
-      uses: datamigrators/mcix/unit-test/execute@latest
+      uses: mettleci/mcix/unit-test/execute@latest
       id: mcix-unittest-execute
       with:
         url: "${{ vars.CP4DHOSTNAME }}" 
@@ -113,7 +113,7 @@ The `mcix unit-test execute -ignore-test-failures` option will prevent a failing
         report: '$(Build.SourcesDirectory)/unittest-reports/${{ parameters.DatastageProject }}.xml'
         testSuite: 'MettleCI CP4D Unit Tests - ${{ parameters.DatastageProject }}'
         ignoreTestFailures: true
-        imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+        imageName: 'mettleci.azurecr.io/mettleci/mcix'
       displayName: 'Run Unit Tests'
     ```
 

@@ -63,7 +63,7 @@ Compiles a DataStage Job producing a JUnit-compatible testing output that can be
 === "GitHub Action"
     ```yaml
     - name: DataStage Compile using mcix datastage compile action
-      uses: datamigrators/mcix/datastage/compile@latest
+      uses: mettleci/mcix/datastage/compile@latest
       id: mcix-datastage-compile
       with:
         api-key: ${{ secrets.CP4DKEY }}
@@ -82,7 +82,7 @@ Compiles a DataStage Job producing a JUnit-compatible testing output that can be
         project: ${{ parameters.DatastageProject }}
         report: '$(Build.SourcesDirectory)/log/compile/compilation_results.xml'
         includeAssetInTestName: true
-        imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+        imageName: 'mettleci.azurecr.io/mettleci/mcix'
       displayName: 'Compile DataStage Assets'
     ```
 
@@ -140,7 +140,7 @@ Exports DataStage assets from a DataStage CP4D/CP4DaaS project to a destination 
 === "GitHub Action"
     ```yaml
     - name: DataStage export using mcix datastage export action
-      uses: datamigrators/mcix/datastage/export@latest
+      uses: mettleci/mcix/datastage/export@latest
       id: mcix-datastage-export
       with:
         api-key: ${{ secrets.CP4DKEY }}
@@ -159,7 +159,7 @@ Exports DataStage assets from a DataStage CP4D/CP4DaaS project to a destination 
         apiKey: ${{ parameters.CP4DKey }}
         project: ${{ parameters.DatastageProject }}
         exportPath: '$(Build.SourcesDirectory)/datastage'
-        imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+        imageName: 'mettleci.azurecr.io/mettleci/mcix'
       displayName: 'Export DataStage Assets'
     ```
 
@@ -213,7 +213,7 @@ Imports DataStage assets from a DataStage export zip file or directory into a CP
 === "GitHub Action"
     ```yaml
     - name: DataStage import using mcix datastage import action
-      uses: datamigrators/mcix/datastage/import@latest
+      uses: mettleci/mcix/datastage/import@latest
       id: mcix-datastage-import
       with:
         api-key: ${{ secrets.CP4DKEY }}
@@ -232,7 +232,7 @@ Imports DataStage assets from a DataStage export zip file or directory into a CP
         apiKey: ${{ parameters.CP4DKey }}
         project: ${{ parameters.DatastageProject }}
         assetsPath: '$(Build.SourcesDirectory)/datastage'
-        imageName: 'mettleci.azurecr.io/datamigrators/mcix'
+        imageName: 'mettleci.azurecr.io/mettleci/mcix'
       displayName: 'Import DataStage Assets'
     ```
 
